@@ -99,5 +99,8 @@
 <!-- 	<a href="./add.php">添加文章</a> -->
 	<?php $page->show_page()?>
 	</div>
+	<div>
+		<img src="./show_code.php" onclick="this.src='./show_code.php?id='+Math.random()">
+	</div>
 </body>
 </html>
