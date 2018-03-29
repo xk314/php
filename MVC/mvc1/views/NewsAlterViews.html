@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>列表展示</title>
+	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="../bootstrap/js/jq.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+	</script>
+	
+	<!--  引入bootstrap 源码存放在同级bootstrap目录下 -->
+</head>
+<body>
+	<div class="container" >
+	<caption ><h2>修改信息</h2></caption><br>
+	<form class=".form-group-sm" method="post" action="?ac=update&id=<=$id?>">
+		标题：<input type="text" name="title" value="<?php echo $result['title']?>"></input><br>
+		作者：<input type="text" name="author" value="<?php echo $result['author']?>"></input><br>
+		来源：<input type="text" name="source" value="<?php echo $result['source']?>"></input><br>
+		关键字：<input type="text" name="keywords" value="<?php echo $result['keywords']?>"></input><br>
+		点击量：<input type="number" name="hits" value="<?php echo $result['hits']?>"></input><br>
+		添加日期：<input type="date" name="addate" value="<?php echo date("Y-y-d",$result['addate'])?>"></input><br>
+
+		<input type="submit" value="提交" onclick="return confirm('确定提交？')"></input>
+		<input type="reset" value="重置" onclick="return confirm('确定重置？')"></input>
+	</form>
+</body>
+</html>
