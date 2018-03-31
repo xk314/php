@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>新闻添加</title>
+	 <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="./bootstrap/js/jq.js"></script>
+	<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+	</script>
+	
+	<!--  引入bootstrap 源码存放在同级bootstrap目录下 -->
+</head>
+<body>
+	<div class="container" >
+	<caption ><h2>添加新闻</h2></caption><br>
+	<form class=".form-group-sm" method="post" action="?c=NewsController&a=insert">
+		标题：<input type="text" name="title" ></input><br>
+		作者：<input type="text" name="author" ></input><br>
+		来源：<input type="text" name="source" ></input><br>
+		关键字：<input type="text" name="keywords" ></input><br>
+		点击量：<input type="number" name="hits"></input><br>
+		添加日期：<input type="text" name="addate"></input><br>
+		<input type="submit" value="提交" onclick="return confirm('确定提交？')"></input>
+		<input type="reset" value="重置" onclick="return confirm('确定重置？')"></input>
+	</form>
+</body>
+</html>

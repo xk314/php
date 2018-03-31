@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>新闻列表展示</title>
+	 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="../bootstrap/js/jq.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var id = document.cookie.split("news_now_page=")[1].split(";")[0];
+			document.getElementById(id).style.color="red";
+		}
+		$("document").ready(function(){
+			$("td").click(function(event) {
+				$(this).css({
+					"background-color": 'yellow',
+				});
+			});
+			$("h2").click(function(event) {
+				$("table").toggle();
+			});
+		});
+	</script>
+	<style type="text/css">
+		a:hover{
+			font-size: 15px;
+			color:green;
+		}
+		li{
+			margin: 0px 15px;
+		}
+		tr{
+			border-bottom: 1px solid green;
+		}
+		tr:hover{
+			/*font-size: 17px;*/
+			color:green;
+		}
+		td{
+			padding:10px;
+		}
+		table {
+			text-align: center;
+			margin: 0px auto;
+			width: 700px;
+		}
+	</style>
+	<!--  引入bootstrap 源码存放在同级bootstrap目录下 -->
+</head>
+<body>
+	<div align="center" >
+	<ul class="list-inline">
+		<li><a href="../controller/StudentController.class.php">学生管理</a></li>
+		<li><a href="../controller/NewsController.class.php">新闻管理</a></li>
+	</ul>
+	<caption ><h2>新闻信息列表</h2></caption><br>
+	<caption >共<?=$total_row?>新闻</caption><br>
+	<caption ><a href="?ac=add">添加新闻</a></caption><br>
+	<table >
+		<tr>
+			<td>NID</td>
+			<td>标题</td>
+			<td>作者</td>
+			<td>来源</td>
+			<td>关键字</td>
+			<td>点击量</td>
+			<td>添加日期</td>
+			<td>操作</td>
+		</tr>
+		<?php foreach($result as $line): ?>
+			<tr>
+			<td><?=$line["nid"]?></td>
+			<td><?=$line["title"]?></td>
+			<td><?=$line["author"]?></td>
+			<td><?=$line["source"]?></td>
+			<td><?=$line["keywords"]?></td>
+			<td><?=$line["hits"]?></td>
+			<td><?php echo date("Y-m-d H-i-s",$line["addate"])?></td>
+			<td>
+				<a href="?ac=alter&id=<?=$line['nid']?>">修改</a>&nbsp;&nbsp;|
+				<a href="?ac=delete&id=<?=$line['nid']?>">删除</a>
+			</td>
+			</tr>
+		<?php endforeach ?>
+	</table><br>
+<!-- 	<a href="./add.php">添加文章</a> -->
+	<?php $page->show_page()?>
+	</div>
+	<!-- <div><a href="?ac=add">添加信息</a></div> -->
+	<div>
+		<img src="./show_code.php" onclick="this.src='../show_code.php?id='+Math.random()">
+	</div>
+</body>
+</html>
