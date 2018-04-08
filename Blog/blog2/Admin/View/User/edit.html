@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="./Public/Admin/Css/public.css" rel="stylesheet" type="text/css" />
+<title>用户管理</title>
+
+<script type="text/javascript">
+	function checkSubmit(){
+		var pattern = /^[0-9a-zA-Z]{5,15}$/;
+		if(!pattern.test(document.form1.username.value)){
+			document.getElementById("usernotice").style.color="red";
+			return false;
+		}
+		if(document.form1.password.value){
+			if(!pattern.test(document.form1.password.value)){
+			document.getElementById("passwdinfo").style.color="red";
+			return false;
+		}
+		}
+		if(document.form1.password.value != document.form1.confirmpwd.value){
+			document.getElementById("confirmpwdinfo").style.color="red";
+			return false;
+		}
+
+		if(document.form1.name.value == ""){
+			var name = document.getElementById("nameinfo");
+			name.style.color="red";
+			name.innerHTML="用户名不能为空！";
+			return false;
+		}
+		pattern = /^[0-9]{11}$/;
+		var pattern1 = /[^[0-9]{3}-[0-9]{8}$]/;
+		var tel = document.form1.tel.value;
+		if(!pattern.test(tel)&& !pattern1.test(tel)){
+			var tel1 = document.getElementById("telinfo");
+			tel1.style.color="red";
+			tel1.innerHTML="格式错误！";
+			return false;
+		}
+		return true;
+	}
+
+	function checkUserName(notice){
+		var pattern = /^[0-9a-zA-Z]{5,15}$/;
+		if(pattern.test(document.form1.username.value)){
+			document.getElementById(notice).style.color="green";
+			document.getElementById(notice).innerHTML="格式正确";
+		}else{
+			document.getElementById(notice).style.color="red";
+			document.getElementById(notice).innerHTML="格式不正确";
+		}
+	}
+
+	function checkPassWd(notice){
+		var pattern = /^[0-9a-zA-Z]{5,15}$/;
+		if(pattern.test(document.form1.password.value)){
+			document.getElementById(notice).style.color="green";
+			document.getElementById(notice).innerHTML="格式正确";
+		}
+		else{
+			document.getElementById(notice).style.color="red";
+			document.getElementById(notice).innerHTML="格式不正确";
+		}
+	}
+
+	function checkConfirm(notice){
+		if(document.form1.password.value == document.form1.confirmpwd.value){
+			document.getElementById(notice).style.color="green";
+			document.getElementById(notice).innerHTML="密码匹配";
+		}
+		else{
+			document.getElementById(notice).style.color="red";
+			document.getElementById(notice).innerHTML="密码不匹配";
+		}
+	}
+
+	function checkName(notice){
+		var name = document.getElementById(notice);
+		if(document.form1.name.value == ""){
+			
+			name.style.color="red";
+			name.innerHTML="用户名不能为空！";
+		}else{
+			name.style.color="green";
+			name.innerHTML="格式正确";
+		}
+	}
+
+	function checkTel(notice){
+		var pattern = /^[0-9]{11}$/;
+		var pattern1 = /[^[0-9]{3}-[0-9]{8}$]/;
+		var tel = document.form1.tel.value;
+		var tel1 = document.getElementById(notice);
+		if(!pattern.test(tel)&& !pattern1.test(tel)){
+			
+			tel1.style.color="red";
+			tel1.innerHTML="格式错误！";
+		}
+		else{
+			tel1.style.color="green";
+			tel1.innerHTML="格式正确";
+		}
+	}
+
+</script>
+
+</head>
+
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0" oncontextmenu="self.event.returnValue=false">
+<noscript><iframe src=*.html></iframe></noscript>
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="border">
+	<tr class="topbg"><td>用户管理</td></tr>
+	<tr class="tdbg">
+	  <td height="30">&nbsp;&nbsp;<a href="?c=User&a=index">管理首页</a>&nbsp;|&nbsp;<a href="?c=User&a=add">添加用户</a></td>
+	</tr>
+</table>
+<br />
+<form id="form1" name="form1" method="post" action="?c=User&a=update" onsubmit=" return checkSubmit()">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="border">
+	<tr class="title">
+		<td colspan="2" align="center">修改用户信息</td>
+	</tr>
+	<tr class="tdbg">
+		<td width="15%" height="30" align="right">用户名称：</td>
+		<td width="85%">
+			<input name="username" type="text" id="username" size="20" maxlength="15" onblur="checkUserName('usernotice')" value="<{$user['username']}>"/>
+			<font color="#FF0000">*</font>
+			<font id="usernotice" color="#666666">长度为5-15位（字母、数字），不能含有特殊符号</font>
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">用户密码：</td>
+		<td>
+			<input name="password" type="password" id="password" size="20" maxlength="15" onblur="checkPassWd('passwdinfo')"/>
+			<font color="#FF0000">*</font>
+			<font id="passwdinfo" color="#666666">长度为5-15位（字母、数字），不能含有特殊符号</font>
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">确认密码：</td>
+		<td>
+			<input name="confirmpwd" type="password" id="confirmpwd" size="20" maxlength="15" onblur="checkConfirm('confirmpwdinfo')"/>
+			<font color="#FF0000">*</font>
+			<font id="confirmpwdinfo" color="#666666">两次输入的密码必须一致</font>
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">真实姓名：</td>
+		<td>
+			<input name="name" type="text" id="name" size="20" maxlength="15" onblur="checkName('nameinfo')" value="<{$user['name']}>"/>
+			<font  id="nameinfo" color="#FF0000">*</font> <font color="#666666">你的姓名</font>
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">联系方式：</td>
+		<td>
+			<input name="tel" type="text" id="tel" size="20" maxlength="20" onblur="checkTel('telinfo')" value="<{$user['tel']}>" />
+			<font color="#FF0000">*</font> 
+			<font id="telinfo" color="#666666">例如：13671181498 或 010-12345678</font>
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">账号状态：</td>
+		<td>
+			<input name="status" type="radio" value="1" <{if $user.status}> checked <{/if}>>正常
+			<input type="radio" name="status" value="0" <{if !$user.status}> checked <{/if}>>停用
+			<!-- if和分界符之间不能存在空格 -->
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">角色：</td>
+		<td>
+			<select name="role">
+				<option value="1" <{if $user.role}> selected="selected" <{/if}>>超级管理员</option>
+				<option value="0" <{if !$user.role}>selected="selected" <{/if}>>普通管理员</option>
+			</select>
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">&nbsp;</td>
+		<td>
+			<input type="hidden" name="id" value="<{$user.id}>"></input>
+			<input type="submit" value="提交" />
+			<input type="button" onclick="history.go(-1)" value="返回" />
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="./Public/Admin/Css/public.css" rel="stylesheet" type="text/css" />
+<title>文章管理</title>
+<link rel='stylesheet' type='text/css' href='./Public/Public/bootstrap/css/bootstrap.min.css'>
+	<script type='text/javascript' src='./Public/Public/bootstrap/js/jq.js'></script>
+	<script type='text/javascript' src='./Public/Public/bootstrap/js/bootstrap.min.js'></script>
+	<script type='text/javascript'>
+		window.onload = function(){
+			var id = document.cookie.split("now_page=")[1].split(";")[0];
+			document.getElementById(id).style.color="red";
+		}
+	</script>
+</head>
+
+<body>
+<!--导航栏-->
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="border">
+	<tr class="topbg"><td>文章管理</td></tr>
+	<tr class="tdbg">
+		<td height="30">&nbsp;&nbsp;
+			<a target="_top" href="?c=Index&a=index">管理首页</a>&nbsp;|&nbsp;
+			<a href="?c=Article&a=add">添加文章</a>
+		</td>
+	</tr>
+</table>
+
+<!--搜索表单-->
+<div style="padding:8px 5px;margin:8px 3px;background-color:#fefefe;text-align:center;">
+
+<form name="form1" method="post" action="?c=Article&a=index">
+	<span style="padding:0px 5px;">分类</span>
+	<select name="category_id">
+		<{foreach $classarrs as $line}>
+					<option value=<{$line.id}>>
+						<{str_repeat("----",$line.level)}>
+						<{$line.classname}>
+					</option>
+		<{/foreach}>
+	</select>
+	<span style="padding:0px 5px;">标题</span>
+	<input type="text" name="keyword" />
+	<input type="submit" value="搜索" />
+	<input type="hidden" name="ac" value="search" />
+</form>
+</div>
+
+<!--文章列表-->
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="border">
+<tr class="title" align="center">
+	<td>编号</td>
+	<td>分类</td>
+	<td>标题</td>
+	<td>作者</td>
+	<td>发布时间</td>
+	<td>操作选项</td>
+</tr>
+<{foreach $articles as $line}>
+<tr class="tdbg" align="center">
+	<td><{$line.id}></td>
+	<td><{$line.classname}></td>
+	<td align="left">
+		<a target="_blank" href="?c=Article&a=show&id=<{$line.id}>"><{$line.title}></a>
+		<{if $line.top}>[<font color="red">顶</font>]<{/if}>
+	</td>
+	<td><{$line.username}></td>
+	<td><{$line.addate|date_format: "%Y-%M-%d %H:%M:%S"}></td>
+	<td>
+		<a href="?c=Article&a=edit&id=<{$line.id}>">修改</a> | 
+		<a href="?c=Article&a=delete&id=<{$line.id}>">删除</a>
+	</td>
+</tr>
+<{/foreach}>
+<!--文章分页-->
+<tr class="tdbg">
+	<td colspan="7" align="center">
+		<{$page->show_page()}>
+	</td>
+</tr>
+</table>
+</body>
+</html>
