@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./js/edit_table.js"></script>
+    <link rel="stylesheet" href="./css/edit_table.css" type="text/css" />
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>姓名</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>毛泽东</td></tr>
+            <tr>
+                <td>1</td>
+                <td>邓小平</td></tr>
+            <tr>
+                <td>1</td>
+                <td>习近平</td></tr>
+        </tbody>
+    </table>
+</body>
+<script type="text/javascript">
+    $('tr:odd').css("background","#59C0FB");
+
+    $("td:odd:gt(0)").click(function () {
+        var td = $(this);
+        if(td.children('input').length >=1)
+            return false;
+        var info = td.text();
+        td.text("");
+        var input= $("<input type='text'>");//如果在此处直接对value赋值，则光标定位到输入框开始，
+        //如果通过val函数向value赋值，则光标通过focus函数定位到输入框末尾
+        input.val(info).css("background-color",td.css("background-color")).css("width",td.css('width'));
+        input.css("height",td.css("height")).css("font-size",td.css("font-size"))
+                .css("font-family",td.css("font-family")).appendTo(td).focus();
+        input.blur(function () {
+            td.html(info);
+        }).keyup(function (e) {
+            var keycode = e.which;
+            if(keycode==13){
+                td.html(""); td.text(input.val());
+            }
+        });
+    });
+</script>
+</html>

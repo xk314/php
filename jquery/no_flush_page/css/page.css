@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border:0px none;
+}
+
+table{
+    border:1px solid lightseagreen;
+    width: 400px;
+    margin: 0px auto;
+    border-collapse: collapse;
+}
+th,td{
+    border:1px solid lightseagreen;
+    text-align: center;
+    height: 30px;
+    line-height:30px;
+}
+div#page{
+
+    width: 400px;
+    margin: 20px auto;
+}
+a{
+    margin: 0px 10px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/page.css" type="text/css" />
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>AID</th>
+                <th>Acode</th>
+                <th>Aname</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="page"></div>
+</body>
+<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        function show_data(data){
+            var str = "";
+            $(data[0]).each(function (i) {
+                str += "<tr>";
+                str += "<td>" + data[0][i].AID + "</td>";
+                str += "<td>" + data[0][i].Acode + "</td>";
+                str += "<td>" + data[0][i].Aname + "</td>";
+                str += "</tr>";
+            });
+            $("tbody").html(str);
+            $("#page").html(data[1]);
+            var page =document.cookie.split(";")[0].split("=")[1];
+            console.log(page);
+            $("#"+page).css("color","red");
+        }
+        //        页面加载完成后，请求第一页的数据
+
+        $.get("page.php",{page:1},show_data,"json");
+
+        $(document).on("click","a",function () {
+            var data = $(this).attr("xhref");
+            $.get("page.php",data,show_data, "json");
+        });
+
+    });
+</script>
+</html>

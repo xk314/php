@@ -1,0 +1,15 @@
+*{margin: 0px;
+padding: 0px;
+    border:0px none;}
+
+table{
+    margin:0px auto;
+    border:1px solid red;
+    width: 300px;
+    border-collapse: collapse;
+}
+td,th{
+    width:50%;
+    height:26px;
+    border:1px solid red;
+}

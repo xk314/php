@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select id="p">
+        <option>请选择省</option>
+    </select>
+    <select id="c">
+        <option>请选择市</option>
+    </select>
+    <select id="a">
+        <option>请选择县</option>
+    </select>
+</body>
+<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $.get("shengshixian.php",{filename:0},function (data) {
+            var str = "<option>请选择省</option>";
+            $(data).each(function (i) {
+                str += "<option value='"+data[i].id+"'>"+data[i].cn_name+"</option>";
+            });
+            $("#p").html(str);
+        },"json");
+        
+        $("#p").change(function () {
+            var filename = $(this).val();
+            $.get("shengshixian.php",{filename:filename},function (data) {
+                var str = "<option>请选择市</option>";
+                $(data).each(function (i) {
+                    str += "<option value='"+data[i].id+"'>"+data[i].cn_name+"</option>";
+                });
+                $("#c").html(str);
+                $("#a").html("<option>请选择县</option>");
+            },"json");
+        });
+
+        $("#c").change(function () {
+            var filename = $(this).val();
+            $.get("shengshixian.php",{filename:filename},function (data) {
+                var str = "<option>请选择县</option>";
+                $(data).each(function (i) {
+                    str += "<option value='"+data[i].id+"'>"+data[i].cn_name+"</option>";
+                });
+                $("#a").html(str);
+            },"json");
+        });
+        
+    });
+</script>
+</html>

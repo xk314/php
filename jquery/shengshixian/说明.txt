@@ -1,0 +1,1 @@
+使用ajax异步请求，jquery库及json技术实现省市县联动
