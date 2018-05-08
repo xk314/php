@@ -24,10 +24,11 @@
               $(function ($) {
                   $('.article .com').click(
                           function() {
+                              console.log('sssssssssssssssssssss');
                             var data = {'id': $(this).attr('num')};
                             $.ajax({
                               'url': "{:url('home/article/read')}",
-                              'type': "",
+                              'type': "POST",
                               'data': data,
                               'dataType': 'html',
                               'success': function (result) {

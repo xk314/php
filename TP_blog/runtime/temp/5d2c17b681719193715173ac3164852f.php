@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1525772376;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1525764835;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1525776888;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1525764835;}*/ ?>
 
 <html>
 <head>
@@ -41,7 +41,7 @@
             <div class="clr"></div>
             <div class="slider">
                 <div id="coin-slider">
-                    <?php $__FOR_START_8345__=1;$__FOR_END_8345__=4;for($i=$__FOR_START_8345__;$i < $__FOR_END_8345__;$i+=1){ ?>
+                    <?php $__FOR_START_494__=1;$__FOR_END_494__=4;for($i=$__FOR_START_494__;$i < $__FOR_END_494__;$i+=1){ ?>
                         <a href="javascript:void(0)" >
                             <img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />
                             <span><big><?php echo $topShow[$i-1]['title']; ?></big><br />
@@ -81,10 +81,11 @@
               $(function ($) {
                   $('.article .com').click(
                           function() {
+                              console.log('sssssssssssssssssssss');
                             var data = {'id': $(this).attr('num')};
                             $.ajax({
                               'url': "<?php echo url('home/article/read'); ?>",
-                              'type': "",
+                              'type': "POST",
                               'data': data,
                               'dataType': 'html',
                               'success': function (result) {
