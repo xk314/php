@@ -15,7 +15,7 @@ class Login extends Controller
     public function index()
     {
         $this->view->engine->layout(false);
-        return view('index');
+        return view('login');
     }
     public function login()
     {
