@@ -58,6 +58,30 @@ class Article extends Controller
         return view('detail', $info);
     }
 
+//    public function getByCategory()
+//    {
+//        $categoryId = input('id');
+//        $articleList = \app\home\model\Article::alias('a')
+//            ->join('user u','a.user_id = u.id')
+//            ->join('category2 c', 'a.category_id = c.id')
+//            ->where('a.category_id','=',$categoryId)
+//            ->field('c.id, c.classname,u.id, u.username,a.*')
+//            ->order('a.top desc, a.orderby')
+//            ->paginate(3,false,['query'=>['id'=>$categoryId],]);
+//        $articleTopShow = \app\home\model\Article::alias('a')
+//            ->where('top','=',1)->field('a.id, a.title, a.content')->limit(3)->select();
+//        $categoryInfo = \app\home\model\Category2::getList();
+//        $pageInfo = $articleList->toArray();
+//        $info = [
+//            'articleList' =>$articleList,
+//            'current_page' =>$pageInfo['current_page'],
+//            'last_page' =>$pageInfo['last_page'],
+//            'topShow' => $articleTopShow,
+//            'categoryInfo' =>$categoryInfo,
+//        ];
+//        return view('showByCategory', $info);
+//    }
+
     /**
      * 显示编辑资源表单页.
      *

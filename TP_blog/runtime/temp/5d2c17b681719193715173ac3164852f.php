@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1525772376;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1525764835;}*/ ?>
 
 <html>
 <head>
@@ -17,7 +18,7 @@
     <div class="header">
         <div class="header_resize">
             <div class="searchform">
-                <form id="formsearch" name="formsearch" method="post" action="{:url('home/index/index')}">
+                <form id="formsearch" name="formsearch" method="post" action="<?php echo url('home/index/index'); ?>">
           <span>
           <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Search our ste:" type="text" />
           </span>
@@ -26,7 +27,7 @@
             </div>
             <div class="menu_nav">
                 <ul>
-                    <li class="active"><a href="{:url('home/index/index')}"><span>Home Page</span></a></li>
+                    <li class="active"><a href="<?php echo url('home/index/index'); ?>"><span>Home Page</span></a></li>
                     <li><a href="support.html"><span>Support</span></a></li>
                     <li><a href="about.html"><span>About Us</span></a></li>
                     <li><a href="blog.html"><span>Blog</span></a></li>
@@ -40,13 +41,13 @@
             <div class="clr"></div>
             <div class="slider">
                 <div id="coin-slider">
-                    {for start='1' end='4'}
+                    <?php $__FOR_START_8345__=1;$__FOR_END_8345__=4;for($i=$__FOR_START_8345__;$i < $__FOR_END_8345__;$i+=1){ ?>
                         <a href="javascript:void(0)" >
-                            <img class='showdetail' num="{$topShow[$i-1]['id']}" src="/static/home/images/slide{$i}.jpg" width="960" height="360" alt="" />
-                            <span><big>{$topShow[$i-1]['title']}</big><br />
-                               {$topShow[$i-1]['content']} </span>
+                            <img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />
+                            <span><big><?php echo $topShow[$i-1]['title']; ?></big><br />
+                               <?php echo $topShow[$i-1]['content']; ?> </span>
                         </a>
-                    {/for}
+                    <?php } ?>
                 </div>
                 <div class="clr"></div>
             </div>
@@ -56,17 +57,54 @@
     <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
     <div class="content">
         <div class="content_resize">
-    {__CONTENT__}
+    
+
+<div class="mainbar">
+    <?php if(($noData)): ?>
+        <div class="article" style="margin-top: 200px">
+            <p style="font-size: 40px">当前条件下无数据！</p>
+        </div>
+    <?php endif; if(is_array($articleList) || $articleList instanceof \think\Collection || $articleList instanceof \think\Paginator): $i = 0; $__LIST__ = $articleList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?>
+    <div class="article"> <a href="#"  num="<?php echo $article['id']; ?>" class="com"><span><?php echo $article['comment_count']; ?></span></a>
+        <p style="font-size: 25px"><?php echo $article['title']; ?></p>
+        <p class="infopost">Posted <span class="date"><?php echo $article['addate']; ?></span> by <a href="#"><?php echo $article['username']; ?></a> &nbsp;&nbsp;|&nbsp;&nbsp; Filed under <a href="#"><?php echo $article['classname']; ?></a>, <a href="#">internet</a></p>
+        <div class="clr"></div>
+        <div class="img"><img src="/static/home/images/img1.jpg" width="200" height="210" alt="" class="fl" /></div>
+        <div class="post_content">
+            <?php echo $article['content']; ?>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <?php endforeach; endif; else: echo "" ;endif; if((!$noData)): ?><p class="pages"><small>Page <?php echo $current_page; ?> of <?php echo $last_page; ?></small> <?php echo $articleList->render(); ?></p><?php endif; ?>
+</div>
+      <script type="text/javascript">
+              $(function ($) {
+                  $('.article .com').click(
+                          function() {
+                            var data = {'id': $(this).attr('num')};
+                            $.ajax({
+                              'url': "<?php echo url('home/article/read'); ?>",
+                              'type': "",
+                              'data': data,
+                              'dataType': 'html',
+                              'success': function (result) {
+                                  $('div.mainbar').html(result);
+                              }
+                            });
+                  });
+              });
+      </script>
+
 
     <div class="sidebar">
         <div class="gadget">
             <h2 class="star"><span>Sidebar</span> Menu</h2>
             <div class="clr"></div>
             <ul class="sb_menu">
-                {volist name='categoryInfo' id='category'}
-                <li><a href="{:url('home/index/index',['category_id'=>$category.id])}" class='category' category_id='{$category.id}'>{$category.classname}</a>
-                    <a href="{:url('home/index/index',['category_id'=>$category.id])}" class="com"><span>{$category.article_count}</span></a></li>
-                {/volist}
+                <?php if(is_array($categoryInfo) || $categoryInfo instanceof \think\Collection || $categoryInfo instanceof \think\Paginator): $i = 0; $__LIST__ = $categoryInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
+                <li><a href="<?php echo url('home/index/index',['category_id'=>$category['id']]); ?>" class='category' category_id='<?php echo $category['id']; ?>'><?php echo $category['classname']; ?></a>
+                    <a href="<?php echo url('home/index/index',['category_id'=>$category['id']]); ?>" class="com"><span><?php echo $category['article_count']; ?></span></a></li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
         <div class="gadget">
@@ -133,7 +171,7 @@
 //                    var data = {'id': $(this).attr('category_id')};
 //                    console.log(data);
 //                    $.ajax({
-//                        'url': "{:url('home/article/getByCategory')}",
+//                        'url': "<?php echo url('home/article/getByCategory'); ?>",
 //                        'type': "POST",
 //                        'data': data,
 //                        'dataType': 'html',

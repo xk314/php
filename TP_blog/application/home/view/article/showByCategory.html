@@ -1,0 +1,34 @@
+
+
+      <div class="mainbar">
+        {volist name='articleList' id='article'}
+        <div class="article"> <a href="#"  num="{$article.id}" class="com"><span>{$article.comment_count}</span></a>
+          <p>{$article.title}</p>
+          <p class="infopost">Posted <span class="date">{$article.addate}</span> by <a href="#">{$article.username}</a> &nbsp;&nbsp;|&nbsp;&nbsp; Filed under <a href="#">{$article.classname}</a>, <a href="#">internet</a></p>
+          <div class="clr"></div>
+          <div class="img"><img src="/static/home/images/img1.jpg" width="200" height="210" alt="" class="fl" /></div>
+          <div class="post_content">
+            {$article.content}
+          </div>
+          <div class="clr"></div>
+        </div>
+        {/volist}
+        <p class="pages"><small>Page {$current_page} of {$last_page}</small> {$articleList->render()}</p>
+      </div>
+      <script type="text/javascript">
+              $(function ($) {
+                  $('.article .com').click(
+                          function() {
+                            var data = {'id': $(this).attr('num')};
+                            $.ajax({
+                              'url': "{:url('home/article/read')}",
+                              'type': "POST",
+                              'data': data,
+                              'dataType': 'html',
+                              'success': function (result) {
+                                  $('div.mainbar').html(result);
+                              }
+                            });
+                  });
+              });
+      </script>
