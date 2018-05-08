@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\index.html";i:1525800045;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525801002;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -38,7 +39,7 @@
                 <ul class="nav pull-right">
                     <li class="dropdown">
                         <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>
-                            {$Think.session.userInfo.username} <i class="caret"></i>
+                            <?php echo \think\Session::get('userInfo.username'); ?> <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -147,13 +148,13 @@
                     <a href="index.html"><i class="icon-chevron-right"></i>后台首页</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/auth/index')}"><span class="badge badge-success pull-right">731</span>权限管理</a>
+                    <a href="<?php echo url('admin/auth/index'); ?>"><span class="badge badge-success pull-right">731</span>权限管理</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/manager/index')}"><span class="badge badge-success pull-right">812</span>管理员管理</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>管理员管理</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/role/index')}"><span class="badge badge-success pull-right">812</span>角色管理</a>
+                    <a href="<?php echo url('admin/role/index'); ?>"><span class="badge badge-success pull-right">812</span>角色管理</a>
                 </li>
                 <li>
                     <a href="#"><span class="badge badge-success pull-right">812</span>分类管理</a>
@@ -179,10 +180,73 @@
             <div class="row-fluid">
                 <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <h4>{$Think.session.userInfo.username}</h4>
+                    <h4><?php echo \think\Session::get('userInfo.username'); ?></h4>
                     The login operation completed successfully</div>
             </div>
-        {__CONTENT__}
+        
+
+<link href="/static/admin/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
+
+<script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/static/admin/assets/DT_bootstrap.js"></script>
+<div class="row-fluid">
+    <!-- block -->
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="muted pull-left">权限管理</div>
+        </div>
+        <div class="block-content collapse in">
+            <div class="span12">
+                <div class="table-toolbar">
+                    <div class="btn-group">
+                        <a href="<?php echo url('admin/auth/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Print</a></li>
+                            <li><a href="#">Save as PDF</a></li>
+                            <li><a href="#">Export to Excel</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>权限名称</th>
+                        <th>父类ID</th>
+                        <th>控制器</th>
+                        <th>方法名</th>
+                        <th>是否菜单项</th>
+                        <th>创建时间</th>
+                        <th>修改时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($authList) || $authList instanceof \think\Collection || $authList instanceof \think\Paginator): $i = 0; $__LIST__ = $authList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i;?>
+                    <tr class="odd gradeX">
+                        <th><?php echo $auth['id']; ?></th>
+                        <th><?php echo str_repeat('&emsp;',$auth['level']*2); ?><?php echo $auth['auth_name']; ?></th>
+                        <th><?php echo $auth['pid']; ?></th>
+                        <th><?php echo $auth['auth_c']; ?></th>
+                        <th><?php echo $auth['auth_a']; ?></th>
+                        <th><?php echo $auth['is_nav']; ?></th>
+                        <th><?php echo $auth['create_time']; ?></th>
+                        <th><?php echo $auth['update_time']; ?></th>
+                        <th><a href="<?php echo url('admin/auth/edit',['id'=>$auth['id']]); ?>">修改</a> | <a href="<?php echo url('admin/auth/delete',['id'=>$auth['id']]); ?>">删除</a></th>
+                    </tr>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /block -->
+</div>
+
 
             <hr>
             <footer>

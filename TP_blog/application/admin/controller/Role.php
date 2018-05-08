@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Request;
 
-class Auth extends Controller
+class Role extends Controller
 {
     /**
      * 显示资源列表
@@ -14,12 +14,7 @@ class Auth extends Controller
      */
     public function index()
     {
-        $authList = \app\admin\model\Auth::select();
-        $authList = getTree($authList);
-        $info = [
-            'authList' => $authList,
-        ];
-        return view('index', $info);
+        return view();
     }
 
     /**
@@ -29,7 +24,7 @@ class Auth extends Controller
      */
     public function create()
     {
-        return '创建权限';
+        //
     }
 
     /**
@@ -62,7 +57,7 @@ class Auth extends Controller
      */
     public function edit($id)
     {
-        return "修改权限".$id;
+        //
     }
 
     /**
@@ -85,6 +80,6 @@ class Auth extends Controller
      */
     public function delete($id)
     {
-        return "修改权限".$id;
+        //
     }
 }
