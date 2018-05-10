@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Request;
 
-class Goods extends Controller
+class Goods extends BaseController
 {
     /**
      * 显示资源列表
@@ -29,8 +29,10 @@ class Goods extends Controller
     public function create()
     {
         $categoryList = \app\admin\model\GoodsCategory::where('pid = 0')->field('id,cate_name')->select();
+        $goodsTypeList = \app\admin\model\GoodsType::select();
         $info =[
             'categoryList' => $categoryList,
+            'goodsTypeList' =>$goodsTypeList,
         ];
         return view('create',$info);
     }
@@ -43,9 +45,20 @@ class Goods extends Controller
      */
     public function save(Request $request)
     {
-        //
-    }
+        $validate = validate('\app\admin\validate\Goods');
+//        if(!$validate->check(input())){
+//            $msg = $validate->getError();
+//            $this->error($msg,url('admin/goods/create'));
+//        }
 
+        $goodsAttr = new \app\admin\model\GoodsAndAttr();
+        $res = \app\admin\model\Goods::create(input(),true);
+        if(empty($res))
+            $this->error('新增商品失败',url('admin/goods/index'));
+        $goodsAttrData = make_data($res->id,input()['attr']);
+       $goodsAttr->saveAll($goodsAttrData);
+        $this->success('新增商品成功', url('admin/goods/index'));
+    }
     /**
      * 显示指定的资源
      *
@@ -88,6 +101,7 @@ class Goods extends Controller
      */
     public function delete($id)
     {
-        dump('修改goods');
+        \app\admin\model\Goods::find($id)->delete();
+        $this->success('删除商品成功', url('admin/goods/index'));
     }
 }

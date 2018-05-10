@@ -31,7 +31,7 @@ class Login extends Controller
         if(empty($info)){
             $this->error("用户名密码错误", url('admin/login/index'));
         }
-        session('userInfo',$info);//将登陆用户信息写入session
+        session('UserInfo',$info);//将登陆用户信息写入session
         $this->success("登录成功",url("admin/index/index"));
     }
 

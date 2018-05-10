@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goods\index.html";i:1525878555;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525964571;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -38,7 +39,7 @@
                 <ul class="nav pull-right">
                     <li class="dropdown">
                         <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>
-                            {$Think.session.userInfo.username} <i class="caret"></i>
+                            <?php echo \think\Session::get('userInfo.username'); ?> <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -147,16 +148,16 @@
                     <a href="#"><i class="icon-chevron-right"></i>权限管理</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/auth/index')}"><span class="badge badge-success pull-right">731</span>权限管理</a>
+                    <a href="<?php echo url('admin/auth/index'); ?>"><span class="badge badge-success pull-right">731</span>权限管理</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/manager/index')}"><span class="badge badge-success pull-right">812</span>管理员列表</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>管理员列表</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/role/index')}"><span class="badge badge-success pull-right">812</span>角色管理</a>
+                    <a href="<?php echo url('admin/role/index'); ?>"><span class="badge badge-success pull-right">812</span>角色管理</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/manager/index')}"><span class="badge badge-success pull-right">812</span>权限管理</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>权限管理</a>
                 </li>
             </ul>
             <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
@@ -164,16 +165,16 @@
                     <a href="#"><i class="icon-chevron-right"></i>商品管理</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/goods/index')}"><span class="badge badge-success pull-right">731</span>商品列表</a>
+                    <a href="<?php echo url('admin/goods/index'); ?>"><span class="badge badge-success pull-right">731</span>商品列表</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/goods/create')}"><span class="badge badge-success pull-right">731</span>商品新增</a>
+                    <a href="<?php echo url('admin/goods/create'); ?>"><span class="badge badge-success pull-right">731</span>商品新增</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/goodstype/index')}"><span class="badge badge-success pull-right">812</span>商品类型</a>
+                    <a href="<?php echo url('admin/goodstype/index'); ?>"><span class="badge badge-success pull-right">812</span>商品类型</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/goodsattr/index')}"><span class="badge badge-success pull-right">812</span>商品属性</a>
+                    <a href="<?php echo url('admin/goodsattr/index'); ?>"><span class="badge badge-success pull-right">812</span>商品属性</a>
                 </li>
             </ul>
             <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
@@ -184,7 +185,7 @@
                     <a href="{:url('admin/auth/index')"><span class="badge badge-success pull-right">731</span>订单列表</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/manager/index')}"><span class="badge badge-success pull-right">812</span>添加订单</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>添加订单</a>
                 </li>
             </ul>
             <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
@@ -195,7 +196,7 @@
                     <a href="{:url('admin/plan/index')"><span class="badge badge-success pull-right">731</span>日程管理</a>
                 </li>
                 <li>
-                    <a href="{:url('admin/manager/index')}"><span class="badge badge-success pull-right">812</span>管理员管理</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>管理员管理</a>
                 </li>
             </ul>
         </div>
@@ -206,7 +207,68 @@
             <div class="row-fluid">
 
             </div>
-        {__CONTENT__}
+        
+
+<link href="/static/admin/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
+
+<script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/static/admin/assets/DT_bootstrap.js"></script>
+<div class="row-fluid">
+    <!-- block -->
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="muted pull-left">商品管理</div>
+        </div>
+        <div class="block-content collapse in">
+            <div class="span12">
+                <div class="table-toolbar">
+                    <div class="btn-group">
+                        <a href="<?php echo url('admin/goods/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Print</a></li>
+                            <li><a href="#">Save as PDF</a></li>
+                            <li><a href="#">Export to Excel</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>商品名称</th>
+                        <th>商品价格</th>
+                        <th>商品数量</th>
+                        <th>商品Logo</th>
+                        <th>添加时间</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($goodsList) || $goodsList instanceof \think\Collection || $goodsList instanceof \think\Paginator): $i = 0; $__LIST__ = $goodsList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$goods): $mod = ($i % 2 );++$i;?>
+                    <tr class="odd gradeX">
+                        <th><?php echo $goods['id']; ?></th>
+                        <th><?php echo $goods['goods_name']; ?></th>
+                        <th><?php echo $goods['goods_price']; ?></th>
+                        <th><?php echo $goods['goods_number']; ?></th>
+                        <th><img src="/static/admin/1.jpg"></th>
+                        <th><?php echo $goods['create_time']; ?></th>
+                        <th><?php echo $goods['update_time']; ?></th>
+                        <th><a href="<?php echo url('admin/goods/edit',['id'=>$goods['id']]); ?>">修改</a> | <a href="<?php echo url('admin/goods/delete',['id'=>$goods['id']]); ?>">删除</a></th>
+                    </tr>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /block -->
+</div>
+
 
             <hr>
             <footer>

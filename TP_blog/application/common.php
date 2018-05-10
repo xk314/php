@@ -24,3 +24,14 @@ if (!function_exists('getTree')) {
         return $tree;
     }
 }
+if (!function_exists('make_data')) {
+    function make_data($id, $data){
+        $res = [];
+        foreach($data as $k => $v){
+            foreach($v as $i){
+                $res[] = ['goods_id'=>$id,'attr_id'=>$k,'attr_value'=>$i];
+            }
+        }
+        return $res;
+    }
+}

@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Request;
 
-class Goodscategory extends Controller
+class Goodscategory extends BaseController
 {
     /**
      * 显示资源列表
@@ -14,7 +14,7 @@ class Goodscategory extends Controller
      */
     public function index($id)
     {
-        $categoryList = \app\admin\model\GoodsCategory::where('pid = 0')->field('id,cate_name')->select();
+        $categoryList = \app\admin\model\GoodsCategory::where("pid = $id")->field('id,cate_name')->select();
         return $categoryList;
     }
 

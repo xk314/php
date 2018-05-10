@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goods\create.html";i:1525967045;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525964571;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\edit.html";i:1525951652;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525956747;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -168,9 +168,6 @@
                     <a href="<?php echo url('admin/goods/index'); ?>"><span class="badge badge-success pull-right">731</span>商品列表</a>
                 </li>
                 <li>
-                    <a href="<?php echo url('admin/goods/create'); ?>"><span class="badge badge-success pull-right">731</span>商品新增</a>
-                </li>
-                <li>
                     <a href="<?php echo url('admin/goodstype/index'); ?>"><span class="badge badge-success pull-right">812</span>商品类型</a>
                 </li>
                 <li>
@@ -222,123 +219,91 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">商品新增</div>
+                        <div class="muted pull-left">商品属性修改</div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
-                            <form  class="form-horizontal" action="<?php echo url('admin/goods/save'); ?>">
+                            <form  class="form-horizontal" action="<?php echo url('admin/goodsattr/update',['id'=>$goodsAttrInfo['id']]); ?>">
                                 <fieldset>
-                                    <div class="alert alert-error hide">
-                                        <button class="close" data-dismiss="alert"></button>
-                                        You have some form errors. Please check below.
-                                    </div>
-                                    <div class="alert alert-success hide">
-                                        <button class="close" data-dismiss="alert"></button>
-                                        Your form validation is successful!
-                                    </div>
-                                    <!--<div class="control-group">-->
-                                        <!--<label class="control-label" for="focusedInput">Name</label>-->
-                                        <!--<div class="controls">-->
-                                            <!--<input class="input-xlarge focused" id="focusedInput" type="text" value="">-->
-                                        <!--</div>-->
-                                    <!--</div>-->
                                     <legend>基本信息</legend>
-                                   <div class="control-group">
-                                       <label  class="control-label" for="goods_name">商品名称<span class="required">*</span></label>
-                                       <div class="controls">
-                                            <input type="text" class="input-xlarge" id="goods_name" name="goods_name" placeholder="请输入商品名称">
-                                       </div>
-                                    </div>
                                     <div class="control-group">
-                                        <label  class="control-label" for="goods_name">商品价格<span class="required">*</span></label>
-                                        <div class="controls has-warning">
-                                            <input type="number" class="input-xlarge" id="goods_price" name="goods_price" placeholder="请输入商品价格">
+                                        <label  class="control-label" for="goods_type">属性名称<span class="required">*</span></label>
+                                        <div class="controls">
+                                            <input type="text" class="input-xlarge" id="goods_type" name="attr_name" value="<?php echo $goodsAttrInfo['attr_name']; ?>">
                                         </div>
                                     </div>
+
                                     <div class="control-group">
-                                        <label  class="control-label" for="goods_name">商品数量<span class="required">*</span></label>
+                                        <label class="control-label" for="select01">商品类型</label>
                                         <div class="controls">
-                                            <input type="number" name="goods_number" class="input-xlarge" id="goods_number" >
-                                            <span class="help-block">请输入整数</span>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="fileInput">商品Logo</label>
-                                        <div class="controls">
-                                            <input class="input-file uniform_on" name="goods_logo" id="fileInput" type="file">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="select01">商品一级分类</label>
-                                        <div class="controls">
-                                            <select id="select01" class="chzn-select">
+                                            <select id="select01" class="chzn-select" name="type_id">
                                                 <option>something</option>
-                                                <?php if(is_array($categoryList) || $categoryList instanceof \think\Collection || $categoryList instanceof \think\Paginator): $i = 0; $__LIST__ = $categoryList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
-                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['cate_name']; ?></option>
-                                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="select011">商品一级分类</label>
-                                        <div class="controls">
-                                            <select id="select011">
-                                                <option>商品一级分类</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="select02">商品二级分类</label>
-                                        <div class="controls">
-                                            <select id="select02" class="">
-                                                <option>商品二级分类</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="select03">商品三级分类<span class="required">*</span></label>
-                                        <div class="controls">
-                                            <select id="select03" class="" name="cate_id">
-                                                <option>商品三级分类</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <legend>商品描述</legend>
-                                    <div class="control-group">
-                                        <label class="control-label" for="goods_introduce">商品描述</label>
-                                        <div class="controls">
-                                            <textarea class="input-xlarge textarea" id="goods_introduce" name="goods_introduce" placeholder="请输入商品描述 ..." style="width: 600px; height: 200px"></textarea>
-                                        </div>
-                                    </div>
-                                    <legend>商品属性</legend>
-                                    <div class="control-group">
-                                        <label class="control-label" for="selectgoodstype">商品类型<span class="required">*</span></label>
-                                        <div class="controls">
-                                            <select id="selectgoodstype" name="type_id">
-                                                <option>选择商品的类型</option>
                                                 <?php if(is_array($goodsTypeList) || $goodsTypeList instanceof \think\Collection || $goodsTypeList instanceof \think\Paginator): $i = 0; $__LIST__ = $goodsTypeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($i % 2 );++$i;?>
-                                                    <option value="<?php echo $type['id']; ?>"><?php echo $type['type_name']; ?></option>
+                                                    <option value="<?php echo $type['id']; ?>" <?php if(($type['id'] = $goodsAttrInfo['type_id'])): ?>selected<?php endif; ?>><?php echo $type['type_name']; ?></option>
                                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                                             </select>
                                         </div>
                                     </div>
-                                    <div id="showattr"></div>
+                                    <div class="control-group">
+                                        <label class="control-label" >商品属性类型</label>
+                                        <div class="controls">
+                                            <label class="radio-inline">
+                                                <?php if(($goodsAttrInfo['attr_type']="唯一属性")): ?>
+                                                    <input type="radio" name="attr_type" value="唯一属性" checked>唯一属性
+                                                <?php else: ?>
+                                                <input type="radio" name="attr_type" value="唯一属性">唯一属性
+                                                <?php endif; ?>
 
+                                            </label>
+                                            <label class="radio-inline">
+                                                <?php if(($goodsAttrInfo['attr_type']="单选属性")): ?>
+                                                <input type="radio" name="attr_type" value="单选属性" checked>单选属性
+                                                <?php else: ?>
+                                                <input type="radio" name="attr_type" value="单选属性">单选属性
+                                                <?php endif; ?>
+                                            </label>
+                                        </div>
+                                    </div>
 
+                                    <div class="control-group">
+                                        <label class="control-label" >商品值录入方式</label>
+                                        <div class="controls">
+                                            <label class="radio-inline">
+                                                <?php if(($goodsAttrInfo['attr_input_type']="输入框")): ?>
+                                                <input type="radio" name="attr_input_type" value="输入框" checked>输入框
+                                                <?php else: ?>
+                                                <input type="radio" name="attr_input_type" value="输入框">输入框
+                                                <?php endif; ?>
+                                            </label>
+                                            <label class="radio-inline">
+                                                <?php if(($goodsAttrInfo['attr_input_type']="下拉列表")): ?>
+                                                <input type="radio" name="attr_input_type" value="下拉列表" checked>下拉列表
+                                                <?php else: ?>
+                                                <input type="radio" name="attr_input_type" value="下拉列表">下拉列表
+                                                <?php endif; ?>
+                                            </label>
 
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="attr_type">商品值可选范围</label>
+                                        <div class="controls">
+                                            <textarea class="" rows="3" id="attr_type" name="attr_values"><?php echo $goodsAttrInfo['attr_values']; ?></textarea>
+                                        </div>
+                                    </div>
 
                                     <div class="form-actions">
                                         <button type="submit" class="btn btn-primary">Save changes</button>
                                         <button type="reset" class="btn">Cancel</button>
                                     </div>
-                                    </fieldset>
+                                </fieldset>
                             </form>
                         </div>
                     </div>
                 </div>
                 <!-- /block -->
             </div>
-<script src="/static/admin/show.js"></script>
+
 <script type="text/javascript">
     $(function($){
             $.ajax({
@@ -347,7 +312,7 @@
                 'data': {id:0},
                 'dataType': 'json',
                 'success': function (result) {
-                 var str = '<option>商品一级分类</option>';
+                 var str = '<option>一级商品分类</option>';
                     $.each(result,function(k,v){
                         str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
                     });
@@ -381,7 +346,8 @@
                 'data': data,
                 'dataType': 'json',
                 'success': function (result) {
-                    var str = '<option>商品二级分类</option>';
+                    var str = '<option>something</option>';
+                    var str = '';
                     $.each(result,function(k,v){
                         str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
                     });
@@ -407,18 +373,7 @@
                 }
             });
         });
-        $('#selectgoodstype').change(function(){
-            $.ajax({
-                'url':"<?php echo url('admin/goodstype/read'); ?>",
-                'type': "POST",
-                'data': {id:$(this).val()},
-                'dataType': 'json',
-                'success': function (result) {
-                    console.log(result);
-                 show(result);
-                }
-            });
-        });
+
 
     });
 </script>
