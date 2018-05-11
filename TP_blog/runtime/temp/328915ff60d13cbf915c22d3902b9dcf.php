@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goods\create.html";i:1525967045;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html";i:1526055079;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -219,111 +219,57 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">商品新增</div>
+                        <div class="muted pull-left">权限新增</div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
-                            <form  class="form-horizontal" action="<?php echo url('admin/goods/save'); ?>">
+                            <form  class="form-horizontal" action="<?php echo url('admin/auth/save'); ?>">
                                 <fieldset>
-                                    <div class="alert alert-error hide">
-                                        <button class="close" data-dismiss="alert"></button>
-                                        You have some form errors. Please check below.
-                                    </div>
-                                    <div class="alert alert-success hide">
-                                        <button class="close" data-dismiss="alert"></button>
-                                        Your form validation is successful!
-                                    </div>
-                                    <!--<div class="control-group">-->
-                                        <!--<label class="control-label" for="focusedInput">Name</label>-->
-                                        <!--<div class="controls">-->
-                                            <!--<input class="input-xlarge focused" id="focusedInput" type="text" value="">-->
-                                        <!--</div>-->
-                                    <!--</div>-->
                                     <legend>基本信息</legend>
                                    <div class="control-group">
-                                       <label  class="control-label" for="goods_name">商品名称<span class="required">*</span></label>
+                                       <label  class="control-label" for="auth_name">权限名称<span class="required">*</span></label>
                                        <div class="controls">
-                                            <input type="text" class="input-xlarge" id="goods_name" name="goods_name" placeholder="请输入商品名称">
+                                            <input type="text" class="input-xlarge" id="auth_name" name="auth_name" placeholder="权限名称">
                                        </div>
                                     </div>
                                     <div class="control-group">
-                                        <label  class="control-label" for="goods_name">商品价格<span class="required">*</span></label>
-                                        <div class="controls has-warning">
-                                            <input type="number" class="input-xlarge" id="goods_price" name="goods_price" placeholder="请输入商品价格">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label  class="control-label" for="goods_name">商品数量<span class="required">*</span></label>
+                                        <label class="control-label" for="select01">权限父类型</label>
                                         <div class="controls">
-                                            <input type="number" name="goods_number" class="input-xlarge" id="goods_number" >
-                                            <span class="help-block">请输入整数</span>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="fileInput">商品Logo</label>
-                                        <div class="controls">
-                                            <input class="input-file uniform_on" name="goods_logo" id="fileInput" type="file">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="select01">商品一级分类</label>
-                                        <div class="controls">
-                                            <select id="select01" class="chzn-select">
-                                                <option>something</option>
-                                                <?php if(is_array($categoryList) || $categoryList instanceof \think\Collection || $categoryList instanceof \think\Paginator): $i = 0; $__LIST__ = $categoryList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
-                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['cate_name']; ?></option>
+                                            <select id="select01" class="chzn-select" name="pid">
+                                                <option>顶级分类</option>
+                                                <?php if(is_array($authArr) || $authArr instanceof \think\Collection || $authArr instanceof \think\Paginator): $i = 0; $__LIST__ = $authArr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i;?>
+                                                    <option value="<?php echo $auth['id']; ?>"><?php echo $auth['auth_name']; ?></option>
                                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="select011">商品一级分类</label>
+                                        <label  class="control-label" for="auth_c">控制器名<span class="required">*</span></label>
                                         <div class="controls">
-                                            <select id="select011">
-                                                <option>商品一级分类</option>
-                                            </select>
+                                            <input type="text" class="input-xlarge" id="auth_c" name="auth_c" placeholder="请输入控制器名称">
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="select02">商品二级分类</label>
+                                        <label  class="control-label" for="auth_a">方法名<span class="required">*</span></label>
                                         <div class="controls">
-                                            <select id="select02" class="">
-                                                <option>商品二级分类</option>
-                                            </select>
+                                            <input type="text" class="input-xlarge" id="auth_a" name="auth_a" placeholder="请输入方法名称">
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="select03">商品三级分类<span class="required">*</span></label>
-                                        <div class="controls">
-                                            <select id="select03" class="" name="cate_id">
-                                                <option>商品三级分类</option>
-                                            </select>
+                                        <label class="control-label" for="optionsCheckbox2">是否列表栏显示</label>
+                                        <div class="controls ">
+                                            <div class="radio-inline">
+                                            <label>
+                                                <input type="radio" id="optionsCheckbox2" name="is_nav" value="否" checked>
+                                                否
+                                            </label>
+                                            <label>
+                                                <input type="radio"  name="is_nav" value="是" >
+                                                是
+                                            </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <legend>商品描述</legend>
-                                    <div class="control-group">
-                                        <label class="control-label" for="goods_introduce">商品描述</label>
-                                        <div class="controls">
-                                            <textarea class="input-xlarge textarea" id="goods_introduce" name="goods_introduce" placeholder="请输入商品描述 ..." style="width: 600px; height: 200px"></textarea>
-                                        </div>
-                                    </div>
-                                    <legend>商品属性</legend>
-                                    <div class="control-group">
-                                        <label class="control-label" for="selectgoodstype">商品类型<span class="required">*</span></label>
-                                        <div class="controls">
-                                            <select id="selectgoodstype" name="type_id">
-                                                <option>选择商品的类型</option>
-                                                <?php if(is_array($goodsTypeList) || $goodsTypeList instanceof \think\Collection || $goodsTypeList instanceof \think\Paginator): $i = 0; $__LIST__ = $goodsTypeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($i % 2 );++$i;?>
-                                                    <option value="<?php echo $type['id']; ?>"><?php echo $type['type_name']; ?></option>
-                                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div id="showattr"></div>
-
-
-
-
+                                     </div>
                                     <div class="form-actions">
                                         <button type="submit" class="btn btn-primary">Save changes</button>
                                         <button type="reset" class="btn">Cancel</button>
@@ -335,7 +281,7 @@
                 </div>
                 <!-- /block -->
             </div>
-<script src="/static/admin/show.js"></script>
+
 <script type="text/javascript">
     $(function($){
             $.ajax({
@@ -344,7 +290,7 @@
                 'data': {id:0},
                 'dataType': 'json',
                 'success': function (result) {
-                 var str = '<option>商品一级分类</option>';
+                 var str = '<option>一级商品分类</option>';
                     $.each(result,function(k,v){
                         str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
                     });
@@ -378,7 +324,8 @@
                 'data': data,
                 'dataType': 'json',
                 'success': function (result) {
-                    var str = '<option>商品二级分类</option>';
+                    var str = '<option>something</option>';
+                    var str = '';
                     $.each(result,function(k,v){
                         str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
                     });
@@ -404,18 +351,7 @@
                 }
             });
         });
-        $('#selectgoodstype').change(function(){
-            $.ajax({
-                'url':"<?php echo url('admin/goodstype/read'); ?>",
-                'type': "POST",
-                'data': {id:$(this).val()},
-                'dataType': 'json',
-                'success': function (result) {
-                    console.log(result);
-                 show(result);
-                }
-            });
-        });
+
 
     });
 </script>

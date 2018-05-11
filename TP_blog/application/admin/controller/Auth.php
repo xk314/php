@@ -29,7 +29,11 @@ class Auth extends BaseController
      */
     public function create()
     {
-        return '创建权限';
+        $authArr = \app\admin\model\Auth::field('id,auth_name')->select();
+        $info = [
+            'authArr' =>$authArr,
+        ];
+        return view('create',$info);
     }
 
     /**
@@ -40,7 +44,15 @@ class Auth extends BaseController
      */
     public function save(Request $request)
     {
-        //
+        $validate = validate('\app\admin\validate\Auth');
+        if(!$validate->check(input())){
+            $msg = $validate->getError();
+            $this->error($msg,url('admin/auth/index'));
+        }
+        $res = \app\admin\model\Auth::create(input(),true);
+        if(empty($res))
+            $this->error('新增权限失败',url('admin/auth/index'));
+        $this->success('新增权限成功', url('admin/auth/index'));
     }
 
     /**
@@ -51,7 +63,7 @@ class Auth extends BaseController
      */
     public function read($id)
     {
-        //
+        dump($id);
     }
 
     /**
@@ -85,6 +97,7 @@ class Auth extends BaseController
      */
     public function delete($id)
     {
-        return "修改权限".$id;
+        \app\admin\model\Auth::find($id)->delete();
+        $this->success('删除权限成功',url('admin/auth/index'));
     }
 }

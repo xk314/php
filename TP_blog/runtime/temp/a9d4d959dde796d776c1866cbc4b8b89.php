@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\index.html";i:1525941365;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525964571;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\index.html";i:1526040487;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525999841;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -39,7 +39,7 @@
                 <ul class="nav pull-right">
                     <li class="dropdown">
                         <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>
-                            <?php echo \think\Session::get('userInfo.username'); ?> <i class="caret"></i>
+                            <?php echo \think\Session::get('UserInfo.username'); ?> <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -210,11 +210,10 @@
         
 
 <link href="/static/admin/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
-
 <script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/static/admin/assets/DT_bootstrap.js"></script>
 <div class="alert alert-block">
-    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <a class="close" data-dismiss="alert" href="#">x</a>
     <h4 class="alert-heading">Warning!</h4>
     Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
 </div>
@@ -266,7 +265,7 @@
                         <th><?php echo $attr['attr_values']; ?></th>
                         <th><?php echo $attr['create_time']; ?></th>
                         <th><?php echo $attr['update_time']; ?></th>
-                        <th><a href="<?php echo url('admin/goodsattr/edit',['id'=>$attr['id']]); ?>">修改</a> | <a href="<?php echo url('admin/goodsattr/delete',['id'=>$attr['id']]); ?>">删除</a></th>
+                        <th><a href="<?php echo url('admin/goodsattr/edit',['id'=>$attr['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;</a> | <a href="<?php echo url('admin/goodsattr/delete',['id'=>$attr['id']]); ?>"><i class="icon-remove-sign"></i></a></th>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>

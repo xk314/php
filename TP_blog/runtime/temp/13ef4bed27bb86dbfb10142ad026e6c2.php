@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\index.html";i:1526043559;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"I:\phpstudy\WWW\myproject\public/../application/admin\view\role\read.html";i:1526050520;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -211,61 +211,82 @@
 <script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/static/admin/assets/DT_bootstrap.js"></script>
 <div class="row-fluid">
-    <!-- block -->
-    <div class="block">
-        <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">权限管理</div>
-        </div>
-        <div class="block-content collapse in">
-            <div class="span12">
-                <div class="table-toolbar">
-                    <div class="btn-group">
-                        <a href="<?php echo url('admin/auth/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+    <div class="row-fluid">
+        <!-- block -->
+        <div class="block">
+            <div class="navbar navbar-inner block-header">
+                <div class="muted pull-left">角色详情</div>
+            </div>
+            <div class="block-content collapse in">
+                <legend>基本信息</legend>
+                <!-- block -->
+                <div class="block">
+                    <div class="navbar navbar-inner block-header">
+                        <div class="muted pull-left">详情</div>
                     </div>
-                    <div class="btn-group pull-right">
-                        <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Print</a></li>
-                            <li><a href="#">Save as PDF</a></li>
-                            <li><a href="#">Export to Excel</a></li>
-                        </ul>
+                    <div class="block-content collapse in">
+                        <div class="span12">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>角色名字</th>
+                                    <th>创建时间</th>
+                                    <th>修改时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><?php echo $roleInfo['id']; ?></td>
+                                    <td><?php echo $roleInfo['role_name']; ?></td>
+                                    <td><?php echo $roleInfo['create_time']; ?></td>
+                                    <td><?php echo $roleInfo['update_time']; ?></td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-
-                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
-                    <thead>
-                    <tr>
-                        <th>编号</th>
-                        <th>用户名</th>
-                        <th>Email</th>
-                        <th>Nickname</th>
-                        <th>Last_login_time</th>
-                        <th>状态</th>
-                        <th>角色类型</th>
-                        <th>创建时间</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php if(is_array($managerList) || $managerList instanceof \think\Collection || $managerList instanceof \think\Paginator): $i = 0; $__LIST__ = $managerList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?>
-                    <tr class="odd gradeX">
-                        <td><?php echo $user['id']; ?></td>
-                        <td><?php echo $user['username']; ?></td>
-                        <td><?php echo $user['email']; ?></td>
-                        <td><?php echo $user['nickname']; ?></td>
-                        <td><?php echo $user['last_login_time']; ?></td>
-                        <td><?php echo $user['status']; ?></td>
-                        <td><?php echo $user['role_name']; ?></td>
-                        <td><?php echo $user['create_time']; ?></td>
-                        <td><a href="<?php echo url('admin/manager/read',['id'=>$user['id']]); ?>"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/manager/edit',['id'=>$user['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/manager/delete',['id'=>$user['id']]); ?>"><i class="icon-remove"></i></a>&nbsp;</a></td>
-                    </tr>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </tbody>
-                </table>
+                <!-- /block -->
+                <legend>权限详情</legend>
+                <!-- block -->
+                <div class="block">
+                    <div class="navbar navbar-inner block-header">
+                        <div class="muted pull-left">权限详情</div>
+                    </div>
+                    <div class="block-content collapse in">
+                        <div class="span12">
+                            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+                                <thead>
+                                <tr>
+                                    <th class="center">权限ID</th>
+                                    <th class="center">权限名</th>
+                                    <th class="center">控制器名</th>
+                                    <th class="center">方法名</th>
+                                    <th class="center">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach($roleAuthArr as $v): ?>
+                                <tr class="odd gradeX">
+                                    <td><?php echo $v[0]['id']; ?></td>
+                                    <td class="center"><?php echo $v[0]['auth_name']; ?></td>
+                                    <td class="center"><?php echo $v[0]['auth_c']; ?></td>
+                                    <td class="center"><?php echo $v[0]['auth_a']; ?></td>
+                                    <td><a href="<?php echo url('admin/auth/read',['id'=>$v[0]['id']]); ?>"><i class="icon-eye-open"></i></a></td>
+                                </tr>
+                                <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- /block -->
             </div>
         </div>
+        <!-- /block -->
     </div>
-    <!-- /block -->
 </div>
 
 

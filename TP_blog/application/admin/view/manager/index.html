@@ -30,28 +30,28 @@
                     <thead>
                     <tr>
                         <th>编号</th>
-                        <th>权限名称</th>
-                        <th>父类ID</th>
-                        <th>控制器</th>
-                        <th>方法名</th>
-                        <th>是否菜单项</th>
+                        <th>用户名</th>
+                        <th>Email</th>
+                        <th>Nickname</th>
+                        <th>Last_login_time</th>
+                        <th>状态</th>
+                        <th>角色类型</th>
                         <th>创建时间</th>
-                        <th>修改时间</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {volist name='authList' id='auth'}
+                    {volist name='managerList' id='user'}
                     <tr class="odd gradeX">
-                        <th>{$auth.id}</th>
-                        <th>{$auth.level|str_repeat='&emsp;',###*2}{$auth.auth_name}</th>
-                        <th>{$auth.pid}</th>
-                        <th>{$auth.auth_c}</th>
-                        <th>{$auth.auth_a}</th>
-                        <th>{$auth.is_nav}</th>
-                        <th>{$auth.create_time}</th>
-                        <th>{$auth.update_time}</th>
-                        <th><a href="{:url('admin/auth/edit',['id'=>$auth.id])}">修改</a> | <a href="{:url('admin/auth/delete',['id'=>$auth.id])}">删除</a></th>
+                        <td>{$user.id}</td>
+                        <td>{$user.username}</td>
+                        <td>{$user.email}</td>
+                        <td>{$user.nickname}</td>
+                        <td>{$user.last_login_time}</td>
+                        <td>{$user.status}</td>
+                        <td>{$user.role_name}</td>
+                        <td>{$user.create_time}</td>
+                        <td><a href="{:url('admin/manager/read',['id'=>$user.id])}"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/manager/edit',['id'=>$user.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/manager/delete',['id'=>$user.id])}"><i class="icon-remove"></i></a>&nbsp;</a></td>
                     </tr>
                     {/volist}
                     </tbody>

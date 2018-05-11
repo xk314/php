@@ -14,7 +14,11 @@ class Role extends BaseController
      */
     public function index()
     {
-        return view();
+        $roleList =\app\admin\model\Role::select();
+        $info = [
+            'roleList' => $roleList,
+        ];
+        return view('index', $info);
     }
 
     /**
@@ -46,7 +50,23 @@ class Role extends BaseController
      */
     public function read($id)
     {
-        //
+        $roleInfo = \app\admin\model\Role::find($id)->toArray();//保存该角色的信息
+        $atuhInfoList = \app\admin\model\Auth::field('id, auth_name, auth_c, auth_a')->select();
+        $atuhInfoList = array_map(function($value){return $value->toArray();},$atuhInfoList);
+        $authInfo = [];
+        foreach($atuhInfoList as $value){
+            $authInfo[$value['id']][] = $value;
+        }
+        $roleAuth = explode(',',$roleInfo['role_auth_ids']);
+        $roleAuthArr = [];  //保存该角色拥有的所有的权限信息
+        foreach($roleAuth as $v){
+            $roleAuthArr[$v] = $authInfo[$v];
+        }
+        $info = [
+            'roleAuthArr' =>$roleAuthArr,
+            'roleInfo' =>$roleInfo,
+        ];
+        return view('read', $info);
     }
 
     /**

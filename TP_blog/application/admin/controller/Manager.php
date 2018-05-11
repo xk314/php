@@ -14,8 +14,13 @@ class Manager extends BaseController
      */
     public function index()
     {
-        $managerList = \app\admin\model\Manager::select();
-        return view();
+        $managerList = \app\admin\model\Manager::alias('m')->field('m.*')
+            ->join('tpshop_role role','m.role_id=role.id')->field('role.role_name')
+            ->select();
+        $info = [
+            'managerList' =>$managerList,
+        ];
+        return view('index', $info);
     }
 
     /**

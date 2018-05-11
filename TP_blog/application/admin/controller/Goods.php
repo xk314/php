@@ -46,10 +46,10 @@ class Goods extends BaseController
     public function save(Request $request)
     {
         $validate = validate('\app\admin\validate\Goods');
-//        if(!$validate->check(input())){
-//            $msg = $validate->getError();
-//            $this->error($msg,url('admin/goods/create'));
-//        }
+        if(!$validate->check(input())){
+            $msg = $validate->getError();
+            $this->error($msg,url('admin/goods/create'));
+        }
 
         $goodsAttr = new \app\admin\model\GoodsAndAttr();
         $res = \app\admin\model\Goods::create(input(),true);
@@ -67,7 +67,30 @@ class Goods extends BaseController
      */
     public function read($id)
     {
-        //
+        $goodsInfo = \app\admin\model\Goods::alias('g')
+            ->field('g.id as goods_id, g.goods_name, g.goods_price, g.goods_number,
+                    g.goods_introduce, g.create_time,g.update_time')
+           ->join('tpshop_type type','type.id=g.type_id')->field('type.type_name')
+            ->where('g.id',$id)
+            ->find()->toArray();
+        $goodsAttrInfo = \app\admin\model\GoodsAndAttr::alias('goods_attr')
+            ->field('goods_attr.attr_value,goods_attr.attr_id')
+            ->join('tpshop_attribute attr','attr.id=goods_attr.attr_id')
+            ->field('attr.attr_name,attr.attr_type, attr.attr_input_type')
+            ->where('goods_id',$id)
+            ->select();
+        $goodsAttrInfo = array_map(function($value){return $value->toArray();},$goodsAttrInfo);
+        $attrInfo = [];
+        foreach($goodsAttrInfo as $info){
+            $attrInfo[$info['attr_id']]['attr_name'] = $info['attr_name'];
+            $attrInfo[$info['attr_id']]['attr_value'][]=$info['attr_value'];
+        }
+        $attrInfo =  array_map(function($value){$value['attr_value']=implode(',',$value['attr_value']);return $value;}, $attrInfo);
+        $info = [
+            'goodsInfo'=>$goodsInfo,
+            'attrInfo' =>$attrInfo,
+        ];
+        return view('read', $info);
     }
 
     /**

@@ -13,12 +13,12 @@ class Goods extends Model
 
     public function getCreateTimeAttr($value)
     {
-        return date("Y-m-d H:i",$value);
+        return date("Y-m-d",$value);
     }
     public function getUpdateTimeAttr($value)
     {
         if(empty($value)) return '未修改';
-        return date("Y-m-d H:i",$value);
+        return date("Y-m-d",$value);
     }
 //自动完成
     public function setCreateTimeAttr()

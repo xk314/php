@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\index.html";i:1526043559;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:80:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodstype\create.html";i:1525938836;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -205,68 +205,176 @@
 
             </div>
         
-
-<link href="/static/admin/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
-
-<script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
-<script src="/static/admin/assets/DT_bootstrap.js"></script>
-<div class="row-fluid">
-    <!-- block -->
-    <div class="block">
-        <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">权限管理</div>
-        </div>
-        <div class="block-content collapse in">
-            <div class="span12">
-                <div class="table-toolbar">
-                    <div class="btn-group">
-                        <a href="<?php echo url('admin/auth/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+    <!-- Bootstrap -->
+    <link href="/static/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/static/admin/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/static/admin/assets/styles.css" rel="stylesheet" media="screen">
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/static/admin/vendors/flot/excanvas.min.js"></script><![endif]-->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+    <![endif]-->
+    <script src="/static/admin/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <div class="row-fluid">
+                <!-- block -->
+                <div class="block">
+                    <div class="navbar navbar-inner block-header">
+                        <div class="muted pull-left">商品类型新增</div>
                     </div>
-                    <div class="btn-group pull-right">
-                        <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Print</a></li>
-                            <li><a href="#">Save as PDF</a></li>
-                            <li><a href="#">Export to Excel</a></li>
-                        </ul>
+                    <div class="block-content collapse in">
+                        <div class="span12">
+                            <form  class="form-horizontal" action="<?php echo url('admin/goodstype/save'); ?>">
+                                <fieldset>
+                                    <legend>基本信息</legend>
+                                   <div class="control-group">
+                                       <label  class="control-label" for="goods_type">商品类型名称<span class="required">*</span></label>
+                                       <div class="controls">
+                                            <input type="text" class="input-xlarge" id="goods_type" name="type_name" placeholder="商品类型名称">
+                                       </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                        <button type="reset" class="btn">Cancel</button>
+                                    </div>
+                                    </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
-
-                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
-                    <thead>
-                    <tr>
-                        <th>编号</th>
-                        <th>用户名</th>
-                        <th>Email</th>
-                        <th>Nickname</th>
-                        <th>Last_login_time</th>
-                        <th>状态</th>
-                        <th>角色类型</th>
-                        <th>创建时间</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php if(is_array($managerList) || $managerList instanceof \think\Collection || $managerList instanceof \think\Paginator): $i = 0; $__LIST__ = $managerList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?>
-                    <tr class="odd gradeX">
-                        <td><?php echo $user['id']; ?></td>
-                        <td><?php echo $user['username']; ?></td>
-                        <td><?php echo $user['email']; ?></td>
-                        <td><?php echo $user['nickname']; ?></td>
-                        <td><?php echo $user['last_login_time']; ?></td>
-                        <td><?php echo $user['status']; ?></td>
-                        <td><?php echo $user['role_name']; ?></td>
-                        <td><?php echo $user['create_time']; ?></td>
-                        <td><a href="<?php echo url('admin/manager/read',['id'=>$user['id']]); ?>"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/manager/edit',['id'=>$user['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/manager/delete',['id'=>$user['id']]); ?>"><i class="icon-remove"></i></a>&nbsp;</a></td>
-                    </tr>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </tbody>
-                </table>
+                <!-- /block -->
             </div>
-        </div>
-    </div>
-    <!-- /block -->
-</div>
+
+<script type="text/javascript">
+    $(function($){
+            $.ajax({
+                'url':"<?php echo url('admin/goodscategory/index'); ?>",
+                'type': "POST",
+                'data': {id:0},
+                'dataType': 'json',
+                'success': function (result) {
+                 var str = '<option>一级商品分类</option>';
+                    $.each(result,function(k,v){
+                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
+                    });
+                    $('#select011').html(str);
+                }
+            });
+        $('#select01').on('change',(function(){
+            var data = {id:$(this).val()};
+            $.ajax({
+                'url':"<?php echo url('admin/goodscategory/index'); ?>",
+                'type': "POST",
+                'data': data,
+                'dataType': 'json',
+                'success': function (result) {
+                    var str = '<option>something</option>';
+                    var str = '';
+                    $.each(result,function(k,v){
+                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
+                    });
+                    console.log(str);
+                    $('#select02').html(str);
+                }
+            });
+        }));
+        $('#select011').change(function(){
+            var data = {id:$(this).val()};
+            console.log(data);
+            $.ajax({
+                'url':"<?php echo url('admin/goodscategory/index'); ?>",
+                'type': "POST",
+                'data': data,
+                'dataType': 'json',
+                'success': function (result) {
+                    var str = '<option>something</option>';
+                    var str = '';
+                    $.each(result,function(k,v){
+                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
+                    });
+                    $('#select02').html(str);
+                }
+            });
+        });
+        $('#select02').change(function(){
+            var data = {id:$(this).val()};
+            console.log(data);
+            $.ajax({
+                'url':"<?php echo url('admin/goodscategory/index'); ?>",
+                'type': "POST",
+                'data': data,
+                'dataType': 'json',
+                'success': function (result) {
+                    var str = '<option>something</option>';
+                    var str = '';
+                    $.each(result,function(k,v){
+                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
+                    });
+                    $('#select03').html(str);
+                }
+            });
+        });
+
+
+    });
+</script>
+
+
+<!--/.fluid-container-->
+<link href="/static/admin/vendors/datepicker.css" rel="stylesheet" media="screen">
+<link href="/static/admin/vendors/uniform.default.css" rel="stylesheet" media="screen">
+<link href="/static/admin/vendors/chosen.min.css" rel="stylesheet" media="screen">
+
+<link href="/static/admin/vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
+
+<script src="/static/admin/vendors/jquery-1.9.1.js"></script>
+<script src="/static/admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/admin/vendors/jquery.uniform.min.js"></script>
+<script src="/static/admin/vendors/chosen.jquery.min.js"></script>
+<script src="/static/admin/vendors/bootstrap-datepicker.js"></script>
+
+<script src="/static/admin/vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
+<script src="/static/admin/vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
+
+<script src="/static/admin/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+
+<script type="text/javascript" src="/static/admin/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/static/admin/assets/form-validation.js"></script>
+
+<script src="/static/admin/assets/scripts.js"></script>
+<script>
+
+    jQuery(document).ready(function() {
+        FormValidation.init();
+    });
+
+
+    $(function() {
+        $(".datepicker").datepicker();
+        $(".uniform_on").uniform();
+        $(".chzn-select").chosen();
+        $('.textarea').wysihtml5();
+
+        $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+            var $total = navigation.find('li').length;
+            var $current = index+1;
+            var $percent = ($current/$total) * 100;
+            $('#rootwizard').find('.bar').css({width:$percent+'%'});
+            // If it's the last tab then hide the last button and show the finish instead
+            if($current >= $total) {
+                $('#rootwizard').find('.pager .next').hide();
+                $('#rootwizard').find('.pager .finish').show();
+                $('#rootwizard').find('.pager .finish').removeClass('disabled');
+            } else {
+                $('#rootwizard').find('.pager .next').show();
+                $('#rootwizard').find('.pager .finish').hide();
+            }
+        }});
+        $('#rootwizard .finish').click(function() {
+            alert('Finished!, Starting over!');
+            $('#rootwizard').find("a[href*='tab1']").trigger('click');
+        });
+    });
+</script>
 
 
             <hr>

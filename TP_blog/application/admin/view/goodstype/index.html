@@ -49,7 +49,7 @@
                         <th>{$type.type_name}</th>
                         <th>{$type.create_time}</th>
                         <th>{$type.update_time}</th>
-                        <th><a href="{:url('admin/goodstype/edit',['id'=>$type.id])}">修改</a> | <a href="{:url('admin/goodstype/delete',['id'=>$type.id])}">删除</a></th>
+                        <th><a href="{:url('admin/goodstype/edit',['id'=>$type.id])}"><i class="icon-edit"></i></a>&nbsp;</a> | <a href="{:url('admin/goodstype/delete',['id'=>$type.id])}"><i class="icon-remove-sign"></i></a></th>
                     </tr>
                     {/volist}
                     </tbody>
