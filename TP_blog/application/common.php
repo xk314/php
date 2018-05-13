@@ -24,6 +24,8 @@ if (!function_exists('getTree')) {
         return $tree;
     }
 }
+
+//处理数据，使其可以满足saveAll方法所需的参数格式。物品对应的详细属性
 if (!function_exists('make_data')) {
     function make_data($id, $data){
         $res = [];
@@ -33,5 +35,13 @@ if (!function_exists('make_data')) {
             }
         }
         return $res;
+    }
+
+    if (!function_exists('make_password')) {
+        function make_password($password)
+        {
+            $base = 'jfdsaiofhweohfdosfhweoi';
+            return md5(md5($base).$password);
+        }
     }
 }

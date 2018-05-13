@@ -25,9 +25,9 @@ class Login extends Controller
         }
         $check = [
             'username' => $loginInfo['username'],
-            'password' => md5($loginInfo['password']),
+            'password' => make_password($loginInfo['password']),
         ];
-        $info = \app\admin\model\User::where($check)->find();
+        $info = \app\admin\model\Manager::where($check)->find();
         if(empty($info)){
             $this->error("用户名密码错误", url('admin/login/index'));
         }

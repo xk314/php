@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\edit.html";i:1525951652;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525956747;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\edit.html";i:1525951652;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -39,7 +39,7 @@
                 <ul class="nav pull-right">
                     <li class="dropdown">
                         <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>
-                            <?php echo \think\Session::get('userInfo.username'); ?> <i class="caret"></i>
+                            <?php echo \think\Session::get('UserInfo.username'); ?> <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -151,13 +151,10 @@
                     <a href="<?php echo url('admin/auth/index'); ?>"><span class="badge badge-success pull-right">731</span>权限管理</a>
                 </li>
                 <li>
-                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>管理员列表</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>用户管理</a>
                 </li>
                 <li>
                     <a href="<?php echo url('admin/role/index'); ?>"><span class="badge badge-success pull-right">812</span>角色管理</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>权限管理</a>
                 </li>
             </ul>
             <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
@@ -166,6 +163,9 @@
                 </li>
                 <li>
                     <a href="<?php echo url('admin/goods/index'); ?>"><span class="badge badge-success pull-right">731</span>商品列表</a>
+                </li>
+                <li>
+                    <a href="<?php echo url('admin/goods/create'); ?>"><span class="badge badge-success pull-right">731</span>商品新增</a>
                 </li>
                 <li>
                     <a href="<?php echo url('admin/goodstype/index'); ?>"><span class="badge badge-success pull-right">812</span>商品类型</a>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html";i:1526045807;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html";i:1526093043;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -255,7 +255,20 @@
                         <th><?php echo str_repeat('&emsp;',$auth['level']*2); ?><?php echo $auth['auth_name']; ?></th>
                         <th><?php echo $auth['create_time']; ?></th>
                         <th><?php echo $auth['update_time']; ?></th>
-                        <th>  <a href="<?php echo url('admin/auth/read',['id'=>$auth['id']]); ?>"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/auth/edit',['id'=>$auth['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/auth/delete',['id'=>$auth['id']]); ?>"><i class="icon-remove-sign"></i></a></th>
+                        <th>  <a href="#<?php echo $auth['id']; ?>" data-toggle="modal"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/auth/edit',['id'=>$auth['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/auth/delete',['id'=>$auth['id']]); ?>"><i class="icon-remove-sign"></i></a></th>
+                        <div id="<?php echo $auth['id']; ?>" class="modal hide">
+                            <div class="modal-header">
+                                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                                <h3>权限详情</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>权限名:<?php echo $auth['auth_name']; ?></p>
+                                <p>Pid:<?php echo $auth['pid']; ?></p>
+                                <p>控制器名:<?php echo $auth['auth_c']; ?></p>
+                                <p>方法名:<?php echo $auth['auth_a']; ?></p>
+                                <p>是否列表栏显示:<?php echo $auth['is_nav']; ?></p>
+                            </div>
+                        </div>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>

@@ -8,13 +8,13 @@
     <!-- block -->
     <div class="block">
         <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">权限管理</div>
+            <div class="muted pull-left">用户管理</div>
         </div>
         <div class="block-content collapse in">
             <div class="span12">
                 <div class="table-toolbar">
                     <div class="btn-group">
-                        <a href="{:url('admin/auth/create')}"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                        <a href="{:url('admin/manager/create')}"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
                     </div>
                     <div class="btn-group pull-right">
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
@@ -31,12 +31,8 @@
                     <tr>
                         <th>编号</th>
                         <th>用户名</th>
-                        <th>Email</th>
-                        <th>Nickname</th>
                         <th>Last_login_time</th>
                         <th>状态</th>
-                        <th>角色类型</th>
-                        <th>创建时间</th>
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -45,12 +41,8 @@
                     <tr class="odd gradeX">
                         <td>{$user.id}</td>
                         <td>{$user.username}</td>
-                        <td>{$user.email}</td>
-                        <td>{$user.nickname}</td>
                         <td>{$user.last_login_time}</td>
                         <td>{$user.status}</td>
-                        <td>{$user.role_name}</td>
-                        <td>{$user.create_time}</td>
                         <td><a href="{:url('admin/manager/read',['id'=>$user.id])}"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/manager/edit',['id'=>$user.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/manager/delete',['id'=>$user.id])}"><i class="icon-remove"></i></a>&nbsp;</a></td>
                     </tr>
                     {/volist}

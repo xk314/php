@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\login\login.html";i:1525742938;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\login\login.html";i:1525750255;}*/ ?>
 
 <html>	
 <head>
@@ -23,6 +23,7 @@
 		$("form img").triggerHandler("click");
 		$('.head-info label').hide();
 		$(this).hide();
+		$('input').css('color','');
 	});	  
 });
 </script>
@@ -110,6 +111,7 @@
             $('input').eq(0).val('Username');
             $('input').eq(1).val('Password');
             $('input').eq(2).val('Code');
+			$('input').css('color','');
 			$('form').attr('class', 'shake shake-hard shake-hover');
             setInterval(function(){$('input').eq(3).val('Login');$('form').attr('class','');},2000);
         }
@@ -117,12 +119,13 @@
 		$('input').eq(0).blur(function(){
 			if (this.value == ''){
 				this.value = 'Username';
-				$('.lbl-1').hide();
+				$('.lbl-3').hide();
 				checkInfo();
 				return
 			}
-			$('.lbl-1').show();
+			$('.lbl-3').show();
 			$('.login-form .close').show();
+			$(this).css('color','yellow')
 		});
 		$('input').eq(1).blur(function(){
 			if (this.value == '') {
@@ -133,16 +136,18 @@
 			}
 			$('.lbl-2').show();
 			$('.login-form .close').show();
+			$(this).css('color','pink')
 		});
 		$('input').eq(2).blur(function(){
 			if (this.value == '') {
 				this.value = 'Code';
-				$('.lbl-3').hide();
+				$('.lbl-1').hide();
 				checkInfo();
 				return
 			}
-			$('.lbl-3').show();
+			$('.lbl-1').show();
 			$('.login-form .close').show();
+			$(this).css('color','blue')
 		});
 	});
 </script>

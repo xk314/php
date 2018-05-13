@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\index.html";i:1526040487;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525999841;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\index.html";i:1526201010;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -151,13 +151,10 @@
                     <a href="<?php echo url('admin/auth/index'); ?>"><span class="badge badge-success pull-right">731</span>权限管理</a>
                 </li>
                 <li>
-                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>管理员列表</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>用户管理</a>
                 </li>
                 <li>
                     <a href="<?php echo url('admin/role/index'); ?>"><span class="badge badge-success pull-right">812</span>角色管理</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>权限管理</a>
                 </li>
             </ul>
             <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
@@ -245,7 +242,7 @@
                     <tr>
                         <th>编号</th>
                         <th>属性名称</th>
-                        <th>从属商品名称</th>
+                        <th>从属商品类型</th>
                         <th>属性类型</th>
                         <th>录入方式</th>
                         <th>属性值</th>

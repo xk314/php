@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\index.html";i:1526043559;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\index.html";i:1526201071;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -214,13 +214,13 @@
     <!-- block -->
     <div class="block">
         <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">权限管理</div>
+            <div class="muted pull-left">用户管理</div>
         </div>
         <div class="block-content collapse in">
             <div class="span12">
                 <div class="table-toolbar">
                     <div class="btn-group">
-                        <a href="<?php echo url('admin/auth/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                        <a href="<?php echo url('admin/manager/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
                     </div>
                     <div class="btn-group pull-right">
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
@@ -237,12 +237,8 @@
                     <tr>
                         <th>编号</th>
                         <th>用户名</th>
-                        <th>Email</th>
-                        <th>Nickname</th>
                         <th>Last_login_time</th>
                         <th>状态</th>
-                        <th>角色类型</th>
-                        <th>创建时间</th>
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -251,12 +247,8 @@
                     <tr class="odd gradeX">
                         <td><?php echo $user['id']; ?></td>
                         <td><?php echo $user['username']; ?></td>
-                        <td><?php echo $user['email']; ?></td>
-                        <td><?php echo $user['nickname']; ?></td>
                         <td><?php echo $user['last_login_time']; ?></td>
                         <td><?php echo $user['status']; ?></td>
-                        <td><?php echo $user['role_name']; ?></td>
-                        <td><?php echo $user['create_time']; ?></td>
                         <td><a href="<?php echo url('admin/manager/read',['id'=>$user['id']]); ?>"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/manager/edit',['id'=>$user['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/manager/delete',['id'=>$user['id']]); ?>"><i class="icon-remove"></i></a>&nbsp;</a></td>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>

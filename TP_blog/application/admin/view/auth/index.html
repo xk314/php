@@ -49,7 +49,20 @@
                         <th>{$auth.level|str_repeat='&emsp;',###*2}{$auth.auth_name}</th>
                         <th>{$auth.create_time}</th>
                         <th>{$auth.update_time}</th>
-                        <th>  <a href="{:url('admin/auth/read',['id'=>$auth.id])}"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/auth/edit',['id'=>$auth.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/auth/delete',['id'=>$auth.id])}"><i class="icon-remove-sign"></i></a></th>
+                        <th>  <a href="#{$auth.id}" data-toggle="modal"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/auth/edit',['id'=>$auth.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/auth/delete',['id'=>$auth.id])}"><i class="icon-remove-sign"></i></a></th>
+                        <div id="{$auth.id}" class="modal hide">
+                            <div class="modal-header">
+                                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                                <h3>权限详情</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>权限名:{$auth.auth_name}</p>
+                                <p>Pid:{$auth.pid}</p>
+                                <p>控制器名:{$auth.auth_c}</p>
+                                <p>方法名:{$auth.auth_a}</p>
+                                <p>是否列表栏显示:{$auth.is_nav}</p>
+                            </div>
+                        </div>
                     </tr>
                     {/volist}
                     </tbody>

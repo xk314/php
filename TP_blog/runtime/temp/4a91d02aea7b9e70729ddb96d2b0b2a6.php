@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\index\index.html";i:1525785923;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1525785923;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\index\index.html";i:1525871625;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -22,7 +22,7 @@
     <script>
         $(function() {
             // Easy pie charts
-            $('.chart').easyPieChart({animate: 1000});
+//            $('.chart').easyPieChart({animate: 1000});
         });
     </script>
 </head>
@@ -39,7 +39,7 @@
                 <ul class="nav pull-right">
                     <li class="dropdown">
                         <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>
-                            <?php echo \think\Session::get('userInfo.username'); ?> <i class="caret"></i>
+                            <?php echo \think\Session::get('UserInfo.username'); ?> <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -143,27 +143,57 @@
     <div class="row-fluid">
         <!--后台首页右侧项目栏-->
         <div class="span3" id="sidebar">
-            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
                 <li class="active">
-                    <a href="index.html"><i class="icon-chevron-right"></i>后台首页</a>
+                    <a href="#"><i class="icon-chevron-right"></i>权限管理</a>
                 </li>
                 <li>
                     <a href="<?php echo url('admin/auth/index'); ?>"><span class="badge badge-success pull-right">731</span>权限管理</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-success pull-right">812</span>分类管理</a>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>用户管理</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-success pull-right">812</span>文章管理</a>
+                    <a href="<?php echo url('admin/role/index'); ?>"><span class="badge badge-success pull-right">812</span>角色管理</a>
+                </li>
+            </ul>
+            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
+                <li class="active">
+                    <a href="#"><i class="icon-chevron-right"></i>商品管理</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-success pull-right">812</span>分类管理</a>
+                    <a href="<?php echo url('admin/goods/index'); ?>"><span class="badge badge-success pull-right">731</span>商品列表</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-success pull-right">812</span>文章评论</a>
+                    <a href="<?php echo url('admin/goods/create'); ?>"><span class="badge badge-success pull-right">731</span>商品新增</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-success pull-right">812</span>用户管理</a>
+                    <a href="<?php echo url('admin/goodstype/index'); ?>"><span class="badge badge-success pull-right">812</span>商品类型</a>
+                </li>
+                <li>
+                    <a href="<?php echo url('admin/goodsattr/index'); ?>"><span class="badge badge-success pull-right">812</span>商品属性</a>
+                </li>
+            </ul>
+            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
+                <li class="active">
+                    <a href="#"><i class="icon-chevron-right"></i>订单管理</a>
+                </li>
+                <li>
+                    <a href="{:url('admin/auth/index')"><span class="badge badge-success pull-right">731</span>订单列表</a>
+                </li>
+                <li>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>添加订单</a>
+                </li>
+            </ul>
+            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
+                <li class="active">
+                    <a href="#"><i class="icon-chevron-right"></i>日程管理</a>
+                </li>
+                <li>
+                    <a href="{:url('admin/plan/index')"><span class="badge badge-success pull-right">731</span>日程管理</a>
+                </li>
+                <li>
+                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>管理员管理</a>
                 </li>
             </ul>
         </div>
@@ -172,14 +202,15 @@
         <!--/span-->
         <div class="span9" id="content">
             <div class="row-fluid">
-                <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <h4><?php echo \think\Session::get('userInfo.username'); ?></h4>
-                    The login operation completed successfully</div>
+
             </div>
         
-
-                    <div class="row-fluid">
+<div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4><?php echo \think\Session::get('userInfo.username'); ?></h4>
+    The login operation completed successfully
+</div>
+<div class="row-fluid">
                         <!-- block 显示原型图-->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
@@ -205,7 +236,7 @@
                         </div>
                         <!-- /block -->
                     </div>
-                    <div class="row-fluid">
+<div class="row-fluid">
                         <div class="span6">
                             <!-- block -->
                             <div class="block">
@@ -251,7 +282,7 @@
                             <!-- /block -->
                         </div>
                     </div>
-                    <div class="row-fluid">
+<div class="row-fluid">
                         <div class="span6">
                             <!-- block -->
                             <div class="block">
@@ -297,7 +328,7 @@
                             <!-- /block -->
                         </div>
                     </div>
-                    <div class="row-fluid">
+<div class="row-fluid">
                         <!-- block -->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
@@ -329,5 +360,11 @@
             </footer>
         </div>
 </body>
-
+<script type="text/javascript">
+    $(function($){
+        $('div.container-fluid div.row-fluid div.span3 ul li.active').click(function(){
+           $(this).nextAll().toggle();
+        });
+    });
+</script>
 </html>

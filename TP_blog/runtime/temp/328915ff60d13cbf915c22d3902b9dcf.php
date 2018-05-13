@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html";i:1526055079;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html";i:1526093182;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -219,7 +219,7 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">权限新增</div>
+                        <div class="muted pull-left">权限新增<a style="" href="<?php echo url('admin/auth/index'); ?>"><i class="icon-remove"></i></a></div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">

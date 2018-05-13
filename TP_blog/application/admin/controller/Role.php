@@ -28,7 +28,15 @@ class Role extends BaseController
      */
     public function create()
     {
-        //
+        $authList = \app\admin\model\Auth::field('id,auth_name,auth_c,auth_a')->select();
+        $authList= array_map(function($value){return $value->toArray();},$authList);
+        foreach($authList as &$v){
+            $v['auth'] = $v['auth_c'] ."/".$v['auth_a'];
+        }
+        $info = [
+            'authList' =>$authList,
+        ];
+        return view('create', $info);
     }
 
     /**
@@ -39,7 +47,17 @@ class Role extends BaseController
      */
     public function save(Request $request)
     {
-        //
+        $validate = validate('\app\admin\validate\Role');
+        if(!$validate->scene('create')->check(input())){
+            $msg = $validate->getError();
+            $this->error($msg,url('admin/role/create'));
+        }
+        $data = input();
+        $data['role_auth_ids'] = implode(',',$data['role_auth_ids']);
+        $res = \app\admin\model\Role::create($data,true);
+        if(empty($res))
+            $this->error('新增角色类型失败',url('admin/role/index'));
+        $this->success('新增角色类型成功', url('admin/role/index'));
     }
 
     /**
@@ -77,7 +95,19 @@ class Role extends BaseController
      */
     public function edit($id)
     {
-        //
+        $roleInfo = \app\admin\model\Role::find($id)->toArray();
+        $roleInfo['auth'] = explode(',',$roleInfo['role_auth_ids']);
+
+        $authList = \app\admin\model\Auth::field('id,auth_name,auth_c,auth_a')->select();
+        $authList= array_map(function($value){return $value->toArray();},$authList);
+        foreach($authList as &$v){
+            $v['auth'] = $v['auth_c'] ."/".$v['auth_a'];
+        }
+        $info = [
+            'roleInfo' => $roleInfo,
+            'authList' => $authList,
+        ];
+        return view('edit', $info);
     }
 
     /**
@@ -89,7 +119,17 @@ class Role extends BaseController
      */
     public function update(Request $request, $id)
     {
-        //
+        $validate = validate('\app\admin\validate\Role');
+        if(!$validate->scene('update')->check(input())){
+            $msg = $validate->getError();
+            $this->error($msg,url('admin/role/edit',['id'=>$id]));
+        }
+        $data = input();
+        $data['role_auth_ids'] = implode(',', $data['role_auth_ids']);
+        $res = \app\admin\model\Role::update($data,$id,true);
+        if(empty($res))
+            $this->error('修改角色信息失败',url('admin/role/index'));
+        $this->success('修改角色信息成功', url('admin/role/index'));
     }
 
     /**
@@ -100,6 +140,7 @@ class Role extends BaseController
      */
     public function delete($id)
     {
-        //
+        \app\admin\model\Role::find($id)->delete();
+        $this->success('删除角色类型成功',url('admin/role/index'));
     }
 }

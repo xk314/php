@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"I:\phpstudy\WWW\myproject\public/../application/admin\view\role\read.html";i:1526050520;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"I:\phpstudy\WWW\myproject\public/../application/admin\view\role\read.html";i:1526214997;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -216,6 +216,7 @@
         <div class="block">
             <div class="navbar navbar-inner block-header">
                 <div class="muted pull-left">角色详情</div>
+                <div style="float: right"><a href="<?php echo url('admin/role/index'); ?>"><i class="icon-remove"></i></a></div>
             </div>
             <div class="block-content collapse in">
                 <legend>基本信息</legend>
