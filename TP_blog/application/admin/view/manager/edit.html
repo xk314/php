@@ -64,7 +64,8 @@
                                             <select id="select02" class="chzn-select" name="role_id">
                                                 <option>请选择角色类型</option>
                                                 {volist name='roleList' id='role'}
-                                                    <option value="{$role.id}" {if($userInfo.role_id==$role.id)}selected{/if}>{$role.role_name}</option>
+                                                <!--由于对用户的role_id字段设置了获取器，所以不能通过角色id进行判断，只能通过角色的role_name字段进行判断-->
+                                                    <option value="{$role.id}" {if($userInfo.role_id==$role.role_name)}selected{/if}>{$role.role_name}</option>
                                                 {/volist}
                                             </select>
                                         </div>

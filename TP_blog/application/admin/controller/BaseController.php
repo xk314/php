@@ -11,6 +11,13 @@ class BaseController extends Controller
     {
         if(!session('?UserInfo'))
             $this->error('您还未登录，请登录', url('admin/login/index'));
+        $check = [
+            'id' => session('UserInfo.id'),
+            'status' => 2,
+        ];
+        if(empty(\app\admin\model\Manager::find($check))){
+            $this->error('账户异常', url('admin/login/index'));
+        }
         parent::__construct($request);
         $this->auth_list();
         $this->auth_control();
@@ -27,13 +34,16 @@ class BaseController extends Controller
         $secondAuth = array_map(function($value){return $value->toArray();},$secondAuth);
 
         $nowUserInfo = session('UserInfo')->toArray();
-        if($nowUserInfo['role_id']===0){
+        if($nowUserInfo['role_id']== '超级管理员'){
             $info = \app\admin\model\Auth::field('id')->select();
             foreach($info as $v){
                 $nowUserAuth[] = $v['id'];
             }
         }else{
-            $nowUserAuth = \app\admin\model\Role::where('id',$nowUserInfo['role_id'])->field("role_auth_ids")->find()->toArray();
+            $nowUserAuth = \app\admin\model\Manager::alias('m')
+                ->join('tpshop_role r', 'm.role_id=r.id')->field('r.role_auth_ids')
+                ->where('m.id', $nowUserInfo['id'])->find()->toArray();
+           // $nowUserAuth = \app\admin\model\Role::where('id',$nowUserInfo['role_id'])->field("role_auth_ids")->find()->toArray();
             $nowUserAuth = explode(',', $nowUserAuth['role_auth_ids']);
         }
         //dump($nowUserAuth);
@@ -48,7 +58,8 @@ class BaseController extends Controller
     private function auth_control()
     {
         $nowUserInfo = session('UserInfo')->toArray();
-        if($nowUserInfo['role_id'] === 0) return;    //超级管理员不用进行权限的检测
+        //如果对模型设置了获取器，则在外部对模型字段进行判断时，需要按照获取器的设置进行判断
+        if($nowUserInfo['role_id'] == '超级管理员') return;    //超级管理员不用进行权限的检测
         $controller = request()->controller();
         $action = request()->action();
         if($controller =='Index' && $action=='index') return; //特殊页面不用进行权限检测

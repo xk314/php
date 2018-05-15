@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\edit.html";i:1526267047;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\edit.html";i:1526355596;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -229,7 +229,8 @@
                                             <select id="select02" class="chzn-select" name="role_id">
                                                 <option>请选择角色类型</option>
                                                 <?php if(is_array($roleList) || $roleList instanceof \think\Collection || $roleList instanceof \think\Paginator): $i = 0; $__LIST__ = $roleList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$role): $mod = ($i % 2 );++$i;?>
-                                                    <option value="<?php echo $role['id']; ?>" <?php if(($userInfo['role_id']==$role['id'])): ?>selected<?php endif; ?>><?php echo $role['role_name']; ?></option>
+                                                <!--由于对用户的role_id字段设置了获取器，所以不能通过角色id进行判断，只能通过角色的role_name字段进行判断-->
+                                                    <option value="<?php echo $role['id']; ?>" <?php if(($userInfo['role_id']==$role['role_name'])): ?>selected<?php endif; ?>><?php echo $role['role_name']; ?></option>
                                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                                             </select>
                                         </div>

@@ -14,13 +14,17 @@ class Article extends BaseController
      */
     public function index()
     {
+        $userInfo = (session('UserInfo')->toArray());
+        if($userInfo['role_id'] == '超级管理员') $where = '2>1';
+        else $where = ['user_id', $userInfo.id];
         $join = [
-            ['user u','a.user_id = u.id','LEFT'],
+            ['tpshop_manager u','a.user_id = u.id','LEFT'],
             ['category2 c', 'a.category_id = c.id', 'LEFT'],
         ];
         $field = "u.username,c.classname,a.top, a.id,a.title,a.addate";
         $infoArr = \app\admin\model\Article::alias('a')->join($join)
             ->field($field)
+            ->where($where)
             ->order('a.top desc,a.orderby')
             ->select();
             ;

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html";i:1526356655;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\comment\index.html";i:1526392375;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -169,24 +169,15 @@
 
 <script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/static/admin/assets/DT_bootstrap.js"></script>
-<div class="alert alert-block">
-    <a class="close" data-dismiss="alert" href="#">&times;</a>
-    <h4 class="alert-heading">Warning!</h4>
-    Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-</div>
-
 <div class="row-fluid">
     <!-- block -->
     <div class="block">
         <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">权限管理</div>
+            <div class="muted pull-left">文章评论管理</div>
         </div>
         <div class="block-content collapse in">
             <div class="span12">
                 <div class="table-toolbar">
-                    <div class="btn-group">
-                        <a href="<?php echo url('admin/auth/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
-                    </div>
                     <div class="btn-group pull-right">
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
                         <ul class="dropdown-menu">
@@ -196,38 +187,28 @@
                         </ul>
                     </div>
                 </div>
-
-                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped">
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
                     <thead>
-                    <tr>
+                    <tr style="text-align: center">
                         <th>编号</th>
-                        <th>权限名称</th>
-                        <th>创建时间</th>
-                        <th>修改时间</th>
+                        <th>文章标题</th>
+                        <th>Pid</th>
+                        <th>评论者</th>
+                        <th>评论</th>
+                        <th>添加时间</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php if(is_array($authList) || $authList instanceof \think\Collection || $authList instanceof \think\Paginator): $i = 0; $__LIST__ = $authList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i;?>
-                    <tr class="odd gradeX">
-                        <td><?php echo $auth['id']; ?></td>
-                        <td><?php echo str_repeat('&emsp;',$auth['level']*2); ?><?php echo $auth['auth_name']; ?></td>
-                        <td><?php echo $auth['create_time']; ?></td>
-                        <td><?php echo $auth['update_time']; ?></td>
-                        <td>  <a href="#<?php echo $auth['id']; ?>" data-toggle="modal"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/auth/edit',['id'=>$auth['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/auth/delete',['id'=>$auth['id']]); ?>"><i class="icon-remove-sign"></i></a></td>
-                        <div id="<?php echo $auth['id']; ?>" class="modal hide">
-                            <div class="modal-header">
-                                <button data-dismiss="modal" class="close" type="button">&times;</button>
-                                <h3>权限详情</h3>
-                            </div>
-                            <div class="modal-body">
-                                <p>权限名:<?php echo $auth['auth_name']; ?></p>
-                                <p>Pid:<?php echo $auth['pid']; ?></p>
-                                <p>控制器名:<?php echo $auth['auth_c']; ?></p>
-                                <p>方法名:<?php echo $auth['auth_a']; ?></p>
-                                <p>是否列表栏显示:<?php echo $auth['is_nav']; ?></p>
-                            </div>
-                        </div>
+                    <?php if(is_array($commentList) || $commentList instanceof \think\Collection || $commentList instanceof \think\Paginator): $i = 0; $__LIST__ = $commentList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$comment): $mod = ($i % 2 );++$i;?>
+                    <tr class="odd gradeX" style="text-align: center">
+                        <td><?php echo $comment['id']; ?></td>
+                        <td><a href="<?php echo url('admin/article/read',['id'=>$comment['article_id']]); ?>"><?php echo $comment['title']; ?></a></td>
+                        <td><?php echo $comment['pid']; ?></td>
+                        <td><?php echo $comment['username']; ?></td>
+                        <td><?php echo substr($comment['content'],0,30); ?></td>
+                        <td><?php echo $comment['addate']; ?></td>
+                        <td><a href="<?php echo url('admin/comment/read',['id'=>$comment['id']]); ?>"><i class="icon-eye-open"></i></a>&nbsp;<a onclick="return confirm('确认删除此评论');" href="<?php echo url('admin/comment/delete',['id'=>$comment['id']]); ?>"><i class="icon-remove-sign"></i></a></td>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>

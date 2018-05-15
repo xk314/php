@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html";i:1526356655;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:85:"I:\phpstudy\WWW\myproject\public/../application/admin\view\articlecategory\index.html";i:1526356781;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -179,13 +179,13 @@
     <!-- block -->
     <div class="block">
         <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">权限管理</div>
+            <div class="muted pull-left">文章分类管理</div>
         </div>
         <div class="block-content collapse in">
             <div class="span12">
                 <div class="table-toolbar">
                     <div class="btn-group">
-                        <a href="<?php echo url('admin/auth/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                        <a href="<?php echo url('admin/articlecategory/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
                     </div>
                     <div class="btn-group pull-right">
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
@@ -201,33 +201,20 @@
                     <thead>
                     <tr>
                         <th>编号</th>
-                        <th>权限名称</th>
-                        <th>创建时间</th>
-                        <th>修改时间</th>
+                        <th>分类名称</th>
+                        <th>排序</th>
+                        <th>文章数量</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php if(is_array($authList) || $authList instanceof \think\Collection || $authList instanceof \think\Paginator): $i = 0; $__LIST__ = $authList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i;?>
+                    <?php if(is_array($categoryInfoList) || $categoryInfoList instanceof \think\Collection || $categoryInfoList instanceof \think\Paginator): $i = 0; $__LIST__ = $categoryInfoList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
                     <tr class="odd gradeX">
-                        <td><?php echo $auth['id']; ?></td>
-                        <td><?php echo str_repeat('&emsp;',$auth['level']*2); ?><?php echo $auth['auth_name']; ?></td>
-                        <td><?php echo $auth['create_time']; ?></td>
-                        <td><?php echo $auth['update_time']; ?></td>
-                        <td>  <a href="#<?php echo $auth['id']; ?>" data-toggle="modal"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/auth/edit',['id'=>$auth['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/auth/delete',['id'=>$auth['id']]); ?>"><i class="icon-remove-sign"></i></a></td>
-                        <div id="<?php echo $auth['id']; ?>" class="modal hide">
-                            <div class="modal-header">
-                                <button data-dismiss="modal" class="close" type="button">&times;</button>
-                                <h3>权限详情</h3>
-                            </div>
-                            <div class="modal-body">
-                                <p>权限名:<?php echo $auth['auth_name']; ?></p>
-                                <p>Pid:<?php echo $auth['pid']; ?></p>
-                                <p>控制器名:<?php echo $auth['auth_c']; ?></p>
-                                <p>方法名:<?php echo $auth['auth_a']; ?></p>
-                                <p>是否列表栏显示:<?php echo $auth['is_nav']; ?></p>
-                            </div>
-                        </div>
+                        <td><?php echo $category['id']; ?></td>
+                        <td><?php echo str_repeat('&emsp;',$category['level']*2); ?><?php echo $category['classname']; ?></td>
+                        <td><?php echo $category['orderby']; ?></td>
+                        <td><?php echo $category['num']; ?></td>
+                        <td>  <a href="<?php echo url('admin/articlecategory/read',['id'=>$category['id']]); ?>" data-toggle="modal"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/articlecategory/edit',['id'=>$category['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/articlecategory/delete',['id'=>$category['id']]); ?>"><i class="icon-remove-sign"></i></a></td>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>

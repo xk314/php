@@ -26,12 +26,14 @@ class Login extends Controller
         $check = [
             'username' => $loginInfo['username'],
             'password' => make_password($loginInfo['password']),
+            'status' => 2
         ];
         $info = \app\admin\model\Manager::where($check)->find();
         if(empty($info)){
             $this->error("用户名密码错误", url('admin/login/index'));
         }
         session('UserInfo',$info);//将登陆用户信息写入session
+       // \app\admin\model\Manager::update(['last_login_time'=>time(),], $info['id']);
         $this->success("登录成功",url("admin/index/index"));
     }
 

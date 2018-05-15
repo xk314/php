@@ -1,0 +1,80 @@
+
+
+<link href="/static/admin/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
+
+<script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/static/admin/assets/DT_bootstrap.js"></script>
+<div class="row-fluid">
+    <div class="row-fluid">
+        <!-- block -->
+        <div class="block">
+            <div class="navbar navbar-inner block-header">
+                <div class="muted pull-left">评论详情</div>
+                <div style="float: right"><a href="{:url('admin/comment/index')}"><i class="icon-remove"></i></a></div>
+            </div>
+            <div class="block-content collapse in">
+                <legend>基本信息</legend>
+                <!-- block -->
+                <div class="block">
+                    <div class="navbar navbar-inner block-header">
+                        <div class="muted pull-left">详情</div>
+                    </div>
+                    <div class="block-content collapse in">
+                        <div class="span12">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>评论者</th>
+                                    <th>评论文章</th>
+                                    <th>父评论</th>
+                                    <th>评论时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{$comment.id}</td>
+                                    <td>{$comment.username}</td>
+                                    <td><a href="{:url('admin/article/read',['id'=>$comment.article_id])}">{$comment.title}</a></td>
+                                    {if($comment.pid == '0')}
+                                    <td><a>{$comment.pid}</a></td>
+                                    {else /}
+                                    <td><a  href="{:url('admin/comment/read',['id'=>$comment.pid])}">{$comment.pid}</a></td>
+                                    {/if}
+                                    <td>{$comment.addate}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <legend>评论内容</legend>
+                <form  class="form-horizontal" >
+                    <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="content">评论内容</label>
+                        <div class="controls">
+                            <textarea disabled class="input-xlarge textarea" id="content" name="content"  style="width: 600px; height: 200px">{$comment.content}</textarea>
+                        </div>
+                    </div>
+                    <fieldset>
+                </form>
+
+                <legend>子评论</legend>
+                {volist name='sonComment' id='son'}
+                <div class="alert alert-success">
+                    <button class="close" data-dismiss="alert"></button>
+                    <strong>用户:{$son.username}&emsp;&emsp;</strong> {$son.content}
+
+                    <div style="float: right"><a onclick="return confirm('确认删除此评论');" href="{:url('admin/comment/delete',['id'=>$son.id])}"><i class="icon-remove"></i></a></div>
+                </div>
+                {/volist}
+
+            </div>
+        </div>
+        <!-- /block -->
+    </div>
+</div>

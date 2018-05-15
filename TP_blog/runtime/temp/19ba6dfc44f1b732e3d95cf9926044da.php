@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\role\index.html";i:1526044889;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\role\index.html";i:1526375059;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -204,11 +204,11 @@
                     <tbody>
                     <?php if(is_array($roleList) || $roleList instanceof \think\Collection || $roleList instanceof \think\Paginator): $i = 0; $__LIST__ = $roleList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$role): $mod = ($i % 2 );++$i;?>
                     <tr class="odd gradeX">
-                        <th><?php echo $role['id']; ?></th>
-                        <th><?php echo $role['role_name']; ?></th>
-                        <th><?php echo $role['create_time']; ?></th>
-                        <th><?php echo $role['update_time']; ?></th>
-                        <th><a href="<?php echo url('admin/role/read',['id'=>$role['id']]); ?>"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/role/edit',['id'=>$role['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/role/delete',['id'=>$role['id']]); ?>"><i class="icon-remove"></i></a></th>
+                        <td><?php echo $role['id']; ?></td>
+                        <td><?php echo $role['role_name']; ?></td>
+                        <td><?php echo $role['create_time']; ?></td>
+                        <td><?php echo $role['update_time']; ?></td>
+                        <td><a href="<?php echo url('admin/role/read',['id'=>$role['id']]); ?>"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/role/edit',['id'=>$role['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/role/delete',['id'=>$role['id']]); ?>"><i class="icon-remove"></i></a></td>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>

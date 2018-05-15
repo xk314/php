@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"I:\phpstudy\WWW\myproject\public/../application/admin\view\article\read.html";i:1526305173;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"I:\phpstudy\WWW\myproject\public/../application/admin\view\article\read.html";i:1526391769;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -178,7 +178,7 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">文章修改</div>
+                        <div class="muted pull-left">文章详情</div>
                         <div style="float: right"><a href="<?php echo url('admin/article/index'); ?>"><i class="icon-remove"></i></a></div>
                     </div>
                     <div class="block-content collapse in">
@@ -245,7 +245,7 @@
                                     <div class="control-group">
                                         <label class="control-label" for="content">文章内容</label>
                                         <div class="controls">
-                                            <textarea disabled class="input-xlarge textarea" id="content" name="content"  style="width: 600px; height: 200px"><?php echo $article['content']; ?></textarea>
+                                            <textarea disabled class="input-xlarge textarea" id="content" name="content"  style="width: 600px; height: 400px"><?php echo $article['content']; ?></textarea>
                                         </div>
                                     </div>
                                     <!--<div class="form-actions">-->

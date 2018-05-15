@@ -55,11 +55,13 @@ class Manager extends Model
     }
 
 //在模型类中如果设置了获取器，会影响使用Model进行关联查询
-//    public  function getRoleIdAttr($value)
-//    {
-//        $arr = [0=>'admin',1=>'主管',2=>'经理',3=>"普通用户"];
-//        return $arr[$value];
-//    }
+//字段的获取器和修改器的操作要一致。如果设置了获取器，则外部程序在对模型对象的字段进行判断时，需要依据获取器
+//返回的值进行判断
+    public  function getRoleIdAttr($value)
+    {
+        $arr = [0=>'超级管理员',1=>'主管',2=>'经理',3=>"普通用户"];
+        return $arr[$value];
+    }
     public function setRoleIdAttr($value)
     {
         $arr = [

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\article\index.html";i:1526304697;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/admin\view\article\index.html";i:1526355885;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -207,7 +207,7 @@
                         <td><?php echo $info['id']; ?></td>
                         <td><?php echo $info['classname']; ?></td>
                         <td align="left">
-                            <a target="_blank" href="#"><?php echo $info['title']; ?></a>
+                            <a target="_blank" href="<?php echo url('admin/article/read',['id'=>$info['id']]); ?>"><?php echo $info['title']; ?></a>
                             <?php if($info['top']=='是'): ?>
                             [<font color="red">顶</font>]
                             <?php endif; ?>

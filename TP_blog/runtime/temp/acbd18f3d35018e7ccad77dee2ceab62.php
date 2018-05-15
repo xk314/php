@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\create.html";i:1526214608;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"I:\phpstudy\WWW\myproject\public/../application/admin\view\manager\create.html";i:1526383140;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -254,7 +254,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-actions">
+                                    <div class="form-actions" style="margin-top: 60px">
                                         <button type="submit" class="btn btn-primary">Save changes</button>
                                         <button type="reset" class="btn">Cancel</button>
                                     </div>

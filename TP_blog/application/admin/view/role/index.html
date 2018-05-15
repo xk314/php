@@ -39,11 +39,11 @@
                     <tbody>
                     {volist name='roleList' id='role'}
                     <tr class="odd gradeX">
-                        <th>{$role.id}</th>
-                        <th>{$role.role_name}</th>
-                        <th>{$role.create_time}</th>
-                        <th>{$role.update_time}</th>
-                        <th><a href="{:url('admin/role/read',['id'=>$role.id])}"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/role/edit',['id'=>$role.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/role/delete',['id'=>$role.id])}"><i class="icon-remove"></i></a></th>
+                        <td>{$role.id}</td>
+                        <td>{$role.role_name}</td>
+                        <td>{$role.create_time}</td>
+                        <td>{$role.update_time}</td>
+                        <td><a href="{:url('admin/role/read',['id'=>$role.id])}"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/role/edit',['id'=>$role.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/role/delete',['id'=>$role.id])}"><i class="icon-remove"></i></a></td>
                     </tr>
                     {/volist}
                     </tbody>

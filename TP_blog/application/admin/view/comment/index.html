@@ -8,14 +8,11 @@
     <!-- block -->
     <div class="block">
         <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">文章管理</div>
+            <div class="muted pull-left">文章评论管理</div>
         </div>
         <div class="block-content collapse in">
             <div class="span12">
                 <div class="table-toolbar">
-                    <div class="btn-group">
-                        <a href="{:url('admin/article/create')}"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
-                    </div>
                     <div class="btn-group pull-right">
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
                         <ul class="dropdown-menu">
@@ -29,27 +26,24 @@
                     <thead>
                     <tr style="text-align: center">
                         <th>编号</th>
-                        <th>文章分类</th>
-                        <th>标题</th>
-                        <th>作者</th>
+                        <th>文章标题</th>
+                        <th>Pid</th>
+                        <th>评论者</th>
+                        <th>评论</th>
                         <th>添加时间</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {volist name='infoArr' id='info'}
+                    {volist name='commentList' id='comment'}
                     <tr class="odd gradeX" style="text-align: center">
-                        <td>{$info.id}</td>
-                        <td>{$info.classname}</td>
-                        <td align="left">
-                            <a target="_blank" href="{:url('admin/article/read',['id'=>$info.id])}">{$info.title}</a>
-                            {if condition="$info.top=='是'"}
-                            [<font color="red">顶</font>]
-                            {/if}
-                        </td>
-                        <td>{$info.username}</td>
-                        <td>{$info.addate}</td>
-                        <td><a href="{:url('admin/article/read',['id'=>$info.id])}"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/article/edit',['id'=>$info.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/article/delete',['id'=>$info.id])}"><i class="icon-remove-sign"></i></a></td>
+                        <td>{$comment.id}</td>
+                        <td><a href="{:url('admin/article/read',['id'=>$comment.article_id])}">{$comment.title}</a></td>
+                        <td>{$comment.pid}</td>
+                        <td>{$comment.username}</td>
+                        <td>{:substr($comment.content,0,30)}</td>
+                        <td>{$comment.addate}</td>
+                        <td><a href="{:url('admin/comment/read',['id'=>$comment.id])}"><i class="icon-eye-open"></i></a>&nbsp;<a onclick="return confirm('确认删除此评论');" href="{:url('admin/comment/delete',['id'=>$comment.id])}"><i class="icon-remove-sign"></i></a></td>
                     </tr>
                     {/volist}
                     </tbody>

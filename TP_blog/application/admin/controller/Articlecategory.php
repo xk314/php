@@ -24,15 +24,12 @@ class Articlecategory extends BaseController
                ->order('orderby asc')
                ->field('c.*,count(a.id) num')
                ->select();
-        //dump($categoryInfo);
-        $categoryInfo=\app\admin\model\Category2::categoryList($categoryInfo);
-//        dump($a);
-//        $categoryInfo['categoryList'] = $a;
-       //dump($categoryInfo);
+        $categoryInfoList=\app\admin\model\Category2::categoryList($categoryInfo);
+
         $info = [
-            'categoryInfo' => $categoryInfo,
+            'categoryInfoList' => $categoryInfoList,
         ];
-        return view('CategoryIndex', $info);
+        return view('index', $info);
     }
 
     /**
@@ -46,7 +43,7 @@ class Articlecategory extends BaseController
         $info = [
             'categoryList' => $categoryList,
         ];
-        return view('CategoryAdd',$info);
+        return view('create',$info);
     }
 
     /**
@@ -65,12 +62,12 @@ class Articlecategory extends BaseController
         $validate = new \think\Validate($rule);
         if(!$validate->check(input())){
             $msg = $validate->getError();
-            $this->error($msg,url('admin/category/create'));
+            $this->error($msg,url('admin/articlecategory/create'));
         }
         $res = \app\admin\model\Category2::create(input(),true);
         if(empty($res))
-            $this->error('创建文章分类失败',url('admin/category/create'));
-        $this->success('创建文章分类成功', url('admin/category/index'));
+            $this->error('创建文章分类失败',url('admin/articlecategory/create'));
+        $this->success('创建文章分类成功', url('admin/articlecategory/index'));
     }
 
     /**
@@ -97,9 +94,9 @@ class Articlecategory extends BaseController
        // dump($categoryList);
         $info = [
             'categoryList' => $categoryList,
-            'categoryinfo' => $category
+            'categoryInfo' => $category
         ];
-        return view('categoryEdit', $info);
+        return view('edit', $info);
     }
 
     /**
@@ -119,13 +116,13 @@ class Articlecategory extends BaseController
         $validate = new \think\Validate($rule);
         if(!$validate->check(input())){
             $msg = $validate->getError();
-            $this->error($msg,url('admin/category/edit',['id'=>input()['id']]));
+            $this->error($msg,url('admin/articlecategory/edit',['id'=>input()['id']]));
         }
         $res = \app\admin\model\Category2::update(input(), [],true);
         if(input()['id'] == $res['id']){
-            $this->success('修改分类成功',url('admin/category/index'));
+            $this->success('修改分类成功',url('admin/articlecategory/index'));
         }
-        $this->error('修改分类失败',url('admin/category/edit',['id'=>input()['id']]));
+        $this->error('修改分类失败',url('admin/articlecategory/edit',['id'=>input()['id']]));
     }
 
     /**
@@ -137,8 +134,8 @@ class Articlecategory extends BaseController
     public function delete($id)
     {
         if(\app\admin\model\Category2::destroy($id)){
-            $this->success('删除分类成功',url('admin/category/index'));
+            $this->success('删除分类成功',url('admin/articlecategory/index'));
         }
-        $this->error('删除分类失败',url('admin/category/index'));
+        $this->error('删除分类失败',url('admin/articlecategory/index'));
     }
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html";i:1526356655;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"I:\phpstudy\WWW\myproject\public/../application/admin\view\comment\read.html";i:1526392302;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -169,73 +169,79 @@
 
 <script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/static/admin/assets/DT_bootstrap.js"></script>
-<div class="alert alert-block">
-    <a class="close" data-dismiss="alert" href="#">&times;</a>
-    <h4 class="alert-heading">Warning!</h4>
-    Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-</div>
-
 <div class="row-fluid">
-    <!-- block -->
-    <div class="block">
-        <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">权限管理</div>
-        </div>
-        <div class="block-content collapse in">
-            <div class="span12">
-                <div class="table-toolbar">
-                    <div class="btn-group">
-                        <a href="<?php echo url('admin/auth/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+    <div class="row-fluid">
+        <!-- block -->
+        <div class="block">
+            <div class="navbar navbar-inner block-header">
+                <div class="muted pull-left">评论详情</div>
+                <div style="float: right"><a href="<?php echo url('admin/comment/index'); ?>"><i class="icon-remove"></i></a></div>
+            </div>
+            <div class="block-content collapse in">
+                <legend>基本信息</legend>
+                <!-- block -->
+                <div class="block">
+                    <div class="navbar navbar-inner block-header">
+                        <div class="muted pull-left">详情</div>
                     </div>
-                    <div class="btn-group pull-right">
-                        <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Print</a></li>
-                            <li><a href="#">Save as PDF</a></li>
-                            <li><a href="#">Export to Excel</a></li>
-                        </ul>
+                    <div class="block-content collapse in">
+                        <div class="span12">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>评论者</th>
+                                    <th>评论文章</th>
+                                    <th>父评论</th>
+                                    <th>评论时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><?php echo $comment['id']; ?></td>
+                                    <td><?php echo $comment['username']; ?></td>
+                                    <td><a href="<?php echo url('admin/article/read',['id'=>$comment['article_id']]); ?>"><?php echo $comment['title']; ?></a></td>
+                                    <?php if(($comment['pid'] == '0')): ?>
+                                    <td><a><?php echo $comment['pid']; ?></a></td>
+                                    <?php else: ?>
+                                    <td><a  href="<?php echo url('admin/comment/read',['id'=>$comment['pid']]); ?>"><?php echo $comment['pid']; ?></a></td>
+                                    <?php endif; ?>
+                                    <td><?php echo $comment['addate']; ?></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+
+                        </div>
                     </div>
                 </div>
-
-                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>编号</th>
-                        <th>权限名称</th>
-                        <th>创建时间</th>
-                        <th>修改时间</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php if(is_array($authList) || $authList instanceof \think\Collection || $authList instanceof \think\Paginator): $i = 0; $__LIST__ = $authList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i;?>
-                    <tr class="odd gradeX">
-                        <td><?php echo $auth['id']; ?></td>
-                        <td><?php echo str_repeat('&emsp;',$auth['level']*2); ?><?php echo $auth['auth_name']; ?></td>
-                        <td><?php echo $auth['create_time']; ?></td>
-                        <td><?php echo $auth['update_time']; ?></td>
-                        <td>  <a href="#<?php echo $auth['id']; ?>" data-toggle="modal"><i class="icon-eye-open"></i></a>&nbsp;<a href="<?php echo url('admin/auth/edit',['id'=>$auth['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/auth/delete',['id'=>$auth['id']]); ?>"><i class="icon-remove-sign"></i></a></td>
-                        <div id="<?php echo $auth['id']; ?>" class="modal hide">
-                            <div class="modal-header">
-                                <button data-dismiss="modal" class="close" type="button">&times;</button>
-                                <h3>权限详情</h3>
-                            </div>
-                            <div class="modal-body">
-                                <p>权限名:<?php echo $auth['auth_name']; ?></p>
-                                <p>Pid:<?php echo $auth['pid']; ?></p>
-                                <p>控制器名:<?php echo $auth['auth_c']; ?></p>
-                                <p>方法名:<?php echo $auth['auth_a']; ?></p>
-                                <p>是否列表栏显示:<?php echo $auth['is_nav']; ?></p>
-                            </div>
+                <legend>评论内容</legend>
+                <form  class="form-horizontal" >
+                    <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="content">评论内容</label>
+                        <div class="controls">
+                            <textarea disabled class="input-xlarge textarea" id="content" name="content"  style="width: 600px; height: 200px"><?php echo $comment['content']; ?></textarea>
                         </div>
-                    </tr>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </tbody>
-                </table>
+                    </div>
+                    <fieldset>
+                </form>
+
+                <legend>子评论</legend>
+                <?php if(is_array($sonComment) || $sonComment instanceof \think\Collection || $sonComment instanceof \think\Paginator): $i = 0; $__LIST__ = $sonComment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$son): $mod = ($i % 2 );++$i;?>
+                <div class="alert alert-success">
+                    <button class="close" data-dismiss="alert"></button>
+                    <strong>用户:<?php echo $son['username']; ?>&emsp;&emsp;</strong> <?php echo $son['content']; ?>
+
+                    <div style="float: right"><a onclick="return confirm('确认删除此评论');" href="<?php echo url('admin/comment/delete',['id'=>$son['id']]); ?>"><i class="icon-remove"></i></a></div>
+                </div>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+
             </div>
         </div>
+        <!-- /block -->
     </div>
-    <!-- /block -->
 </div>
 
 
