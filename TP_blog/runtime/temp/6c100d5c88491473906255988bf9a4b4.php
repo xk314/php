@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goodsattr\index.html";i:1526201010;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\links\index.html";i:1526305557;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -166,25 +166,20 @@
         
 
 <link href="/static/admin/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
+
 <script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
 <script src="/static/admin/assets/DT_bootstrap.js"></script>
-<div class="alert alert-block">
-    <a class="close" data-dismiss="alert" href="#">x</a>
-    <h4 class="alert-heading">Warning!</h4>
-    Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-</div>
-
 <div class="row-fluid">
     <!-- block -->
     <div class="block">
         <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">商品属性管理</div>
+            <div class="muted pull-left">友情链接管理</div>
         </div>
         <div class="block-content collapse in">
             <div class="span12">
                 <div class="table-toolbar">
                     <div class="btn-group">
-                        <a href="<?php echo url('admin/goodsattr/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                        <a href="<?php echo url('admin/links/create'); ?>"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
                     </div>
                     <div class="btn-group pull-right">
                         <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
@@ -195,33 +190,24 @@
                         </ul>
                     </div>
                 </div>
-
                 <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
                     <thead>
-                    <tr>
+                    <tr style="text-align: center">
                         <th>编号</th>
-                        <th>属性名称</th>
-                        <th>从属商品类型</th>
-                        <th>属性类型</th>
-                        <th>录入方式</th>
-                        <th>属性值</th>
-                        <th>创建时间</th>
-                        <th>修改时间</th>
+                        <th>域名</th>
+                        <th>网址</th>
+                        <th>排序</th>
                         <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php if(is_array($goodsAttrList) || $goodsAttrList instanceof \think\Collection || $goodsAttrList instanceof \think\Paginator): $i = 0; $__LIST__ = $goodsAttrList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$attr): $mod = ($i % 2 );++$i;?>
-                    <tr class="odd gradeX">
-                        <th><?php echo $attr['id']; ?></th>
-                        <th><?php echo $attr['attr_name']; ?></th>
-                        <th><?php echo $attr['type_name']; ?></th>
-                        <th><?php echo $attr['attr_type']; ?></th>
-                        <th><?php echo $attr['attr_input_type']; ?></th>
-                        <th><?php echo $attr['attr_values']; ?></th>
-                        <th><?php echo $attr['create_time']; ?></th>
-                        <th><?php echo $attr['update_time']; ?></th>
-                        <th><a href="<?php echo url('admin/goodsattr/edit',['id'=>$attr['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;</a> | <a href="<?php echo url('admin/goodsattr/delete',['id'=>$attr['id']]); ?>"><i class="icon-remove-sign"></i></a></th>
+                    <?php if(is_array($linksList) || $linksList instanceof \think\Collection || $linksList instanceof \think\Paginator): $i = 0; $__LIST__ = $linksList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$link): $mod = ($i % 2 );++$i;?>
+                    <tr class="odd gradeX" style="text-align: center">
+                        <td><?php echo $link['id']; ?></td>
+                        <td><?php echo $link['domain']; ?></td>
+                        <td><?php echo $link['url']; ?></td>
+                        <td><?php echo $link['orderby']; ?></td>
+                        <td></a>&nbsp;<a href="<?php echo url('admin/links/edit',['id'=>$link['id']]); ?>"><i class="icon-edit"></i></a>&nbsp;<a href="<?php echo url('admin/links/delete',['id'=>$link['id']]); ?>"><i class="icon-remove-sign"></i></a></td>
                     </tr>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>

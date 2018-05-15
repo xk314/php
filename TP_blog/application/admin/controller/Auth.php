@@ -99,8 +99,8 @@ class Auth extends BaseController
             $msg = $validate->getError();
             $this->error($msg,url('admin/auth/index'));
         }
-        $res = \app\admin\model\Auth::where('auth_name',input('auth_name'))->find();
-        !empty($res) && $this->error('权限名已存在',url('admin/auth/index'));
+        //$res = \app\admin\model\Auth::where('auth_name',input('auth_name'))->find();
+       // !empty($res) && $this->error('权限名已存在',url('admin/auth/index'));
         $res = \app\admin\model\Auth::update(input(),$id,true);
         if(empty($res))
             $this->error('修改权限失败',url('admin/auth/index'));

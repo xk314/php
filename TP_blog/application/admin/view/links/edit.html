@@ -13,60 +13,31 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">用户信息修改</div>
-                        <div style="float: right"><a href="{:url('admin/manager/index')}"><i class="icon-remove"></i></a></div>
+                        <div class="muted pull-left">友情链接修改</div>
+                        <div style="float: right"><a href="{:url('admin/links/index')}"><i class="icon-remove"></i></a></div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
-                            <form  class="form-horizontal" action="{:url('admin/manager/update',['id'=>$userInfo.id])}">
+                            <form  class="form-horizontal" action="{:url('admin/links/update',['id'=>$link.id])}">
                                 <fieldset>
-                                    <div class="alert alert-error hide">
-                                        <button class="close" data-dismiss="alert"></button>
-                                        You have some form errors. Please check below.
-                                    </div>
-                                    <div class="alert alert-success hide">
-                                        <button class="close" data-dismiss="alert"></button>
-                                        Your form validation is successful!
-                                    </div>
-                                    <!--<div class="control-group">-->
-                                        <!--<label class="control-label" for="focusedInput">Name</label>-->
-                                        <!--<div class="controls">-->
-                                            <!--<input class="input-xlarge focused" id="focusedInput" type="text" value="">-->
-                                        <!--</div>-->
-                                    <!--</div>-->
                                     <legend>基本信息</legend>
                                    <div class="control-group">
-                                    <label  class="control-label" for="username">用户名<span class="required">*</span></label>
-                                    <div class="controls">
-                                        <input type="text" disabled class="input-xlarge" id="username" name="username" value="{$userInfo.username}">
+                                       <label  class="control-label" for="domain">域名<span class="required">*</span></label>
+                                       <div class="controls">
+                                            <input type="text" class="input-xlarge" id="domain" name="domain" value="{$link.domain}">
+                                       </div>
                                     </div>
-                                </div>
                                     <div class="control-group">
-                                        <label  class="control-label" for="nickname">Nickname<span class="required">*</span></label>
-                                        <div class="controls">
-                                            <input type="text" disabled class="input-xlarge" id="nickname" name="nickname" value="{$userInfo.nickname}">
+                                        <label  class="control-label" for="url">URL<span class="required">*</span></label>
+                                        <div class="controls has-warning">
+                                            <input type="text" class="input-xlarge" id="url" name="url" value="{$link.url}">
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="select01">用户状态</label>
+                                        <label  class="control-label" for="orderby">排序<span class="required">*</span></label>
                                         <div class="controls">
-                                            <select id="select01" class="chzn-select" name="status">
-                                                <option>请设置用户状态</option>
-                                                <option value="注销" {if($userInfo.status=='注销')}selected{/if}>注销</option>
-                                                <option value="禁用" {if($userInfo.status=='禁用')}selected{/if}>禁用</option>
-                                                <option value="正常" {if($userInfo.status=='正常')}selected{/if}>正常</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="select02">用户角色类型</label>
-                                        <div class="controls">
-                                            <select id="select02" class="chzn-select" name="role_id">
-                                                <option>请选择角色类型</option>
-                                                {volist name='roleList' id='role'}
-                                                    <option value="{$role.id}" {if($userInfo.role_id==$role.id)}selected{/if}>{$role.role_name}</option>
-                                                {/volist}
-                                            </select>
+                                            <input type="number" name="orderby" class="input-xlarge" id="orderby" value="{$link.orderby}" >
+                                            <span class="help-block">请输入整数</span>
                                         </div>
                                     </div>
                                     <div class="form-actions">

@@ -14,7 +14,7 @@
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
                         <div class="muted pull-left">权限修改
-                            <a style="text-align: right" href="{:url('admin/auth/index')}"><i class="icon-remove"></i></a>
+                            <div style="float: right"><a href="{:url('admin/manager/index')}"><i class="icon-remove"></i></a></div>
                         </div>
                     </div>
                     <div class="block-content collapse in">
@@ -32,9 +32,9 @@
                                         <label class="control-label" for="select01">权限父类型</label>
                                         <div class="controls">
                                             <select id="select01" class="chzn-select" name="pid">
-                                                <option>顶级分类</option>
+                                                <option value="0">顶级分类</option>
                                                 {volist name='authArr' id='auth'}
-                                                    <option value="{$auth.id}" {if($auth.id=$authInfo.pid)}selected{/if}>{$auth.auth_name}</option>
+                                                    <option value="{$auth.id}" {if($auth.id==$authInfo.pid)}selected{/if}>{$auth.auth_name}</option>
                                                 {/volist}
                                             </select>
                                         </div>

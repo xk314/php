@@ -41,7 +41,7 @@
             <div class="clr"></div>
             <div class="slider">
                 <div id="coin-slider">
-                    <?php $__FOR_START_15838__=1;$__FOR_END_15838__=4;for($i=$__FOR_START_15838__;$i < $__FOR_END_15838__;$i+=1){ ?>
+                    <?php $__FOR_START_19309__=1;$__FOR_END_19309__=4;for($i=$__FOR_START_19309__;$i < $__FOR_END_19309__;$i+=1){ ?>
                         <a href="javascript:void(0)" >
                             <img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />
                             <span><big><?php echo $topShow[$i-1]['title']; ?></big><br />

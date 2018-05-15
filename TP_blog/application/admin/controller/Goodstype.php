@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Request;
 
-class Goodstype extends BaseController
+class Articlecategory extends BaseController
 {
     /**
      * 显示资源列表

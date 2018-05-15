@@ -63,12 +63,13 @@ class Manager extends Model
     public function setRoleIdAttr($value)
     {
         $arr = [
-            'admin'=>0,
+            '超级管理员'=>0,
             '主管' =>1,
             '经理' => 2,
             '普通用户' => 3,
         ];
-        if(empty($value)){
+        //表单提交过来的数据都为字符串形式，所以不可使用全等或不全等进行判断，否则永远不会满足条件
+        if(empty($value)&& $value != 0){
             return $arr['普通用户'];
         }
         return $value;

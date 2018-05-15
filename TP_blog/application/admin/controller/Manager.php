@@ -71,7 +71,7 @@ class Manager extends BaseController
                     ->field('m.*')->join('tpshop_role role','m.role_id=role.id')->field('role.role_name')
                     ->find($id)->toArray();
 
-        //将所有所有的权限信息处理为索引为权限ID的数组
+        //将所有的权限信息处理为索引为权限ID的数组
         $authList = \app\admin\model\Auth::field('id,auth_name')->select(); //所有权限信息
         $authList = array_map(function($value){return $value->toArray();},$authList);
         $authArrById = [];  //将所有的权限信息以权限ID为下标放入数组
@@ -79,12 +79,16 @@ class Manager extends BaseController
             $authArrById[$v['id']] = $v;
         }
         //获取当前用户对应的角色类型拥有的权利
-        $userAuthIds = \app\admin\model\Role::where('id',$userInfo['role_id'])
-            ->field('role_auth_ids')->find()->toArray();
-        $userAuthIds['role_auth_ids'] = explode(',',$userAuthIds['role_auth_ids']);//用户所有权限的ID
-        //将用户拥有的权限，放入用户信息数组下标为auth处，数据为二维数组，下标为权限的ID
-        foreach($userAuthIds['role_auth_ids'] as $id){
-            $userInfo['auth'][$id] = $authArrById[$id];
+        if($userInfo['role_id'] == 0)
+            $userInfo['auth'] = $authArrById;
+        else {
+            $userAuthIds = \app\admin\model\Role::where('id',$userInfo['role_id'])
+                ->field('role_auth_ids')->find()->toArray();
+            $userAuthIds['role_auth_ids'] = explode(',',$userAuthIds['role_auth_ids']);//用户所有权限的ID
+            //将用户拥有的权限，放入用户信息数组下标为auth处，数据为二维数组，下标为权限的ID
+            foreach($userAuthIds['role_auth_ids'] as $id){
+                $userInfo['auth'][$id] = $authArrById[$id];
+            }
         }
         $info = [
             'userInfo'=>$userInfo,

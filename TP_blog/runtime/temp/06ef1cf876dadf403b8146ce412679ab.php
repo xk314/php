@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goods\index.html";i:1526048390;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526043875;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"I:\phpstudy\WWW\myproject\public/../application/admin\view\goods\index.html";i:1526048390;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -143,59 +143,18 @@
     <div class="row-fluid">
         <!--后台首页右侧项目栏-->
         <div class="span3" id="sidebar">
-            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
-                <li class="active">
-                    <a href="#"><i class="icon-chevron-right"></i>权限管理</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/auth/index'); ?>"><span class="badge badge-success pull-right">731</span>权限管理</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>用户管理</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/role/index'); ?>"><span class="badge badge-success pull-right">812</span>角色管理</a>
-                </li>
-            </ul>
-            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
-                <li class="active">
-                    <a href="#"><i class="icon-chevron-right"></i>商品管理</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/goods/index'); ?>"><span class="badge badge-success pull-right">731</span>商品列表</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/goods/create'); ?>"><span class="badge badge-success pull-right">731</span>商品新增</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/goodstype/index'); ?>"><span class="badge badge-success pull-right">812</span>商品类型</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/goodsattr/index'); ?>"><span class="badge badge-success pull-right">812</span>商品属性</a>
-                </li>
-            </ul>
-            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
-                <li class="active">
-                    <a href="#"><i class="icon-chevron-right"></i>订单管理</a>
-                </li>
-                <li>
-                    <a href="{:url('admin/auth/index')"><span class="badge badge-success pull-right">731</span>订单列表</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>添加订单</a>
-                </li>
-            </ul>
-            <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
-                <li class="active">
-                    <a href="#"><i class="icon-chevron-right"></i>日程管理</a>
-                </li>
-                <li>
-                    <a href="{:url('admin/plan/index')"><span class="badge badge-success pull-right">731</span>日程管理</a>
-                </li>
-                <li>
-                    <a href="<?php echo url('admin/manager/index'); ?>"><span class="badge badge-success pull-right">812</span>管理员管理</a>
-                </li>
-            </ul>
+            <?php if(is_array($topAuth) || $topAuth instanceof \think\Collection || $topAuth instanceof \think\Paginator): $i = 0; $__LIST__ = $topAuth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$top): $mod = ($i % 2 );++$i;if((in_array($top['id'],$userAuth))): ?>
+                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse" style="margin-top: 0px;margin-bottom: 10px">
+                        <li class="active">
+                            <a href="#"><i class="icon-chevron-right"></i><?php echo $top['auth_name']; ?></a>
+                        </li>
+                        <?php if(is_array($secondAuth) || $secondAuth instanceof \think\Collection || $secondAuth instanceof \think\Paginator): $i = 0; $__LIST__ = $secondAuth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$second): $mod = ($i % 2 );++$i;if((in_array($second['id'],$userAuth))): if(($second['pid']==$top['id'])): ?>
+                                    <li>
+                                        <a href="<?php echo url($second['auth_c'].'/'.$second['auth_a']); ?>"><span class="badge badge-success pull-right"></span><?php echo $second['auth_name']; ?></a>
+                                 </li>
+                                <?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
+                    </ul>
+                <?php endif; endforeach; endif; else: echo "" ;endif; ?>
         </div>
 
         <!--后台中间首项目栏-->

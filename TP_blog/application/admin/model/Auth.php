@@ -6,6 +6,8 @@ use think\Model;
 
 class Auth extends Model
 {
+    //protected  $table = 'tpshop_auth';
+
 //    设置自动完成
     protected $insert = ['create_time'];
     protected $update = ['update_time'];

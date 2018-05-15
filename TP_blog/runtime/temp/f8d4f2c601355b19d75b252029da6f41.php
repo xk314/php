@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\edit.html";i:1526297685;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/admin\view\links\edit.html";i:1526306293;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -178,59 +178,33 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">权限修改
-                            <div style="float: right"><a href="<?php echo url('admin/manager/index'); ?>"><i class="icon-remove"></i></a></div>
-                        </div>
+                        <div class="muted pull-left">友情链接修改</div>
+                        <div style="float: right"><a href="<?php echo url('admin/links/index'); ?>"><i class="icon-remove"></i></a></div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
-                            <form  class="form-horizontal" action="<?php echo url('admin/auth/update',['id'=>$authInfo['id']]); ?>">
+                            <form  class="form-horizontal" action="<?php echo url('admin/links/update',['id'=>$link['id']]); ?>">
                                 <fieldset>
                                     <legend>基本信息</legend>
                                    <div class="control-group">
-                                       <label  class="control-label" for="auth_name">权限名称<span class="required">*</span></label>
+                                       <label  class="control-label" for="domain">域名<span class="required">*</span></label>
                                        <div class="controls">
-                                            <input type="text" class="input-xlarge" id="auth_name" name="auth_name" value="<?php echo $authInfo['auth_name']; ?>">
+                                            <input type="text" class="input-xlarge" id="domain" name="domain" value="<?php echo $link['domain']; ?>">
                                        </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="select01">权限父类型</label>
-                                        <div class="controls">
-                                            <select id="select01" class="chzn-select" name="pid">
-                                                <option value="0">顶级分类</option>
-                                                <?php if(is_array($authArr) || $authArr instanceof \think\Collection || $authArr instanceof \think\Paginator): $i = 0; $__LIST__ = $authArr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i;?>
-                                                    <option value="<?php echo $auth['id']; ?>" <?php if(($auth['id']==$authInfo['pid'])): ?>selected<?php endif; ?>><?php echo $auth['auth_name']; ?></option>
-                                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                                            </select>
+                                        <label  class="control-label" for="url">URL<span class="required">*</span></label>
+                                        <div class="controls has-warning">
+                                            <input type="text" class="input-xlarge" id="url" name="url" value="<?php echo $link['url']; ?>">
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label  class="control-label" for="auth_c">控制器名<span class="required">*</span></label>
+                                        <label  class="control-label" for="orderby">排序<span class="required">*</span></label>
                                         <div class="controls">
-                                            <input type="text" class="input-xlarge" id="auth_c" name="auth_c" value="<?php echo $authInfo['auth_c']; ?>">
+                                            <input type="number" name="orderby" class="input-xlarge" id="orderby" value="<?php echo $link['orderby']; ?>" >
+                                            <span class="help-block">请输入整数</span>
                                         </div>
                                     </div>
-                                    <div class="control-group">
-                                        <label  class="control-label" for="auth_a">方法名<span class="required">*</span></label>
-                                        <div class="controls">
-                                            <input type="text" class="input-xlarge" id="auth_a" name="auth_a" value="<?php echo $authInfo['auth_a']; ?>">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="optionsCheckbox2">是否列表栏显示</label>
-                                        <div class="controls ">
-                                            <div class="radio-inline">
-                                            <label>
-                                                <input type="radio" id="optionsCheckbox2" name="is_nav" value="否" <?php if(($authInfo['is_nav']="否")): ?>checked<?php endif; ?>>
-                                                否
-                                            </label>
-                                            <label>
-                                                <input type="radio"  name="is_nav" value="是" <?php if(($authInfo['is_nav']="是")): ?>checked<?php endif; ?>>
-                                                是
-                                            </label>
-                                            </div>
-                                        </div>
-                                     </div>
                                     <div class="form-actions">
                                         <button type="submit" class="btn btn-primary">Save changes</button>
                                         <button type="reset" class="btn">Cancel</button>
@@ -242,7 +216,7 @@
                 </div>
                 <!-- /block -->
             </div>
-
+<script src="/static/admin/show.js"></script>
 <script type="text/javascript">
     $(function($){
             $.ajax({
@@ -251,7 +225,7 @@
                 'data': {id:0},
                 'dataType': 'json',
                 'success': function (result) {
-                 var str = '<option>一级商品分类</option>';
+                 var str = '<option>商品一级分类</option>';
                     $.each(result,function(k,v){
                         str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
                     });
@@ -285,8 +259,7 @@
                 'data': data,
                 'dataType': 'json',
                 'success': function (result) {
-                    var str = '<option>something</option>';
-                    var str = '';
+                    var str = '<option>商品二级分类</option>';
                     $.each(result,function(k,v){
                         str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
                     });
@@ -312,7 +285,18 @@
                 }
             });
         });
-
+        $('#selectgoodstype').change(function(){
+            $.ajax({
+                'url':"<?php echo url('admin/goodstype/read'); ?>",
+                'type': "POST",
+                'data': {id:$(this).val()},
+                'dataType': 'json',
+                'success': function (result) {
+                    console.log(result);
+                 show(result);
+                }
+            });
+        });
 
     });
 </script>

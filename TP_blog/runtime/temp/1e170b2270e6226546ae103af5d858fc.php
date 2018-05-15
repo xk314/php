@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\edit.html";i:1526297685;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"I:\phpstudy\WWW\myproject\public/../application/admin\view\article\create.html";i:1526303151;s:60:"I:\phpstudy\WWW\myproject\application\admin\view\layout.html";i:1526298807;}*/ ?>
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -178,59 +178,76 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">权限修改
-                            <div style="float: right"><a href="<?php echo url('admin/manager/index'); ?>"><i class="icon-remove"></i></a></div>
-                        </div>
+                        <div class="muted pull-left">添加文章</div>
+                        <div style="float: right"><a href="<?php echo url('admin/article/index'); ?>"><i class="icon-remove"></i></a></div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
-                            <form  class="form-horizontal" action="<?php echo url('admin/auth/update',['id'=>$authInfo['id']]); ?>">
+                            <form  class="form-horizontal" action="<?php echo url('admin/article/save'); ?>">
                                 <fieldset>
+                                    <div class="alert alert-error hide">
+                                        <button class="close" data-dismiss="alert"></button>
+                                        You have some form errors. Please check below.
+                                    </div>
+                                    <div class="alert alert-success hide">
+                                        <button class="close" data-dismiss="alert"></button>
+                                        Your form validation is successful!
+                                    </div>
+                                    <!--<div class="control-group">-->
+                                        <!--<label class="control-label" for="focusedInput">Name</label>-->
+                                        <!--<div class="controls">-->
+                                            <!--<input class="input-xlarge focused" id="focusedInput" type="text" value="">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
                                     <legend>基本信息</legend>
                                    <div class="control-group">
-                                       <label  class="control-label" for="auth_name">权限名称<span class="required">*</span></label>
+                                       <label  class="control-label" for="title">标题<span class="required">*</span></label>
                                        <div class="controls">
-                                            <input type="text" class="input-xlarge" id="auth_name" name="auth_name" value="<?php echo $authInfo['auth_name']; ?>">
+                                            <input type="text" class="input-xlarge" id="title" name="title" placeholder="请输入文章标题">
                                        </div>
                                     </div>
+
                                     <div class="control-group">
-                                        <label class="control-label" for="select01">权限父类型</label>
+                                        <label class="control-label" for="select01">文章分类</label>
                                         <div class="controls">
-                                            <select id="select01" class="chzn-select" name="pid">
-                                                <option value="0">顶级分类</option>
-                                                <?php if(is_array($authArr) || $authArr instanceof \think\Collection || $authArr instanceof \think\Paginator): $i = 0; $__LIST__ = $authArr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$auth): $mod = ($i % 2 );++$i;?>
-                                                    <option value="<?php echo $auth['id']; ?>" <?php if(($auth['id']==$authInfo['pid'])): ?>selected<?php endif; ?>><?php echo $auth['auth_name']; ?></option>
+                                            <select id="select01" class="chzn-select" name="category_id">
+                                                <option>something</option>
+                                                <?php if(is_array($categoryList) || $categoryList instanceof \think\Collection || $categoryList instanceof \think\Paginator): $i = 0; $__LIST__ = $categoryList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
+                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['classname']; ?></option>
                                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label  class="control-label" for="auth_c">控制器名<span class="required">*</span></label>
+                                        <label  class="control-label" for="orderby">排序<span class="required">*</span></label>
                                         <div class="controls">
-                                            <input type="text" class="input-xlarge" id="auth_c" name="auth_c" value="<?php echo $authInfo['auth_c']; ?>">
+                                            <input type="number" name="orderby" class="input-xlarge" id="orderby" value="50" >
+                                            <span class="help-block">请输入整数</span>
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label  class="control-label" for="auth_a">方法名<span class="required">*</span></label>
-                                        <div class="controls">
-                                            <input type="text" class="input-xlarge" id="auth_a" name="auth_a" value="<?php echo $authInfo['auth_a']; ?>">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="optionsCheckbox2">是否列表栏显示</label>
+                                        <label class="control-label" for="top">置顶</label>
                                         <div class="controls ">
                                             <div class="radio-inline">
-                                            <label>
-                                                <input type="radio" id="optionsCheckbox2" name="is_nav" value="否" <?php if(($authInfo['is_nav']="否")): ?>checked<?php endif; ?>>
-                                                否
-                                            </label>
-                                            <label>
-                                                <input type="radio"  name="is_nav" value="是" <?php if(($authInfo['is_nav']="是")): ?>checked<?php endif; ?>>
-                                                是
-                                            </label>
+                                                <label>
+                                                    <input type="radio" id="top" name="top" value="否" checked>
+                                                    否
+                                                </label>
+                                                <label>
+                                                    <input type="radio"  name="top" value="是" >
+                                                    是
+                                                </label>
                                             </div>
                                         </div>
-                                     </div>
+                                    </div>
+
+                                    <legend>文章内容</legend>
+                                    <div class="control-group">
+                                        <label class="control-label" for="content">文章内容</label>
+                                        <div class="controls">
+                                            <textarea class="input-xlarge textarea" id="content" name="content" placeholder="请输入文章内容 ..." style="width: 600px; height: 200px"></textarea>
+                                        </div>
+                                    </div>
                                     <div class="form-actions">
                                         <button type="submit" class="btn btn-primary">Save changes</button>
                                         <button type="reset" class="btn">Cancel</button>
@@ -242,80 +259,6 @@
                 </div>
                 <!-- /block -->
             </div>
-
-<script type="text/javascript">
-    $(function($){
-            $.ajax({
-                'url':"<?php echo url('admin/goodscategory/index'); ?>",
-                'type': "POST",
-                'data': {id:0},
-                'dataType': 'json',
-                'success': function (result) {
-                 var str = '<option>一级商品分类</option>';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    $('#select011').html(str);
-                }
-            });
-        $('#select01').on('change',(function(){
-            var data = {id:$(this).val()};
-            $.ajax({
-                'url':"<?php echo url('admin/goodscategory/index'); ?>",
-                'type': "POST",
-                'data': data,
-                'dataType': 'json',
-                'success': function (result) {
-                    var str = '<option>something</option>';
-                    var str = '';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    console.log(str);
-                    $('#select02').html(str);
-                }
-            });
-        }));
-        $('#select011').change(function(){
-            var data = {id:$(this).val()};
-            console.log(data);
-            $.ajax({
-                'url':"<?php echo url('admin/goodscategory/index'); ?>",
-                'type': "POST",
-                'data': data,
-                'dataType': 'json',
-                'success': function (result) {
-                    var str = '<option>something</option>';
-                    var str = '';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    $('#select02').html(str);
-                }
-            });
-        });
-        $('#select02').change(function(){
-            var data = {id:$(this).val()};
-            console.log(data);
-            $.ajax({
-                'url':"<?php echo url('admin/goodscategory/index'); ?>",
-                'type': "POST",
-                'data': data,
-                'dataType': 'json',
-                'success': function (result) {
-                    var str = '<option>something</option>';
-                    var str = '';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    $('#select03').html(str);
-                }
-            });
-        });
-
-
-    });
-</script>
 
 
 <!--/.fluid-container-->
