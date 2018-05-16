@@ -44,4 +44,18 @@ if (!function_exists('make_data')) {
             return md5(md5($base).$password);
         }
     }
+
+    if (!function_exists('commentList')) {
+        function commentList($arrs, $pid = 0)
+        {
+            $comment_list = [];
+            foreach ($arrs as $arr) {
+                if ($arr['pid'] == $pid) {
+                    $arr['son'] = commentList($arrs, $arr['id']);
+                    $comment_list[] = $arr;
+                }
+            }
+            return $comment_list;
+        }
+    }
 }

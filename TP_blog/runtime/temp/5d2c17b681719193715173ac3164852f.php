@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1525776888;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1525764835;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1526466984;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1525764835;}*/ ?>
 
 <html>
 <head>
@@ -41,7 +41,7 @@
             <div class="clr"></div>
             <div class="slider">
                 <div id="coin-slider">
-                    <?php $__FOR_START_6478__=1;$__FOR_END_6478__=4;for($i=$__FOR_START_6478__;$i < $__FOR_END_6478__;$i+=1){ ?>
+                    <?php $__FOR_START_31125__=1;$__FOR_END_31125__=4;for($i=$__FOR_START_31125__;$i < $__FOR_END_31125__;$i+=1){ ?>
                         <a href="javascript:void(0)" >
                             <img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />
                             <span><big><?php echo $topShow[$i-1]['title']; ?></big><br />
@@ -65,7 +65,7 @@
             <p style="font-size: 40px">当前条件下无数据！</p>
         </div>
     <?php endif; if(is_array($articleList) || $articleList instanceof \think\Collection || $articleList instanceof \think\Paginator): $i = 0; $__LIST__ = $articleList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?>
-    <div class="article"> <a href="#"  num="<?php echo $article['id']; ?>" class="com"><span><?php echo $article['comment_count']; ?></span></a>
+    <div class="article"> <a href="<?php echo url('home/article/read',['id'=>$article['id']]); ?>"  num="<?php echo $article['id']; ?>" class="com"><span><?php echo $article['comment_count']; ?></span></a>
         <p style="font-size: 25px"><?php echo $article['title']; ?></p>
         <p class="infopost">Posted <span class="date"><?php echo $article['addate']; ?></span> by <a href="#"><?php echo $article['username']; ?></a> &nbsp;&nbsp;|&nbsp;&nbsp; Filed under <a href="#"><?php echo $article['classname']; ?></a>, <a href="#">internet</a></p>
         <div class="clr"></div>
@@ -77,24 +77,23 @@
     </div>
     <?php endforeach; endif; else: echo "" ;endif; if((!$noData)): ?><p class="pages"><small>Page <?php echo $current_page; ?> of <?php echo $last_page; ?></small> <?php echo $articleList->render(); ?></p><?php endif; ?>
 </div>
-      <script type="text/javascript">
-              $(function ($) {
-                  $('.article .com').click(
-                          function() {
-                              console.log('sssssssssssssssssssss');
-                            var data = {'id': $(this).attr('num')};
-                            $.ajax({
-                              'url': "<?php echo url('home/article/read'); ?>",
-                              'type': "POST",
-                              'data': data,
-                              'dataType': 'html',
-                              'success': function (result) {
-                                  $('div.mainbar').html(result);
-                              }
-                            });
-                  });
-              });
-      </script>
+      <!--<script type="text/javascript">-->
+              <!--$(function ($) {-->
+                  <!--$('.article .com').click(-->
+                          <!--function() {-->
+                            <!--var data = {'id': $(this).attr('num')};-->
+                            <!--$.ajax({-->
+                              <!--'url': "<?php echo url('home/article/read'); ?>",-->
+                              <!--'type': "POST",-->
+                              <!--'data': data,-->
+                              <!--'dataType': 'html',-->
+                              <!--'success': function (result) {-->
+                                  <!--$('div.mainbar').html(result);-->
+                              <!--}-->
+                            <!--});-->
+                  <!--});-->
+              <!--});-->
+      <!--</script>-->
 
 
     <div class="sidebar">

@@ -27,10 +27,10 @@
                                             <input type="text" class="input-xlarge" id="role_name" name="role_name" value="{$roleInfo.role_name}">
                                        </div>
                                    </div>
-                                    <div class="control-group">
+                                    <div class="control-group" style="margin-bottom: 120px">
                                         <label class="control-label" for="role_auth">添加权限</label>
                                         <div class="controls">
-                                            <select multiple="multiple" id="role_auth" name="role_auth_ids[]" class="chzn-select span4">
+                                            <select multiple="multiple" id="role_auth" name="role_auth_ids[]" class="chzn-select span4" style="width: 500px">
                                                 <option>请配置权限信息</option>
                                                 {volist name='authList' id='auth'}
                                                     <option value="{$auth.id}" {if(in_array($auth.id,$roleInfo.auth))}selected{/if}>{$auth.auth_name}&emsp;{$auth.auth}</option>
@@ -57,74 +57,9 @@
 
 <script type="text/javascript">
     $(function($){
-            $.ajax({
-                'url':"{:url('admin/goodscategory/index')}",
-                'type': "POST",
-                'data': {id:0},
-                'dataType': 'json',
-                'success': function (result) {
-                 var str = '<option>一级商品分类</option>';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    $('#select011').html(str);
-                }
-            });
-        $('#select01').on('change',(function(){
-            var data = {id:$(this).val()};
-            $.ajax({
-                'url':"{:url('admin/goodscategory/index')}",
-                'type': "POST",
-                'data': data,
-                'dataType': 'json',
-                'success': function (result) {
-                    var str = '<option>something</option>';
-                    var str = '';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    console.log(str);
-                    $('#select02').html(str);
-                }
-            });
-        }));
-        $('#select011').change(function(){
-            var data = {id:$(this).val()};
-            console.log(data);
-            $.ajax({
-                'url':"{:url('admin/goodscategory/index')}",
-                'type': "POST",
-                'data': data,
-                'dataType': 'json',
-                'success': function (result) {
-                    var str = '<option>something</option>';
-                    var str = '';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    $('#select02').html(str);
-                }
-            });
+        $('#role_auth').change(function(){
+            console.log($(this).val());
         });
-        $('#select02').change(function(){
-            var data = {id:$(this).val()};
-            console.log(data);
-            $.ajax({
-                'url':"{:url('admin/goodscategory/index')}",
-                'type': "POST",
-                'data': data,
-                'dataType': 'json',
-                'success': function (result) {
-                    var str = '<option>something</option>';
-                    var str = '';
-                    $.each(result,function(k,v){
-                        str += "<option value='" +v.id +"'>"+ v.cate_name+"</option>";
-                    });
-                    $('#select03').html(str);
-                }
-            });
-        });
-
 
     });
 </script>

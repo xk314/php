@@ -16,7 +16,7 @@ class Article extends BaseController
     {
         $userInfo = (session('UserInfo')->toArray());
         if($userInfo['role_id'] == '超级管理员') $where = '2>1';
-        else $where = ['user_id', $userInfo.id];
+        else $where = "a.user_id = ".$userInfo['id'];
         $join = [
             ['tpshop_manager u','a.user_id = u.id','LEFT'],
             ['category2 c', 'a.category_id = c.id', 'LEFT'],
@@ -27,7 +27,6 @@ class Article extends BaseController
             ->where($where)
             ->order('a.top desc,a.orderby')
             ->select();
-            ;
         //$infoArr = array_map(function($obj){return $obj->toArray();},$infoArr);
         //select查询结果为数组形式，通过上述方式将数组中的对象转化为数组
        // dump($infoArr[0]->addate);

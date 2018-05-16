@@ -1,7 +1,7 @@
 <?php
 namespace app\home\controller;
 
-class Index
+class Index extends  BaseController
 {
     public function index()
     {
@@ -12,7 +12,7 @@ class Index
         //首页右侧分类栏
         if($categoryId != 0)
             $where ['a.category_id'] =['=',$categoryId];
-        if(count($search)>=2)
+        if(count($search)>=2) //用户在搜索框输入内容
             $where ['a.title'] =['like',"%$search[1]%"];
         $articleList = \app\home\model\Article::alias('a')
             ->join('user u','a.user_id = u.id')
@@ -23,16 +23,11 @@ class Index
             ->paginate(3);
         $noData = false;
         if(count($articleList->toArray()['data']) == 0) $noData = true;
-        $articleTopShow = \app\home\model\Article::alias('a')
-            ->where('top','=',1)->field('a.id, a.title, a.content')->limit(3)->select();
-        $categoryInfo = \app\home\model\Category2::getList();
         $pageInfo = $articleList->toArray();
         $info = [
             'articleList' =>$articleList,
             'current_page' =>$pageInfo['current_page'],
             'last_page' =>$pageInfo['last_page'],
-            'topShow' => $articleTopShow,
-            'categoryInfo' =>$categoryInfo,
             'noData' =>$noData,
         ];
         return view('index', $info);

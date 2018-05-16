@@ -1,15 +1,117 @@
 
+<style type="text/css">
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  a{
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  li{
+    list-style: none;
+  }
+  div.son{
+    padding-left: 50px;
+  }
+  div.comment .p1 {
+    margin: 0px;
+    padding: 5px;
+  }
+  div.comment .p2 {
+    margin: 0px;
+    padding-left: 30px;
+  }
+</style>
+<h2>{$article.title}</h2>
       <div class="mainbar">
         <div class="article">
-          <h2>{$article.title}</h2>
+          <div><span style="font-size: 25px;color: #0e0e0e;margin-bottom: 10px">{$article.title}</span></div>
           <div class="clr"></div>
-          <p>Posted by <a href="#">{$article.username}</a> <span>&nbsp;&bull;&nbsp;</span> Filed under <a href="#">{$article.classname}</a>, <a href="#">internet</a></p>
           <p>{$article.content}</p>
-          <p>Tagged: <a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a></p>
-          <p><a href="#"><strong>Comments ({$article.comment_count})</strong></a> <span>&nbsp;&bull;&nbsp;</span> {$article.addate} <span>&nbsp;&bull;&nbsp;</span> <a href="javascript:void(0)"><strong>Edit</strong></a></p>
+          <!--<p>Tagged: <a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a></p>-->
+          <p>作者: <a href="#">{$article.username}</a>
+            分类: <a href="#">{$article.classname}</a>
+            <span style="margin-right: 10px">阅读: {$article.read}</span>
+            点赞:<a id="praise" article="{$article.id}" href="javascript:void(0)">{$article.praise}</a>
+            <span style="margin-right: 10px">评论:{$article.comment_count}</span>
+            <span style="margin-right: 10px">时间:{$article.addate}</span>时间:{$article.addate}
+          </p>
+
+          <!--分页代码-->
+          <div class="pagelist2">
+            <ul>
+              <li>前一篇：
+                {if $pre}
+                <a href="{:url('home/article/read',['id'=>$pre.id])}">{$pre.title}</a>
+                {else}
+                <a href="javascript:void(0)">没有啦</a>
+                {/if}
+              </li>
+              <li>后一篇：
+                {if $next}
+                <a href="{:url('home/article/read',['id'=>$next.id])}">{$next.title}</a>
+                {else}
+                <a href="javascript:void(0)">没有啦</a>
+                {/if}
+              </li>
+            </ul>
+          </div><!--//分页代码-->
         </div>
+
+
+        
         <div class="article">
-          <h2><span>3</span> Responses</h2>
+          <!--评论-->
+          <h2><span></span>Comment</h2>
+          <div class="clr"></div>
+          <div class="comment">
+            <!--主评论内容-->
+            <ul class="comment">
+              {foreach $comments as $comment}
+              <li class="topcomment">
+                <p class="p1">
+                  <b><a href="#">{$comment.username}</a> 发布于{$comment.addate}</b>
+                  <a href="javascript:void(0)">回复</a>
+                </p>
+                <p class="p2">{$comment.content}</p>
+
+                <div class="son">
+                    <!--子评论内容-->
+                    <ul class="soncomment">
+                      {foreach $comment.son as $sonComment}
+                      <li>
+                        <p class="p1">
+                          <b><a href="#">{$sonComment.username}</a> 发布于{$sonComment.addate}</b>
+                        </p>
+                        <p class="p2">{$sonComment.content}</p>
+                        <div class="clear"></div>
+                      </li>
+                      {/foreach}
+                    </ul><!--//子评论结内容-->
+                  </div>
+              </li>
+              {/foreach}
+
+
+
+
+
+            </ul><!--//主评论内容-->
+            <form id="form1">
+              <div>发表评论(*)</div>
+              <textarea name="content" style="width:95%;height:150px;"></textarea>
+              <input type="hidden" name="article_id" value="{$article.id}">
+              <input type="hidden" name="pid" value="0">
+              <br><input type="button" value="提交" />
+            </form>
+          </div><!--//评论-->
+
+
+
+
+
+
           <div class="clr"></div>
           <div class="comment"> <a href="#"><img src="/static/home/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
             <p><a href="#">admin</a> Says:<br />
@@ -27,32 +129,76 @@
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.</p>
           </div>
         </div>
-        <div class="article">
-          <h2><span>Leave a</span> Reply</h2>
-          <div class="clr"></div>
-          <form action="#" method="post" id="leavereply">
-            <ol>
-              <li>
-                <label for="name">Name (required)</label>
-                <input id="name" name="name" class="text" />
-              </li>
-              <li>
-                <label for="email">Email Address (required)</label>
-                <input id="email" name="email" class="text" />
-              </li>
-              <li>
-                <label for="website">Website</label>
-                <input id="website" name="website" class="text" />
-              </li>
-              <li>
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="8" cols="50"></textarea>
-              </li>
-              <li>
-                <input type="image" name="imageField" id="imageField" src="/static/home/images/submit.gif" class="send" />
-                <div class="clr"></div>
-              </li>
-            </ol>
-          </form>
-        </div>
+        <!--<div class="article">-->
+          <!--<h2><span>Leave a</span> Reply</h2>-->
+          <!--<div class="clr"></div>-->
+          <!--<form action="#" method="post" id="leavereply">-->
+            <!--<ol>-->
+              <!--<li>-->
+                <!--<label for="name">Name (required)</label>-->
+                <!--<input id="name" name="name" class="text" />-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<label for="email">Email Address (required)</label>-->
+                <!--<input id="email" name="email" class="text" />-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<label for="website">Website</label>-->
+                <!--<input id="website" name="website" class="text" />-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<label for="message">Your Message</label>-->
+                <!--<textarea id="message" name="message" rows="8" cols="50"></textarea>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<input type="image" name="imageField" id="imageField" src="/static/home/images/submit.gif" class="send" />-->
+                <!--<div class="clr"></div>-->
+              <!--</li>-->
+            <!--</ol>-->
+          <!--</form>-->
+        <!--</div>-->
       </div>
+
+<script type="text/javascript">
+  $(function(){
+    $('#praise').click(function(){
+      var _this = this;
+      var data = {'id':$(this).attr('article')};
+      $.ajax({
+        'url': "{:url('home/article/praise')}",
+        'type': "POST",
+        'data': data,
+        'dataType': 'json',
+        'success': function (result) {
+         if(result.msg == 'success')
+           $(_this).html((parseInt($(_this).html())+1));
+//          注意this在原页面和ajax处理函数中的区别,两个表示不同的区别
+        }
+      });
+    });
+    $('input[type=button]').click(function(){
+      if($('textarea').val() == ''){
+        alert('评论不能为空');
+        return;
+      }
+      var comment = $('textarea').val();
+      var data = $('#form1').serialize();
+      $.ajax({
+        'url': "{:url('home/article/comment')}",
+        'type': "POST",
+        'data': data,
+        'dataType': 'json',
+        'success': function (result) {
+          if(result.msg == 'success')
+            var str ="<li class='topcomment'><p class='p1'><b>" +
+                    "<a href='#'>" + "<{comment.username}></a> 发布于<{comment.addate}></b>"
+                    +"<a href='javascript:void(0)'>回复</a></p><p class='p2'>" + comment +"</p>";
+            $('ul.comment').append($(str));
+          $('textarea').val('')
+
+        }
+      });
+    });
+
+  });
+</script>

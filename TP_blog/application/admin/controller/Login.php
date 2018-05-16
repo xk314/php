@@ -33,10 +33,15 @@ class Login extends Controller
             $this->error("用户名密码错误", url('admin/login/index'));
         }
         session('UserInfo',$info);//将登陆用户信息写入session
-       // \app\admin\model\Manager::update(['last_login_time'=>time(),], $info['id']);
+       \app\admin\model\Manager::update(['last_login_time'=>time(), 'id'=>$info['id']]);
         $this->success("登录成功",url("admin/index/index"));
     }
 
+    public function logout()
+    {
+        session('UserInfo', null);
+        $this->success('您已安全退出', url('admin/login/index'));
+    }
     /**
      * 显示创建资源表单页.
      *

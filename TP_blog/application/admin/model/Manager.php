@@ -17,26 +17,29 @@ class Manager extends Model
     {
         return date("Y-m-d",$value);
     }
+    public function setCreateTimeAttr()
+    {
+        return time();
+    }
     public function getUpdateTimeAttr($value)
     {
         if(empty($value)) return '未修改';
         return date("Y-m-d",$value);
     }
+    public function setUpdateTimeAttr()
+    {
+        return time();
+    }
+
+
     public function getLastLoginTimeAttr($value)
     {
         if(empty($value)) return '暂未登录';
         return date("Y-m-d",$value);
     }
 
-//自动完成
-    public function setCreateTimeAttr()
-    {
-        return time();
-    }
-    public function setUpdateTimeAttr()
-    {
-        return time();
-    }
+
+
 
 
     public function getStatusAttr($value)
@@ -47,6 +50,7 @@ class Manager extends Model
 //自动完成
     public function setStatusAttr($value)
     {
+        //默认将新创建的用户的状态设置为正常
         if(!in_array($value,['注销','禁用','正常'])){
             return 2;
         }

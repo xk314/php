@@ -69,9 +69,12 @@ class BaseController extends Controller
         ];
         //当前操作所需的权限Id,若权限未添加到auth表中，则此处会报错，必须确保所有的操作已经添加到权限表中
         $needAuthId = \app\admin\model\Auth::where($search)->field('id')->find()->toArray()['id'];
-        $userAuthIds = \app\admin\model\Role::where('id',$nowUserInfo['role_id'])->field('role_auth_ids')->find()->toArray();
-        $userAuthIds = explode(',',$userAuthIds['role_auth_ids']);
-        if(in_array($needAuthId, $userAuthIds))
+        $nowUserAuthIds = \app\admin\model\Manager::alias('m')
+            ->join('tpshop_role r', 'm.role_id=r.id')->field('r.role_auth_ids')
+            ->where('m.id', $nowUserInfo['id'])->find()->toArray();
+        // $nowUserAuth = \app\admin\model\Role::where('id',$nowUserInfo['role_id'])->field("role_auth_ids")->find()->toArray();
+        $nowUserAuthIds = explode(',', $nowUserAuthIds['role_auth_ids']);
+        if(in_array($needAuthId, $nowUserAuthIds))
             return;
         else
             $this->error('您没有该操作的权限', url('admin/index/index'));

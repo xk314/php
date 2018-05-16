@@ -15,8 +15,14 @@ class Comment extends BaseController
     public function index()
     {
         $userInfo = (session('UserInfo')->toArray());
+        $nowUserArticle = \app\admin\model\Article::where('user_id', $userInfo['id'])->field('id')->select();
+        $nowUserArticle = array_map(function($value){return $value->toArray();}, $nowUserArticle);
+        $nowUserArticleIds = [];
+        foreach($nowUserArticle as $v)  $nowUserArticleIds[] = $v['id'];
+        //以上得到当前用户的所有文章id
+        $nowUserArticleIds = implode(',', $nowUserArticleIds);
         if($userInfo['role_id'] == '超级管理员') $where = '2>1';
-        else $where = ['a.user_id', $userInfo.id];
+        else $where['c.article_id'] = ['in', $nowUserArticleIds];
         $commentList = \app\admin\model\Comment::alias('c')
             ->field('c.*')
             ->join('article a','a.id=c.article_id')

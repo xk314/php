@@ -5,7 +5,7 @@ namespace app\home\controller;
 use think\Controller;
 use think\Request;
 
-class Article extends Controller
+class Article extends BaseController
 {
     /**
      * 显示资源列表
@@ -46,13 +46,36 @@ class Article extends Controller
      */
     public function read($id)
     {
-        $this->view->engine->layout(false);
+        \app\home\model\Article::where('id', $id)->setInc('read');
+//        $this->view->engine->layout(false);
         $article = \app\home\model\Article::alias('a')
             ->join('user u','a.user_id = u.id')
             ->join('category2 c', 'a.category_id = c.id')
             ->field('c.id, c.classname,u.id, u.username,a.*')
             ->find($id);
+        $pre = \app\home\model\Article::alias('a')
+            ->join('user u','a.user_id = u.id')
+            ->join('category2 c', 'a.category_id = c.id')
+            ->field('c.id, c.classname,u.id, u.username,a.*')
+            ->where(['a.id'=>['<', $id]])
+            ->order('a.id desc')->limit(1)
+            ->find();
+
+        $next = \app\home\model\Article::alias('a')
+            ->join('user u','a.user_id = u.id')
+            ->join('category2 c', 'a.category_id = c.id')
+            ->field('c.id, c.classname,u.id, u.username,a.*')
+            ->where(['a.id'=>['>', $id]])
+            ->order('a.id')->limit(1)
+            ->find();
+        $comment = \app\admin\model\Comment::alias('c')->field('c.*')
+            ->join('tpshop_manager m','c.user_id = m.id')->field('m.username')
+            ->where('c.article_id', $id)->select();
+        $comment = commentList($comment);
         $info = [
+            'pre' => $pre,
+            'next' => $next,
+            'comments' => $comment,
             'article' => $article,
         ];
         return view('detail', $info);
@@ -115,4 +138,17 @@ class Article extends Controller
     {
         //
     }
+
+    public function praise($id)
+    {
+        \app\home\model\Article::where('id', $id)->setInc('praise');
+        return json(['msg' => 'success']);
+    }
+    public function comment()
+    {
+        $comment = \app\home\model\Comment::create(input(), true);
+        if(!empty($comment))
+            return json(['msg'=>'success']);
+    }
+
 }
