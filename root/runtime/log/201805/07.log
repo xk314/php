@@ -1,0 +1,3422 @@
+---------------------------------------------------------------
+[ 2018-05-07T21:45:22+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.039585s][吞吐率：25.26req/s] [内存消耗：1,439.06kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:45:22+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.047450s][吞吐率：21.07req/s] [内存消耗：1,082.67kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:46:56+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.040101s][吞吐率：24.94req/s] [内存消耗：1,439.33kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:46:56+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.039703s][吞吐率：25.19req/s] [内存消耗：1,082.62kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:47:50+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.034034s][吞吐率：29.38req/s] [内存消耗：1,438.95kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:47:50+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.038311s][吞吐率：26.10req/s] [内存消耗：1,082.59kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:48:05+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.030656s][吞吐率：32.62req/s] [内存消耗：1,082.60kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:48:40+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.035804s][吞吐率：27.93req/s] [内存消耗：1,439.00kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:48:40+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.038953s][吞吐率：25.67req/s] [内存消耗：1,082.60kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:49:23+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.037710s][吞吐率：26.52req/s] [内存消耗：1,439.00kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:49:23+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.040003s][吞吐率：25.00req/s] [内存消耗：1,082.59kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:49:32+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.029214s][吞吐率：34.23req/s] [内存消耗：1,082.58kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:49:50+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.034250s][吞吐率：29.20req/s] [内存消耗：1,439.06kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:49:50+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.036962s][吞吐率：27.05req/s] [内存消耗：1,082.61kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:49:57+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.031374s][吞吐率：31.87req/s] [内存消耗：1,082.60kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:17+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.035132s][吞吐率：28.46req/s] [内存消耗：1,284.08kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:18+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027497s][吞吐率：36.37req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:18+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027017s][吞吐率：37.01req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:21+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.032406s][吞吐率：30.86req/s] [内存消耗：1,319.97kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:21+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.041858s][吞吐率：23.89req/s] [内存消耗：1,082.60kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:23+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.029642s][吞吐率：33.74req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:25+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.029873s][吞吐率：33.48req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:25+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.031604s][吞吐率：31.64req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:26+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027513s][吞吐率：36.35req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:26+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027508s][吞吐率：36.35req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:27+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.029756s][吞吐率：33.61req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:27+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.031594s][吞吐率：31.65req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:27+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.031986s][吞吐率：31.26req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:30+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.030215s][吞吐率：33.10req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:31+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.028228s][吞吐率：35.43req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:31+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.030999s][吞吐率：32.26req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:57:31+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027297s][吞吐率：36.63req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:15+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.031585s][吞吐率：31.66req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:16+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027301s][吞吐率：36.63req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:16+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027439s][吞吐率：36.44req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:17+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.033750s][吞吐率：29.63req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:18+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.030239s][吞吐率：33.07req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:18+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.030736s][吞吐率：32.54req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:18+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.030530s][吞吐率：32.75req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:18+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.028648s][吞吐率：34.91req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:22+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.033907s][吞吐率：29.49req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:22+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.033450s][吞吐率：29.90req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:22+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.033530s][吞吐率：29.82req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:22+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.032391s][吞吐率：30.87req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:52+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.031156s][吞吐率：32.10req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:52+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027916s][吞吐率：35.82req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:58:53+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.026884s][吞吐率：37.20req/s] [内存消耗：1,284.10kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '37',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'fdsa',
+  'password' => 'fdsa',
+  'code' => 'fdsa',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:59:30+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.034686s][吞吐率：28.83req/s] [内存消耗：1,319.83kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:59:30+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.040426s][吞吐率：24.74req/s] [内存消耗：1,082.62kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:59:33+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.030713s][吞吐率：32.56req/s] [内存消耗：1,266.63kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:59:33+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.027081s][吞吐率：36.93req/s] [内存消耗：1,266.63kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:59:34+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.026484s][吞吐率：37.76req/s] [内存消耗：1,266.63kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:59:34+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.026245s][吞吐率：38.10req/s] [内存消耗：1,266.63kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T21:59:34+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.026934s][吞吐率：37.13req/s] [内存消耗：1,266.63kb] [文件加载：45]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:06:31+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.033449s][吞吐率：29.90req/s] [内存消耗：1,322.20kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:06:31+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.045856s][吞吐率：21.81req/s] [内存消耗：1,082.61kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:06:52+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.026624s][吞吐率：37.56req/s] [内存消耗：1,082.59kb] [文件加载：37]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:07:51+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.061786s][吞吐率：16.18req/s] [内存消耗：2,235.80kb] [文件加载：57]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => '12345',
+  'password' => '12345',
+  'code' => 'ecrx',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002468s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.010150s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = '12345'  AND `password` = '827ccb0eea8a706c4c34a16891f84e7b' LIMIT 1 [ RunTime:0.001255s ]
+---------------------------------------------------------------
+[ 2018-05-07T22:08:40+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.036527s][吞吐率：27.38req/s] [内存消耗：1,322.30kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:40+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.044933s][吞吐率：22.26req/s] [内存消耗：1,343.60kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:40+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.030867s][吞吐率：32.40req/s] [内存消耗：1,322.30kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:40+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.041521s][吞吐率：24.08req/s] [内存消耗：1,343.57kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:40+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.030721s][吞吐率：32.55req/s] [内存消耗：1,322.30kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:40+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.039422s][吞吐率：25.37req/s] [内存消耗：1,343.57kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:41+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.030033s][吞吐率：33.30req/s] [内存消耗：1,322.30kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:41+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.039478s][吞吐率：25.33req/s] [内存消耗：1,343.60kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:41+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.034931s][吞吐率：28.63req/s] [内存消耗：1,322.30kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:41+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.046524s][吞吐率：21.49req/s] [内存消耗：1,343.60kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:41+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.032533s][吞吐率：30.74req/s] [内存消耗：1,322.30kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:41+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.040179s][吞吐率：24.89req/s] [内存消耗：1,343.55kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:43+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.036272s][吞吐率：27.57req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:45+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.031982s][吞吐率：31.27req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:45+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.035794s][吞吐率：27.94req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:46+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.031785s][吞吐率：31.46req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:08:46+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.032339s][吞吐率：30.92req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:09:05+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.057403s][吞吐率：17.42req/s] [内存消耗：2,235.76kb] [文件加载：57]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => '12345',
+  'password' => '12345',
+  'code' => 'h4md',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001401s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009025s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = '12345'  AND `password` = '827ccb0eea8a706c4c34a16891f84e7b' LIMIT 1 [ RunTime:0.000726s ]
+---------------------------------------------------------------
+[ 2018-05-07T22:12:58+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.042823s][吞吐率：23.35req/s] [内存消耗：1,441.49kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:12:58+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.041806s][吞吐率：23.92req/s] [内存消耗：1,343.55kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:12:59+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.040004s][吞吐率：25.00req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:13:00+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.032376s][吞吐率：30.89req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:13:00+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.032617s][吞吐率：30.66req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:13:00+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.032414s][吞吐率：30.85req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:13:44+08:00 ] 127.0.0.1 GET /admin/login
+[ info ] www.my.com/admin/login [运行时间：0.040073s][吞吐率：24.95req/s] [内存消耗：1,441.45kb] [文件加载：49]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:13:44+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.my.com/captcha.html [运行时间：0.049558s][吞吐率：20.18req/s] [内存消耗：1,343.57kb] [文件加载：39]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ I:\phpstudy\WWW\myproject\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:13:46+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.040430s][吞吐率：24.73req/s] [内存消耗：1,629.41kb] [文件加载：50]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => 'Username',
+  'password' => 'Password',
+  'code' => 'Code',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:14:00+08:00 ] 127.0.0.1 POST /admin/login/login.html
+[ info ] www.my.com/admin/login/login.html [运行时间：0.058196s][吞吐率：17.18req/s] [内存消耗：2,235.76kb] [文件加载：57]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login_html' => '',
+  'username' => '12345',
+  'password' => '12345',
+  'code' => '2zhq',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ I:\phpstudy\WWW\myproject\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001882s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.010534s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `username` = '12345'  AND `password` = '827ccb0eea8a706c4c34a16891f84e7b' LIMIT 1 [ RunTime:0.000642s ]
+---------------------------------------------------------------
+[ 2018-05-07T22:14:00+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.041521s][吞吐率：24.08req/s] [内存消耗：1,251.91kb] [文件加载：46]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[I:\phpstudy\WWW\myproject\thinkphp\library\think\Template.php:1086]
+---------------------------------------------------------------
+[ 2018-05-07T22:14:36+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.029642s][吞吐率：33.74req/s] [内存消耗：1,067.91kb] [文件加载：42]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\admin\controller\Index::$view[I:\phpstudy\WWW\myproject\application\admin\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-05-07T22:14:37+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.029539s][吞吐率：33.85req/s] [内存消耗：1,067.91kb] [文件加载：42]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\admin\controller\Index::$view[I:\phpstudy\WWW\myproject\application\admin\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-05-07T22:14:37+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.030004s][吞吐率：33.33req/s] [内存消耗：1,067.91kb] [文件加载：42]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\admin\controller\Index::$view[I:\phpstudy\WWW\myproject\application\admin\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-05-07T22:14:38+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.027542s][吞吐率：36.31req/s] [内存消耗：1,067.91kb] [文件加载：42]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\admin\controller\Index::$view[I:\phpstudy\WWW\myproject\application\admin\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-05-07T22:14:38+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.027766s][吞吐率：36.02req/s] [内存消耗：1,067.91kb] [文件加载：42]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\admin\controller\Index::$view[I:\phpstudy\WWW\myproject\application\admin\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-05-07T22:14:38+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.029901s][吞吐率：33.44req/s] [内存消耗：1,067.91kb] [文件加载：42]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\admin\controller\Index::$view[I:\phpstudy\WWW\myproject\application\admin\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-05-07T22:15:17+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.036703s][吞吐率：27.25req/s] [内存消耗：1,585.85kb] [文件加载：48]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:16:54+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.034863s][吞吐率：28.68req/s] [内存消耗：1,329.02kb] [文件加载：46]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-07T22:18:08+08:00 ] 127.0.0.1 GET /admin/index/index.html
+[ info ] www.my.com/admin/index/index.html [运行时间：0.031766s][吞吐率：31.48req/s] [内存消耗：1,329.02kb] [文件加载：46]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmc=144340137; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); t_0=1; pgv_pvi=3371843584; pgv_si=s5561165824; PHPSESSID=au15bdfp5e5d96n7tovbhmqut2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

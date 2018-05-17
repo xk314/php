@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1526466984;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1525764835;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1526565515;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1526563010;}*/ ?>
 
 <html>
 <head>
@@ -30,8 +30,8 @@
                     <li class="active"><a href="<?php echo url('home/index/index'); ?>"><span>Home Page</span></a></li>
                     <li><a href="support.html"><span>Support</span></a></li>
                     <li><a href="about.html"><span>About Us</span></a></li>
-                    <li><a href="blog.html"><span>Blog</span></a></li>
-                    <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    <li><a href="<?php echo url('home/login/index'); ?>"><span>Login</span></a></li>
+                    <li><a href="<?php echo url('home/login/loginout'); ?>"><span>Login Out</span></a></li>
                 </ul>
             </div>
             <div class="clr"></div>
@@ -41,12 +41,12 @@
             <div class="clr"></div>
             <div class="slider">
                 <div id="coin-slider">
-                    <?php $__FOR_START_31125__=1;$__FOR_END_31125__=4;for($i=$__FOR_START_31125__;$i < $__FOR_END_31125__;$i+=1){ ?>
+                    <?php $__FOR_START_6285__=1;$__FOR_END_6285__=4;for($i=$__FOR_START_6285__;$i < $__FOR_END_6285__;$i+=1){ ?>
                         <a href="javascript:void(0)" >
                             <img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />
-                            <span><big><?php echo $topShow[$i-1]['title']; ?></big><br />
-                               <?php echo $topShow[$i-1]['content']; ?> </span>
-                        </a>
+                            <!--<span><big><?php echo $topShow[$i-1]['title']; ?></big><br />-->
+                               <!--<?php echo $topShow[$i-1]['content']; ?> </span>-->
+                        <!--</a>-->
                     <?php } ?>
                 </div>
                 <div class="clr"></div>
@@ -57,7 +57,11 @@
     <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
     <div class="content">
         <div class="content_resize">
-    
+    <style type="text/css">
+    a{
+        text-decoration: none;
+    }
+</style>
 
 <div class="mainbar">
     <?php if(($noData)): ?>
@@ -66,16 +70,18 @@
         </div>
     <?php endif; if(is_array($articleList) || $articleList instanceof \think\Collection || $articleList instanceof \think\Paginator): $i = 0; $__LIST__ = $articleList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?>
     <div class="article"> <a href="<?php echo url('home/article/read',['id'=>$article['id']]); ?>"  num="<?php echo $article['id']; ?>" class="com"><span><?php echo $article['comment_count']; ?></span></a>
-        <p style="font-size: 25px"><?php echo $article['title']; ?></p>
-        <p class="infopost">Posted <span class="date"><?php echo $article['addate']; ?></span> by <a href="#"><?php echo $article['username']; ?></a> &nbsp;&nbsp;|&nbsp;&nbsp; Filed under <a href="#"><?php echo $article['classname']; ?></a>, <a href="#">internet</a></p>
+        <p style="font-size: 25px"><a href="<?php echo url('home/article/read',['id'=>$article['id']]); ?>"><?php echo $article['title']; ?></a></p>
+        <p class="infopost">作者&emsp;<a href="javascript:void(0)"><?php echo $article['username']; ?></a>&emsp;|&emsp;时间&emsp;<span class="date"><?php echo $article['addate']; ?></span>
+            &emsp;|&emsp;类型 <a href="javascript:void(0)"><?php echo $article['classname']; ?>&emsp;|&emsp;点赞数&emsp;<?php echo $article['praise']; ?>&emsp;|&emsp;评论数&emsp;<?php echo $article['comment_count']; ?></a></p>
         <div class="clr"></div>
-        <div class="img"><img src="/static/home/images/img1.jpg" width="200" height="210" alt="" class="fl" /></div>
+        <!--<div class="img"><img src="/static/home/images/img1.jpg" width="200" height="210" alt="" class="fl" /></div>-->
         <div class="post_content">
             <?php echo $article['content']; ?>
         </div>
         <div class="clr"></div>
     </div>
-    <?php endforeach; endif; else: echo "" ;endif; if((!$noData)): ?><p class="pages"><small>Page <?php echo $current_page; ?> of <?php echo $last_page; ?></small> <?php echo $articleList->render(); ?></p><?php endif; ?>
+    <?php endforeach; endif; else: echo "" ;endif; if((!$noData)): ?><?php echo $articleList->render(); endif; ?>
+    <!--<p class="pages"><small>Page <?php echo $current_page; ?> of <?php echo $last_page; ?></small></p>-->
 </div>
       <!--<script type="text/javascript">-->
               <!--$(function ($) {-->

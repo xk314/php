@@ -1,0 +1,74 @@
+
+
+<link href="/static/admin/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
+
+<script src="/static/admin/vendors/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/static/admin/assets/DT_bootstrap.js"></script>
+<div class="alert alert-block">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <h4 class="alert-heading">Warning!</h4>
+    Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+</div>
+
+<div class="row-fluid">
+    <!-- block -->
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="muted pull-left">权限管理</div>
+        </div>
+        <div class="block-content collapse in">
+            <div class="span12">
+                <div class="table-toolbar">
+                    <div class="btn-group">
+                        <a href="{:url('admin/auth/create')}"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Print</a></li>
+                            <li><a href="#">Save as PDF</a></li>
+                            <li><a href="#">Export to Excel</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>权限名称</th>
+                        <th>创建时间</th>
+                        <th>修改时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {volist name='authList' id='auth'}
+                    <tr class="odd gradeX">
+                        <th>{$auth.id}</th>
+                        <th>{$auth.level|str_repeat='&emsp;',###*2}{$auth.auth_name}</th>
+                        <th>{$auth.create_time}</th>
+                        <th>{$auth.update_time}</th>
+                        <th>  <a href="#{$auth.id}" data-toggle="modal"><i class="icon-eye-open"></i></a>&nbsp;<a href="{:url('admin/auth/edit',['id'=>$auth.id])}"><i class="icon-edit"></i></a>&nbsp;<a href="{:url('admin/auth/delete',['id'=>$auth.id])}"><i class="icon-remove-sign"></i></a></th>
+                        <div id="{$auth.id}" class="modal hide">
+                            <div class="modal-header">
+                                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                                <h3>权限详情</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>权限名:{$auth.auth_name}</p>
+                                <p>Pid:{$auth.pid}</p>
+                                <p>控制器名:{$auth.auth_c}</p>
+                                <p>方法名:{$auth.auth_a}</p>
+                                <p>是否列表栏显示:{$auth.is_nav}</p>
+                            </div>
+                        </div>
+                    </tr>
+                    {/volist}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /block -->
+</div>

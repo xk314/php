@@ -144,11 +144,17 @@ class Article extends BaseController
         \app\home\model\Article::where('id', $id)->setInc('praise');
         return json(['msg' => 'success']);
     }
+
     public function comment()
     {
+            if(!session('?UserInfo')){
+                //保存信息，方便用户登录后跳转到想要评论的文章处
+                session('call_back_article_id', ['date' => time(), 'id' => input('article_id')]);
+                return json(['msg'=>'未登录','article_id' => input('article_id')]);
+            }
         $comment = \app\home\model\Comment::create(input(), true);
         if(!empty($comment))
-            return json(['msg'=>'success']);
+            return json(['msg'=>'success','article_id' => input('article_id')]);
     }
 
 }

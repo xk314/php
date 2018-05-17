@@ -29,8 +29,8 @@
                     <li class="active"><a href="{:url('home/index/index')}"><span>Home Page</span></a></li>
                     <li><a href="support.html"><span>Support</span></a></li>
                     <li><a href="about.html"><span>About Us</span></a></li>
-                    <li><a href="blog.html"><span>Blog</span></a></li>
-                    <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    <li><a href="{:url('home/login/index')}"><span>Login</span></a></li>
+                    <li><a href="{:url('home/login/loginout')}"><span>Login Out</span></a></li>
                 </ul>
             </div>
             <div class="clr"></div>
@@ -43,9 +43,9 @@
                     {for start='1' end='4'}
                         <a href="javascript:void(0)" >
                             <img class='showdetail' num="{$topShow[$i-1]['id']}" src="/static/home/images/slide{$i}.jpg" width="960" height="360" alt="" />
-                            <span><big>{$topShow[$i-1]['title']}</big><br />
-                               {$topShow[$i-1]['content']} </span>
-                        </a>
+                            <!--<span><big>{$topShow[$i-1]['title']}</big><br />-->
+                               <!--{$topShow[$i-1]['content']} </span>-->
+                        <!--</a>-->
                     {/for}
                 </div>
                 <div class="clr"></div>

@@ -12,6 +12,7 @@ class BaseController extends Controller
        parent::__construct($request);
        $this->commom_assign();
    }
+
    public  function commom_assign()
    {
        //顶端显示

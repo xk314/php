@@ -71,8 +71,8 @@
               {foreach $comments as $comment}
               <li class="topcomment">
                 <p class="p1">
-                  <b><a href="#">{$comment.username}</a> 发布于{$comment.addate}</b>
-                  <a href="javascript:void(0)">回复</a>
+                  <b><a href="javascript:void(0)">{$comment.username}</a> 发布于{$comment.addate}</b>
+                  <a comment_id='{$comment.id}' class="reply" href="javascript:void(0)">回复</a>
                 </p>
                 <p class="p2">{$comment.content}</p>
 
@@ -95,73 +95,27 @@
 
 
 
-
-
             </ul><!--//主评论内容-->
             <form id="form1">
               <div>发表评论(*)</div>
               <textarea name="content" style="width:95%;height:150px;"></textarea>
               <input type="hidden" name="article_id" value="{$article.id}">
               <input type="hidden" name="pid" value="0">
-              <br><input type="button" value="提交" />
+              <input type="hidden" name="user_id" value="{$Think.session.UserInfo.id}">
+              <br><input id='submit' type="button" value="提交" />
             </form>
           </div><!--//评论-->
 
 
 
-
-
-
           <div class="clr"></div>
-          <div class="comment"> <a href="#"><img src="/static/home/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
-            <p><a href="#">admin</a> Says:<br />
-              April 20th, 2009 at 2:17 pm</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.</p>
-          </div>
-          <div class="comment"> <a href="#"><img src="/static/home/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
-            <p><a href="#">Admin</a> Says:<br />
-              April 20th, 2009 at 3:21 pm</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.</p>
-          </div>
-          <div class="comment"> <a href="#"><img src="/static/home/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
-            <p><a href="#">admin</a> Says:<br />
-              April 20th, 2009 at 2:17 pm</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.</p>
-          </div>
         </div>
-        <!--<div class="article">-->
-          <!--<h2><span>Leave a</span> Reply</h2>-->
-          <!--<div class="clr"></div>-->
-          <!--<form action="#" method="post" id="leavereply">-->
-            <!--<ol>-->
-              <!--<li>-->
-                <!--<label for="name">Name (required)</label>-->
-                <!--<input id="name" name="name" class="text" />-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<label for="email">Email Address (required)</label>-->
-                <!--<input id="email" name="email" class="text" />-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<label for="website">Website</label>-->
-                <!--<input id="website" name="website" class="text" />-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<label for="message">Your Message</label>-->
-                <!--<textarea id="message" name="message" rows="8" cols="50"></textarea>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<input type="image" name="imageField" id="imageField" src="/static/home/images/submit.gif" class="send" />-->
-                <!--<div class="clr"></div>-->
-              <!--</li>-->
-            <!--</ol>-->
-          <!--</form>-->
-        <!--</div>-->
       </div>
 
 <script type="text/javascript">
   $(function(){
     $('#praise').click(function(){
+
       var _this = this;
       var data = {'id':$(this).attr('article')};
       $.ajax({
@@ -176,7 +130,9 @@
         }
       });
     });
-    $('input[type=button]').click(function(){
+
+
+    $('#submit').click(function(){
       if($('textarea').val() == ''){
         alert('评论不能为空');
         return;
@@ -189,15 +145,38 @@
         'data': data,
         'dataType': 'json',
         'success': function (result) {
-          if(result.msg == 'success')
-            var str ="<li class='topcomment'><p class='p1'><b>" +
-                    "<a href='#'>" + "<{comment.username}></a> 发布于<{comment.addate}></b>"
-                    +"<a href='javascript:void(0)'>回复</a></p><p class='p2'>" + comment +"</p>";
-            $('ul.comment').append($(str));
-          $('textarea').val('')
-
+          if(result.msg == '未登录')
+            alert('您当前未登录，不能发表评论');
+          if(result.msg != 'success'){
+            alert('评论失败'); return;
+          }
+          window.location.href = "{:url('home/article/read',['id'=>$article.id])}";
+//            var str ="<li class='topcomment'><p class='p1'><b>" +
+//                    "<a href='#'>" + "{$Think.session.UserInfo.username}</a> 发布于{:date('Y-m-d H:i',time())}</b>"
+//                    +"</p><p class='p2'>" + comment +"</p>";
+//            $('ul.comment').append($(str));
+//            $('textarea').val('');
         }
       });
+    });
+
+
+    $('.reply').live('click',function(){
+      var comment_id = $(this).attr('comment_id');
+      $('#form1 input[name=pid]').val(comment_id);
+      if($('#del_reply').length > 0) return;
+      $('#form1').append("<input id='del_reply' type='button' value='取消回复' />");
+    });
+
+
+    $('#del_reply').live('click', function(){
+      $('#form1 input[name=pid]').attr('pid', 0);
+      $(this).remove();
+      $('#form1 textarea').val('');
+    });
+
+    $('#submit').click(function(){
+      $('#del_reply').remove();
     });
 
   });

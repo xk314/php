@@ -1,0 +1,1899 @@
+---------------------------------------------------------------
+[ 2018-05-12T00:05:37+08:00 ] 127.0.0.1 GET /admin/auth/index.html
+[ info ] www.my.com/admin/auth/index.html [运行时间：0.063010s][吞吐率：15.87req/s] [内存消耗：2,281.53kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/save.html?auth_name=%E6%B5%8B%E8%AF%95&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=index&auth_a=test',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html [ array (
+  0 => 'authList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001925s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.010075s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` [ RunTime:0.000598s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:05:39+08:00 ] 127.0.0.1 GET /admin/auth/index.html
+[ info ] www.my.com/admin/auth/index.html [运行时间：0.058451s][吞吐率：17.11req/s] [内存消耗：2,280.99kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html [ array (
+  0 => 'authList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001151s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007560s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` [ RunTime:0.000685s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:05:40+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.060082s][吞吐率：16.64req/s] [内存消耗：2,408.49kb] [文件加载：60]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001127s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007324s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000516s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:05:40+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.063589s][吞吐率：15.73req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001463s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.012511s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001650s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:33+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.071064s][吞吐率：14.07req/s] [内存消耗：2,409.29kb] [文件加载：60]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011076s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.008999s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000662s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:33+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.069205s][吞吐率：14.45req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001282s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.011349s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001725s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:34+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.054624s][吞吐率：18.31req/s] [内存消耗：2,255.27kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001143s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.008762s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000596s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:34+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.064152s][吞吐率：15.59req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001101s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.007376s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001183s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:43+08:00 ] 127.0.0.1 GET /admin/goods/create.html
+[ info ] www.my.com/admin/goods/create.html [运行时间：0.073759s][吞吐率：13.56req/s] [内存消耗：2,299.76kb] [文件加载：59]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goods->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\goods\create.html [ array (
+  0 => 'categoryList',
+  1 => 'goodsTypeList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001526s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.009985s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001132s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_type` [ RunTime:0.008618s ]
+[ sql ] [ SQL ] SELECT * FROM `tpshop_type` [ RunTime:0.000823s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:43+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.066522s][吞吐率：15.03req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/goods/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001877s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.011703s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001775s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:46+08:00 ] 127.0.0.1 POST /admin/goodstype/read.html
+[ info ] www.my.com/admin/goodstype/read.html [运行时间：0.056601s][吞吐率：17.67req/s] [内存消耗：2,185.59kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodstype',
+    2 => 'read',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/goods/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodstype/read_html' => '',
+  'id' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodstype->read[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodstype.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001288s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_attribute` [ RunTime:0.007868s ]
+[ sql ] [ SQL ] SELECT * FROM `tpshop_attribute` WHERE  `type_id` = 3 [ RunTime:0.000762s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:06:48+08:00 ] 127.0.0.1 POST /admin/goodstype/read.html
+[ info ] www.my.com/admin/goodstype/read.html [运行时间：0.059937s][吞吐率：16.68req/s] [内存消耗：2,187.45kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodstype',
+    2 => 'read',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/goods/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodstype/read_html' => '',
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodstype->read[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodstype.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001124s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_attribute` [ RunTime:0.009087s ]
+[ sql ] [ SQL ] SELECT * FROM `tpshop_attribute` WHERE  `type_id` = 1 [ RunTime:0.000677s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:08:01+08:00 ] 127.0.0.1 GET /admin/goods/create.html
+[ info ] www.my.com/admin/goods/create.html [运行时间：0.072368s][吞吐率：13.82req/s] [内存消耗：2,299.98kb] [文件加载：59]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goods',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goods/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goods->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\goods\create.html [ array (
+  0 => 'categoryList',
+  1 => 'goodsTypeList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001210s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.009638s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001141s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_type` [ RunTime:0.007976s ]
+[ sql ] [ SQL ] SELECT * FROM `tpshop_type` [ RunTime:0.000727s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:08:01+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.061614s][吞吐率：16.23req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/goods/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001298s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.009558s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001166s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:08:04+08:00 ] 127.0.0.1 GET /admin/auth/index.html
+[ info ] www.my.com/admin/auth/index.html [运行时间：0.058211s][吞吐率：17.18req/s] [内存消耗：2,281.01kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/goods/create.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html [ array (
+  0 => 'authList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001155s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007859s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` [ RunTime:0.000619s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:08:05+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.057928s][吞吐率：17.26req/s] [内存消耗：2,409.03kb] [文件加载：60]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001118s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007359s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000529s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:08:05+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.065863s][吞吐率：15.18req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001371s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.010261s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.000994s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:08:07+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.053749s][吞吐率：18.61req/s] [内存消耗：2,255.27kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001269s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.008542s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000556s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:08:07+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.060116s][吞吐率：16.63req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001219s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.008332s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001006s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:02+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.061314s][吞吐率：16.31req/s] [内存消耗：2,409.30kb] [文件加载：60]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001636s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007478s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:02+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.070758s][吞吐率：14.13req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010910s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.008547s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001145s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:03+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.053852s][吞吐率：18.57req/s] [内存消耗：2,255.27kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001113s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.008919s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000545s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:03+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.065855s][吞吐率：15.18req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001027s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.007286s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001622s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:03+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.053642s][吞吐率：18.64req/s] [内存消耗：2,255.27kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001129s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.008826s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000582s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:03+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.067903s][吞吐率：14.73req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001882s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.008188s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001015s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:04+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.056169s][吞吐率：17.80req/s] [内存消耗：2,255.27kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001125s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.010205s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000676s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:09:04+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.066801s][吞吐率：14.97req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001012s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.009757s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001204s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:21+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.067280s][吞吐率：14.86req/s] [内存消耗：2,409.52kb] [文件加载：60]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001118s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.009171s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000580s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:21+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.063184s][吞吐率：15.83req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001189s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.010825s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001834s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:22+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.059894s][吞吐率：16.70req/s] [内存消耗：2,255.27kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001155s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.009623s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000896s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:22+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.064947s][吞吐率：15.40req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001264s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.007218s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001058s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:22+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.056071s][吞吐率：17.83req/s] [内存消耗：2,255.27kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001169s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.009023s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000550s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:23+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.065438s][吞吐率：15.28req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001066s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.007242s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001388s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:25+08:00 ] 127.0.0.1 GET /admin/auth/save.html?auth_name=&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=&auth_a=&is_nav=%E5%90%A6
+[ info ] www.my.com/admin/auth/save.html?auth_name=&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=&auth_a=&is_nav=%E5%90%A6 [运行时间：0.035891s][吞吐率：27.86req/s] [内存消耗：1,617.88kb] [文件加载：52]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/save_html' => '',
+  'auth_name' => '',
+  'pid' => '顶级分类',
+  'auth_c' => '',
+  'auth_a' => '',
+  'is_nav' => '否',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->save[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-12T00:11:26+08:00 ] 127.0.0.1 GET /admin/auth/index.html
+[ info ] www.my.com/admin/auth/index.html [运行时间：0.076470s][吞吐率：13.08req/s] [内存消耗：2,281.24kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/save.html?auth_name=&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=&auth_a=&is_nav=%E5%90%A6',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html [ array (
+  0 => 'authList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001337s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.011634s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` [ RunTime:0.001031s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:27+08:00 ] 127.0.0.1 GET /admin/auth/create.html
+[ info ] www.my.com/admin/auth/create.html [运行时间：0.054385s][吞吐率：18.39req/s] [内存消耗：2,254.99kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'create',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/create_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->create[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\create.html [ array (
+  0 => 'authArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001196s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.006986s ]
+[ sql ] [ SQL ] SELECT `id`,`auth_name` FROM `auth` [ RunTime:0.000514s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:28+08:00 ] 127.0.0.1 POST /admin/goodscategory/index.html
+[ info ] www.my.com/admin/goodscategory/index.html [运行时间：0.067812s][吞吐率：14.75req/s] [内存消耗：2,168.63kb] [文件加载：56]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'goodscategory',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.my.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/goodscategory/index_html' => '',
+  'id' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Goodscategory->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Goodscategory.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001191s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tpshop_category` [ RunTime:0.010554s ]
+[ sql ] [ SQL ] SELECT `id`,`cate_name` FROM `tpshop_category` WHERE  (  pid = 0 ) [ RunTime:0.001043s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:40+08:00 ] 127.0.0.1 GET /admin/auth/save.html?auth_name=%E6%B5%8B%E8%AF%95&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=index&auth_a=test&is_nav=%E6%98%AF
+[ info ] www.my.com/admin/auth/save.html?auth_name=%E6%B5%8B%E8%AF%95&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=index&auth_a=test&is_nav=%E6%98%AF [运行时间：0.058735s][吞吐率：17.03req/s] [内存消耗：2,255.59kb] [文件加载：60]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/create.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/save_html' => '',
+  'auth_name' => '测试',
+  'pid' => '顶级分类',
+  'auth_c' => 'index',
+  'auth_a' => 'test',
+  'is_nav' => '是',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->save[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001268s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.009388s ]
+[ sql ] [ SQL ] INSERT INTO `auth` (`auth_name` , `pid` , `auth_c` , `auth_a` , `is_nav` , `create_time`) VALUES ('测试' , 0 , 'index' , 'test' , 1 , 1526055100) [ RunTime:0.001348s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:41+08:00 ] 127.0.0.1 GET /admin/auth/index.html
+[ info ] www.my.com/admin/auth/index.html [运行时间：0.057918s][吞吐率：17.27req/s] [内存消耗：2,283.78kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/save.html?auth_name=%E6%B5%8B%E8%AF%95&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=index&auth_a=test&is_nav=%E6%98%AF',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html [ array (
+  0 => 'authList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001150s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007827s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` [ RunTime:0.000662s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:11:48+08:00 ] 127.0.0.1 GET /admin/auth/delete/id/15.html
+[ info ] www.my.com/admin/auth/delete/id/15.html [运行时间：0.033256s][吞吐率：30.07req/s] [内存消耗：1,532.38kb] [文件加载：47]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'delete',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/delete/id/15_html' => '',
+  'id' => '15',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->delete[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-12T00:12:53+08:00 ] 127.0.0.1 GET /admin/auth/index.html
+[ info ] www.my.com/admin/auth/index.html [运行时间：0.069588s][吞吐率：14.37req/s] [内存消耗：2,284.40kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/save.html?auth_name=%E6%B5%8B%E8%AF%95&pid=%E9%A1%B6%E7%BA%A7%E5%88%86%E7%B1%BB&auth_c=index&auth_a=test&is_nav=%E6%98%AF',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html [ array (
+  0 => 'authList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002263s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.009799s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` [ RunTime:0.000667s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:12:54+08:00 ] 127.0.0.1 GET /admin/auth/delete/id/15.html
+[ info ] www.my.com/admin/auth/delete/id/15.html [运行时间：0.059428s][吞吐率：16.83req/s] [内存消耗：2,293.09kb] [文件加载：61]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'delete',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/delete/id/15_html' => '',
+  'id' => '15',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->delete[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001082s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007057s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` WHERE  `id` = 15 LIMIT 1 [ RunTime:0.000727s ]
+[ sql ] [ SQL ] DELETE FROM `auth`    WHERE  `id` = 15 [ RunTime:0.003540s ]
+---------------------------------------------------------------
+[ 2018-05-12T00:12:55+08:00 ] 127.0.0.1 GET /admin/auth/index.html
+[ info ] www.my.com/admin/auth/index.html [运行时间：0.060272s][吞吐率：16.59req/s] [内存消耗：2,281.58kb] [文件加载：58]
+[ info ] [ LANG ] I:\phpstudy\WWW\myproject\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'p=oRMAAAx/LwAA; s=dpr=1; __utma=144340137.1514062881.1525664007.1525664007.1525664007.1; __utmz=144340137.1525664007.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); pgv_pvi=3371843584; PHPSESSID=n2c68amafhgtdnk0ue4u78jb60',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.my.com/admin/auth/delete/id/15.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.my.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/auth/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->index[ I:\phpstudy\WWW\myproject\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] I:\phpstudy\WWW\myproject\public/../application/admin\view\auth\index.html [ array (
+  0 => 'authList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001156s ] mysql:host=127.0.0.1;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth` [ RunTime:0.007885s ]
+[ sql ] [ SQL ] SELECT * FROM `auth` [ RunTime:0.000675s ]
