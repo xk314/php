@@ -49,7 +49,6 @@ class Login extends Controller
     }
 
 
-
     public function loginout()
     {
         session('UserInfo', null);

@@ -32,4 +32,11 @@ class Index extends  BaseController
         ];
         return view('index', $info);
     }
+
+    public function sentence()
+    {
+        $sentence = \app\home\model\Sentence::select();
+        $sentence = array_map(function($value){return $value->toArray();}, $sentence);
+        return json(['msg' => 'success', 'sentence' => $sentence]);
+    }
 }

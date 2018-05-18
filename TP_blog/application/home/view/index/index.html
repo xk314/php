@@ -13,12 +13,12 @@
     {volist name='articleList' id='article'}
     <div class="article"> <a href="{:url('home/article/read',['id'=>$article.id])}"  num="{$article.id}" class="com"><span>{$article.comment_count}</span></a>
         <p style="font-size: 25px"><a href="{:url('home/article/read',['id'=>$article.id])}">{$article.title}</a></p>
-        <p class="infopost">作者&emsp;<a href="javascript:void(0)">{$article.username}</a>&emsp;|&emsp;时间&emsp;<span class="date">{$article.addate}</span>
-            &emsp;|&emsp;类型 <a href="javascript:void(0)">{$article.classname}&emsp;|&emsp;点赞数&emsp;{$article.praise}&emsp;|&emsp;评论数&emsp;{$article.comment_count}</a></p>
+        <p class="infopost">作者&emsp;<a style="text-decoration: none" href="javascript:void(0)">{$article.username}</a>&emsp;|&emsp;时间&emsp;<span class="date">{$article.addate}</span>
+            &emsp;|&emsp;类型 <a style="text-decoration: none" href="javascript:void(0)">{$article.classname}&emsp;|&emsp;点赞数&emsp;{$article.praise}&emsp;|&emsp;评论数&emsp;{$article.comment_count}</a></p>
         <div class="clr"></div>
         <!--<div class="img"><img src="/static/home/images/img1.jpg" width="200" height="210" alt="" class="fl" /></div>-->
         <div class="post_content">
-            {$article.content}
+            &emsp;&emsp;{$article.content}
         </div>
         <div class="clr"></div>
     </div>

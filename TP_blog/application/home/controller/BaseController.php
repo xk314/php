@@ -20,7 +20,13 @@ class BaseController extends Controller
            ->where('top','=',1)->field('a.id, a.title, a.content')->limit(3)->select();
        $categoryInfo = \app\home\model\Category2::getList();
 
-       $this->assign('topShow', $articleTopShow);
-       $this->assign('categoryInfo', $categoryInfo);
+       $linksList = \app\home\model\Links::limit(6)->order('id desc')->select();
+
+       $info = [
+           'linksList' => $linksList,
+           'topShow' => $articleTopShow,
+           'categoryInfo' => $categoryInfo,
+       ];
+       $this->assign($info);
    }
 }

@@ -1,17 +1,86 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1526565515;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1526563010;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"I:\phpstudy\WWW\myproject\public/../application/home\view\index\index.html";i:1526643191;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1526661583;}*/ ?>
 
 <html>
 <head>
     <title>Roope</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="/static/home/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/static/home/css/pages.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/static/home/css/coin-slider.css" />
-    <script type="text/javascript" src="/static/home/js/cufon-yui.js"></script>
-    <script type="text/javascript" src="/static/home/js/droid_sans_400-droid_sans_700.font.js"></script>
     <script type="text/javascript" src="/static/home/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="/static/home/js/script.js"></script>
-    <script type="text/javascript" src="/static/home/js/coin-slider.min.js"></script>
+    <style type="text/css">
+        #myul_show {
+            width:960px;
+            height: 360px;
+            position: relative;
+            overflow: hidden;
+        }
+        #myul_show img{
+            position: absolute;
+            left: 0px;
+            top:0px;
+            z-index: 1;
+        }
+        img:first-child{
+            /*z-index: 3;*/
+
+        }
+    </style>
+    <script type="text/javascript">
+        //逐渐将要显示的图片的透明度调到100%
+        function changeItem(inIndex, fn){
+            $($('#myul_show img')[inIndex]).css('opacity', 0);
+            for(var i=0; i<=60; i++){
+                (function(j){
+                    setTimeout(function(){
+                        $($('#myul_show img')[inIndex]).css('opacity', 5*j/100);
+                        if(j>=20) fn(); //将要消失的图片的zIndex修改为1
+                    },j*50);
+                })(i);
+            }
+        }
+
+
+        $(function(){
+            var outIndex = 0;
+            var inIndex = 1;
+            setInterval(function(){
+                if(outIndex>=$('#myul_show img').length)
+                    outIndex = 0;
+                if(inIndex >= $('#myul_show img').length)
+                    inIndex = 0;
+                $($('#myul_show img')[outIndex]).css('zIndex', 2) ;
+//                $('#myul_show img')[outIndex].css('zIndex', 1) ;
+                $($('#myul_show img')[inIndex]).css('zIndex', 3);
+//                对数组格式的jquery对象执行下标操作时，获取到的时js的dom对象，使用$()将其在转化为jquery对象
+                changeItem(inIndex, function(){
+                    $($('#myul_show img')[outIndex-1]).css('zIndex',1);
+                });
+                outIndex++;
+                inIndex++;
+            },4000);
+
+            $.ajax({
+                'url' : "<?php echo url('home/index/sentence'); ?>",
+                'type' : 'get',
+                'data' : {},
+                'dataType' : 'json',
+                'success' : function(result){
+                    if(result.msg == 'success'){
+                        var date = result.sentence;
+                        $('#mysentence').text(date[0]['sentence']);
+                        var i = 1;
+                        setInterval(function(){
+                            if(i >= date.length){
+                                i = 0;
+                            }
+                            $('#mysentence').text(date[i]['sentence']);
+                            i++;
+                        },10000);
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="main">
@@ -28,33 +97,49 @@
             <div class="menu_nav">
                 <ul>
                     <li class="active"><a href="<?php echo url('home/index/index'); ?>"><span>Home Page</span></a></li>
-                    <li><a href="support.html"><span>Support</span></a></li>
-                    <li><a href="about.html"><span>About Us</span></a></li>
-                    <li><a href="<?php echo url('home/login/index'); ?>"><span>Login</span></a></li>
+                    <li><a href="javascript:void(0)"><span>Support</span></a></li>
+                    <li><a href="javascript:void(0)"><span>About Us</span></a></li>
+                    <li>
+                        <?php if((session('?UserInfo'))): ?>
+                            <a href="javascript:void(0)"><span><?php echo \think\Session::get('UserInfo.username'); ?></span></a>
+                        <?php else: ?>
+                            <a href="<?php echo url('home/login/index'); ?>"><span>Login</span></a>
+                        <?php endif; ?>
+                    </li>
+                    <?php if((session('?UserInfo'))): ?>
                     <li><a href="<?php echo url('home/login/loginout'); ?>"><span>Login Out</span></a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="clr"></div>
             <div class="logo">
-                <h1><a href="index.html"><span>Roope</span> <small>Company Slogan Here</small></a></h1>
+                <div><h1 id="mysentence"></h1></div>
             </div>
             <div class="clr"></div>
-            <div class="slider">
-                <div id="coin-slider">
-                    <?php $__FOR_START_6285__=1;$__FOR_END_6285__=4;for($i=$__FOR_START_6285__;$i < $__FOR_END_6285__;$i+=1){ ?>
-                        <a href="javascript:void(0)" >
-                            <img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />
-                            <!--<span><big><?php echo $topShow[$i-1]['title']; ?></big><br />-->
-                               <!--<?php echo $topShow[$i-1]['content']; ?> </span>-->
+                     <!--<div class="slider">-->
+                <!--<div id="coin-slider">-->
+                    <!--<?php $__FOR_START_25722__=1;$__FOR_END_25722__=4;for($i=$__FOR_START_25722__;$i < $__FOR_END_25722__;$i+=1){ ?>-->
+                        <!--<a href="javascript:void(0)" >-->
+                            <!--<img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />-->
+                            <!--&lt;!&ndash;<span><big><?php echo $topShow[$i-1]['title']; ?></big><br />&ndash;&gt;-->
+                               <!--&lt;!&ndash;<?php echo $topShow[$i-1]['content']; ?> </span>&ndash;&gt;-->
                         <!--</a>-->
-                    <?php } ?>
+                    <!--<?php } ?>-->
+                <!--</div>-->
+                <!--<div class="clr"></div>-->
+            <!--</div>-->
+            <div >
+                <div id="myul_show">
+                       <img  src="/static/home/images/slide1.jpg" width="960" height="360" alt="" />
+                        <img style="float: left" src="/static/home/images/slide2.jpg" width="960" height="360" alt="" />
+                        <img style="float: left" src="/static/home/images/slide3.jpg" width="960" height="360" alt="" />
                 </div>
                 <div class="clr"></div>
             </div>
             <div class="clr"></div>
         </div>
     </div>
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+    <!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>-->
     <div class="content">
         <div class="content_resize">
     <style type="text/css">
@@ -71,12 +156,12 @@
     <?php endif; if(is_array($articleList) || $articleList instanceof \think\Collection || $articleList instanceof \think\Paginator): $i = 0; $__LIST__ = $articleList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?>
     <div class="article"> <a href="<?php echo url('home/article/read',['id'=>$article['id']]); ?>"  num="<?php echo $article['id']; ?>" class="com"><span><?php echo $article['comment_count']; ?></span></a>
         <p style="font-size: 25px"><a href="<?php echo url('home/article/read',['id'=>$article['id']]); ?>"><?php echo $article['title']; ?></a></p>
-        <p class="infopost">作者&emsp;<a href="javascript:void(0)"><?php echo $article['username']; ?></a>&emsp;|&emsp;时间&emsp;<span class="date"><?php echo $article['addate']; ?></span>
-            &emsp;|&emsp;类型 <a href="javascript:void(0)"><?php echo $article['classname']; ?>&emsp;|&emsp;点赞数&emsp;<?php echo $article['praise']; ?>&emsp;|&emsp;评论数&emsp;<?php echo $article['comment_count']; ?></a></p>
+        <p class="infopost">作者&emsp;<a style="text-decoration: none" href="javascript:void(0)"><?php echo $article['username']; ?></a>&emsp;|&emsp;时间&emsp;<span class="date"><?php echo $article['addate']; ?></span>
+            &emsp;|&emsp;类型 <a style="text-decoration: none" href="javascript:void(0)"><?php echo $article['classname']; ?>&emsp;|&emsp;点赞数&emsp;<?php echo $article['praise']; ?>&emsp;|&emsp;评论数&emsp;<?php echo $article['comment_count']; ?></a></p>
         <div class="clr"></div>
         <!--<div class="img"><img src="/static/home/images/img1.jpg" width="200" height="210" alt="" class="fl" /></div>-->
         <div class="post_content">
-            <?php echo $article['content']; ?>
+            &emsp;&emsp;<?php echo $article['content']; ?>
         </div>
         <div class="clr"></div>
     </div>
@@ -104,9 +189,9 @@
 
     <div class="sidebar">
         <div class="gadget">
-            <h2 class="star"><span>Sidebar</span> Menu</h2>
+            <span style="font-size: 25px;">文章分类</span>
             <div class="clr"></div>
-            <ul class="sb_menu">
+            <ul class="sb_menu" style="margin-top: 20px;">
                 <?php if(is_array($categoryInfo) || $categoryInfo instanceof \think\Collection || $categoryInfo instanceof \think\Paginator): $i = 0; $__LIST__ = $categoryInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
                 <li><a href="<?php echo url('home/index/index',['category_id'=>$category['id']]); ?>" class='category' category_id='<?php echo $category['id']; ?>'><?php echo $category['classname']; ?></a>
                     <a href="<?php echo url('home/index/index',['category_id'=>$category['id']]); ?>" class="com"><span><?php echo $category['article_count']; ?></span></a></li>
@@ -114,21 +199,12 @@
             </ul>
         </div>
         <div class="gadget">
-            <h2 class="star"><span>Sponsors</span></h2>
+            <span style="font-size: 25px;">友情链接</span>
             <div class="clr"></div>
-            <ul class="ex_menu">
-                <li><a href="#">Lorem ipsum dolor</a><br />
-                    Donec libero. Suspendisse bibendum</li>
-                <li><a href="#">Dui pede condimentum</a><br />
-                    Phasellus suscipit, leo a pharetra</li>
-                <li><a href="#">Condimentum lorem</a><br />
-                    Tellus eleifend magna eget</li>
-                <li><a href="#">Fringilla velit magna</a><br />
-                    Curabitur vel urna in tristique</li>
-                <li><a href="#">Suspendisse bibendum</a><br />
-                    Cras id urna orbi tincidunt orci ac</li>
-                <li><a href="#">Donec mattis</a><br />
-                    purus nec placerat bibendum</li>
+            <ul class="ex_menu" style="margin-top: 20px;">
+                <?php if(is_array($linksList) || $linksList instanceof \think\Collection || $linksList instanceof \think\Paginator): $i = 0; $__LIST__ = $linksList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$link): $mod = ($i % 2 );++$i;?>
+                <li ><a target="_blank" href="<?php echo $link['url']; ?>" style="color: #9A9A9A"><?php echo $link['domain']; ?></a></li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
     </div>

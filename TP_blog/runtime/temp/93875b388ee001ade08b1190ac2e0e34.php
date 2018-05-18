@@ -1,17 +1,86 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/home\view\article\detail.html";i:1526484944;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1525764835;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"I:\phpstudy\WWW\myproject\public/../application/home\view\article\detail.html";i:1526660219;s:59:"I:\phpstudy\WWW\myproject\application\home\view\layout.html";i:1526661583;}*/ ?>
 
 <html>
 <head>
     <title>Roope</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="/static/home/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/static/home/css/pages.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/static/home/css/coin-slider.css" />
-    <script type="text/javascript" src="/static/home/js/cufon-yui.js"></script>
-    <script type="text/javascript" src="/static/home/js/droid_sans_400-droid_sans_700.font.js"></script>
     <script type="text/javascript" src="/static/home/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="/static/home/js/script.js"></script>
-    <script type="text/javascript" src="/static/home/js/coin-slider.min.js"></script>
+    <style type="text/css">
+        #myul_show {
+            width:960px;
+            height: 360px;
+            position: relative;
+            overflow: hidden;
+        }
+        #myul_show img{
+            position: absolute;
+            left: 0px;
+            top:0px;
+            z-index: 1;
+        }
+        img:first-child{
+            /*z-index: 3;*/
+
+        }
+    </style>
+    <script type="text/javascript">
+        //逐渐将要显示的图片的透明度调到100%
+        function changeItem(inIndex, fn){
+            $($('#myul_show img')[inIndex]).css('opacity', 0);
+            for(var i=0; i<=60; i++){
+                (function(j){
+                    setTimeout(function(){
+                        $($('#myul_show img')[inIndex]).css('opacity', 5*j/100);
+                        if(j>=20) fn(); //将要消失的图片的zIndex修改为1
+                    },j*50);
+                })(i);
+            }
+        }
+
+
+        $(function(){
+            var outIndex = 0;
+            var inIndex = 1;
+            setInterval(function(){
+                if(outIndex>=$('#myul_show img').length)
+                    outIndex = 0;
+                if(inIndex >= $('#myul_show img').length)
+                    inIndex = 0;
+                $($('#myul_show img')[outIndex]).css('zIndex', 2) ;
+//                $('#myul_show img')[outIndex].css('zIndex', 1) ;
+                $($('#myul_show img')[inIndex]).css('zIndex', 3);
+//                对数组格式的jquery对象执行下标操作时，获取到的时js的dom对象，使用$()将其在转化为jquery对象
+                changeItem(inIndex, function(){
+                    $($('#myul_show img')[outIndex-1]).css('zIndex',1);
+                });
+                outIndex++;
+                inIndex++;
+            },4000);
+
+            $.ajax({
+                'url' : "<?php echo url('home/index/sentence'); ?>",
+                'type' : 'get',
+                'data' : {},
+                'dataType' : 'json',
+                'success' : function(result){
+                    if(result.msg == 'success'){
+                        var date = result.sentence;
+                        $('#mysentence').text(date[0]['sentence']);
+                        var i = 1;
+                        setInterval(function(){
+                            if(i >= date.length){
+                                i = 0;
+                            }
+                            $('#mysentence').text(date[i]['sentence']);
+                            i++;
+                        },10000);
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="main">
@@ -28,33 +97,49 @@
             <div class="menu_nav">
                 <ul>
                     <li class="active"><a href="<?php echo url('home/index/index'); ?>"><span>Home Page</span></a></li>
-                    <li><a href="support.html"><span>Support</span></a></li>
-                    <li><a href="about.html"><span>About Us</span></a></li>
-                    <li><a href="blog.html"><span>Blog</span></a></li>
-                    <li><a href="contact.html"><span>Contact Us</span></a></li>
+                    <li><a href="javascript:void(0)"><span>Support</span></a></li>
+                    <li><a href="javascript:void(0)"><span>About Us</span></a></li>
+                    <li>
+                        <?php if((session('?UserInfo'))): ?>
+                            <a href="javascript:void(0)"><span><?php echo \think\Session::get('UserInfo.username'); ?></span></a>
+                        <?php else: ?>
+                            <a href="<?php echo url('home/login/index'); ?>"><span>Login</span></a>
+                        <?php endif; ?>
+                    </li>
+                    <?php if((session('?UserInfo'))): ?>
+                    <li><a href="<?php echo url('home/login/loginout'); ?>"><span>Login Out</span></a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="clr"></div>
             <div class="logo">
-                <h1><a href="index.html"><span>Roope</span> <small>Company Slogan Here</small></a></h1>
+                <div><h1 id="mysentence"></h1></div>
             </div>
             <div class="clr"></div>
-            <div class="slider">
-                <div id="coin-slider">
-                    <?php $__FOR_START_16784__=1;$__FOR_END_16784__=4;for($i=$__FOR_START_16784__;$i < $__FOR_END_16784__;$i+=1){ ?>
-                        <a href="javascript:void(0)" >
-                            <img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />
-                            <span><big><?php echo $topShow[$i-1]['title']; ?></big><br />
-                               <?php echo $topShow[$i-1]['content']; ?> </span>
-                        </a>
-                    <?php } ?>
+                     <!--<div class="slider">-->
+                <!--<div id="coin-slider">-->
+                    <!--<?php $__FOR_START_13967__=1;$__FOR_END_13967__=4;for($i=$__FOR_START_13967__;$i < $__FOR_END_13967__;$i+=1){ ?>-->
+                        <!--<a href="javascript:void(0)" >-->
+                            <!--<img class='showdetail' num="<?php echo $topShow[$i-1]['id']; ?>" src="/static/home/images/slide<?php echo $i; ?>.jpg" width="960" height="360" alt="" />-->
+                            <!--&lt;!&ndash;<span><big><?php echo $topShow[$i-1]['title']; ?></big><br />&ndash;&gt;-->
+                               <!--&lt;!&ndash;<?php echo $topShow[$i-1]['content']; ?> </span>&ndash;&gt;-->
+                        <!--</a>-->
+                    <!--<?php } ?>-->
+                <!--</div>-->
+                <!--<div class="clr"></div>-->
+            <!--</div>-->
+            <div >
+                <div id="myul_show">
+                       <img  src="/static/home/images/slide1.jpg" width="960" height="360" alt="" />
+                        <img style="float: left" src="/static/home/images/slide2.jpg" width="960" height="360" alt="" />
+                        <img style="float: left" src="/static/home/images/slide3.jpg" width="960" height="360" alt="" />
                 </div>
                 <div class="clr"></div>
             </div>
             <div class="clr"></div>
         </div>
     </div>
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+    <!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>-->
     <div class="content">
         <div class="content_resize">
     
@@ -85,9 +170,9 @@
 <h2><?php echo $article['title']; ?></h2>
       <div class="mainbar">
         <div class="article">
-          <div><span style="font-size: 25px;color: #0e0e0e;margin-bottom: 10px"><?php echo $article['title']; ?></span></div>
+          <div style="margin-bottom: 20px"><span style="font-size: 25px;color: #0e0e0e;margin-bottom: 20px"><?php echo $article['title']; ?></span></div>
           <div class="clr"></div>
-          <p><?php echo $article['content']; ?></p>
+          <p>&emsp;&emsp;<?php echo $article['content']; ?></p>
           <!--<p>Tagged: <a href="#">orci</a>, <a href="#">lectus</a>, <a href="#">varius</a>, <a href="#">turpis</a></p>-->
           <p>作者: <a href="#"><?php echo $article['username']; ?></a>
             分类: <a href="#"><?php echo $article['classname']; ?></a>
@@ -130,8 +215,8 @@
               <?php foreach($comments as $comment): ?>
               <li class="topcomment">
                 <p class="p1">
-                  <b><a href="#"><?php echo $comment['username']; ?></a> 发布于<?php echo $comment['addate']; ?></b>
-                  <a href="javascript:void(0)">回复</a>
+                  <b><a href="javascript:void(0)"><?php echo $comment['username']; ?></a> 发布于<?php echo $comment['addate']; ?></b>
+                  <a comment_id='<?php echo $comment['id']; ?>' class="reply" href="javascript:void(0)">回复</a>
                 </p>
                 <p class="p2"><?php echo $comment['content']; ?></p>
 
@@ -154,73 +239,27 @@
 
 
 
-
-
             </ul><!--//主评论内容-->
             <form id="form1">
               <div>发表评论(*)</div>
               <textarea name="content" style="width:95%;height:150px;"></textarea>
               <input type="hidden" name="article_id" value="<?php echo $article['id']; ?>">
               <input type="hidden" name="pid" value="0">
-              <br><input type="button" value="提交" />
+              <input type="hidden" name="user_id" value="<?php echo \think\Session::get('UserInfo.id'); ?>">
+              <br><input id='submit' type="button" value="提交" />
             </form>
           </div><!--//评论-->
 
 
 
-
-
-
           <div class="clr"></div>
-          <div class="comment"> <a href="#"><img src="/static/home/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
-            <p><a href="#">admin</a> Says:<br />
-              April 20th, 2009 at 2:17 pm</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.</p>
-          </div>
-          <div class="comment"> <a href="#"><img src="/static/home/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
-            <p><a href="#">Admin</a> Says:<br />
-              April 20th, 2009 at 3:21 pm</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.</p>
-          </div>
-          <div class="comment"> <a href="#"><img src="/static/home/images/userpic.gif" width="40" height="40" alt="" class="userpic" /></a>
-            <p><a href="#">admin</a> Says:<br />
-              April 20th, 2009 at 2:17 pm</p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.</p>
-          </div>
         </div>
-        <!--<div class="article">-->
-          <!--<h2><span>Leave a</span> Reply</h2>-->
-          <!--<div class="clr"></div>-->
-          <!--<form action="#" method="post" id="leavereply">-->
-            <!--<ol>-->
-              <!--<li>-->
-                <!--<label for="name">Name (required)</label>-->
-                <!--<input id="name" name="name" class="text" />-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<label for="email">Email Address (required)</label>-->
-                <!--<input id="email" name="email" class="text" />-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<label for="website">Website</label>-->
-                <!--<input id="website" name="website" class="text" />-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<label for="message">Your Message</label>-->
-                <!--<textarea id="message" name="message" rows="8" cols="50"></textarea>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<input type="image" name="imageField" id="imageField" src="/static/home/images/submit.gif" class="send" />-->
-                <!--<div class="clr"></div>-->
-              <!--</li>-->
-            <!--</ol>-->
-          <!--</form>-->
-        <!--</div>-->
       </div>
 
 <script type="text/javascript">
   $(function(){
     $('#praise').click(function(){
+
       var _this = this;
       var data = {'id':$(this).attr('article')};
       $.ajax({
@@ -235,7 +274,9 @@
         }
       });
     });
-    $('input[type=button]').click(function(){
+
+
+    $('#submit').click(function(){
       if($('textarea').val() == ''){
         alert('评论不能为空');
         return;
@@ -248,15 +289,39 @@
         'data': data,
         'dataType': 'json',
         'success': function (result) {
-          if(result.msg == 'success')
-            var str ="<li class='topcomment'><p class='p1'><b>" +
-                    "<a href='#'>" + "<{comment.username}></a> 发布于<{comment.addate}></b>"
-                    +"<a href='javascript:void(0)'>回复</a></p><p class='p2'>" + comment +"</p>";
-            $('ul.comment').append($(str));
-          $('textarea').val('')
-
+          if(result.msg == '未登录') {
+              alert('您当前未登录，不能发表评论');return;
+          }
+          if(result.msg != 'success'){
+            alert('评论失败'); return;
+          }
+          window.location.href = "<?php echo url('home/article/read',['id'=>$article['id']]); ?>";
+//            var str ="<li class='topcomment'><p class='p1'><b>" +
+//                    "<a href='#'>" + "<?php echo \think\Session::get('UserInfo.username'); ?></a> 发布于<?php echo date('Y-m-d H:i',time()); ?></b>"
+//                    +"</p><p class='p2'>" + comment +"</p>";
+//            $('ul.comment').append($(str));
+//            $('textarea').val('');
         }
       });
+    });
+
+
+    $('.reply').live('click',function(){
+      var comment_id = $(this).attr('comment_id');
+      $('#form1 input[name=pid]').val(comment_id);
+      if($('#del_reply').length > 0) return;
+      $('#form1').append("<input id='del_reply' type='button' value='取消回复' />");
+    });
+
+
+    $('#del_reply').live('click', function(){
+      $('#form1 input[name=pid]').attr('pid', 0);
+      $(this).remove();
+      $('#form1 textarea').val('');
+    });
+
+    $('#submit').click(function(){
+      $('#del_reply').remove();
     });
 
   });
@@ -264,9 +329,9 @@
 
     <div class="sidebar">
         <div class="gadget">
-            <h2 class="star"><span>Sidebar</span> Menu</h2>
+            <span style="font-size: 25px;">文章分类</span>
             <div class="clr"></div>
-            <ul class="sb_menu">
+            <ul class="sb_menu" style="margin-top: 20px;">
                 <?php if(is_array($categoryInfo) || $categoryInfo instanceof \think\Collection || $categoryInfo instanceof \think\Paginator): $i = 0; $__LIST__ = $categoryInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
                 <li><a href="<?php echo url('home/index/index',['category_id'=>$category['id']]); ?>" class='category' category_id='<?php echo $category['id']; ?>'><?php echo $category['classname']; ?></a>
                     <a href="<?php echo url('home/index/index',['category_id'=>$category['id']]); ?>" class="com"><span><?php echo $category['article_count']; ?></span></a></li>
@@ -274,21 +339,12 @@
             </ul>
         </div>
         <div class="gadget">
-            <h2 class="star"><span>Sponsors</span></h2>
+            <span style="font-size: 25px;">友情链接</span>
             <div class="clr"></div>
-            <ul class="ex_menu">
-                <li><a href="#">Lorem ipsum dolor</a><br />
-                    Donec libero. Suspendisse bibendum</li>
-                <li><a href="#">Dui pede condimentum</a><br />
-                    Phasellus suscipit, leo a pharetra</li>
-                <li><a href="#">Condimentum lorem</a><br />
-                    Tellus eleifend magna eget</li>
-                <li><a href="#">Fringilla velit magna</a><br />
-                    Curabitur vel urna in tristique</li>
-                <li><a href="#">Suspendisse bibendum</a><br />
-                    Cras id urna orbi tincidunt orci ac</li>
-                <li><a href="#">Donec mattis</a><br />
-                    purus nec placerat bibendum</li>
+            <ul class="ex_menu" style="margin-top: 20px;">
+                <?php if(is_array($linksList) || $linksList instanceof \think\Collection || $linksList instanceof \think\Paginator): $i = 0; $__LIST__ = $linksList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$link): $mod = ($i % 2 );++$i;?>
+                <li ><a target="_blank" href="<?php echo $link['url']; ?>" style="color: #9A9A9A"><?php echo $link['domain']; ?></a></li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
     </div>
