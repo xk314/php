@@ -4,7 +4,15 @@
     <title>Roope</title>
     <link href="/static/home/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/static/home/css/pages.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/home/css/coin-slider.css" />
+
+    <script type="text/javascript" src="/static/home/js/cufon-yui.js"></script>
+    <script type="text/javascript" src="/static/home/js/droid_sans_400-droid_sans_700.font.js"></script>
+
+
+
     <script type="text/javascript" src="/static/home/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/static/home/js/coin-slider.min.js"></script>
     <script type="text/javascript" src="/static/home/js/script.js"></script>
     <style type="text/css">
         #myul_show {
@@ -96,8 +104,8 @@
             <div class="menu_nav">
                 <ul>
                     <li class="active"><a href="{:url('home/index/index')}"><span>Home Page</span></a></li>
-                    <li><a href="javascript:void(0)"><span>Support</span></a></li>
-                    <li><a href="javascript:void(0)"><span>About Us</span></a></li>
+                    <li><a href="{:url('admin/index/index')}"><span>Admin</span></a></li>
+                    <!--<li><a href="javascript:void(0)"><span>About Us</span></a></li>-->
                     <li>
                         {if(session('?UserInfo'))}
                             <a href="javascript:void(0)"><span>{$Think.session.UserInfo.username}</span></a>
@@ -173,29 +181,28 @@
             <h2><span>Image</span> Gallery</h2>
             <a href="#"><img src="/static/home/images/gal1.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="/static/home/images/gal2.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="/static/home/images/gal3.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="/static/home/images/gal4.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="/static/home/images/gal5.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="/static/home/images/gal6.jpg" width="75" height="75" alt="" class="gal" /></a> </div>
         <div class="col c2">
-            <h2><span>Services</span> Overview</h2>
-            <p>Curabitur sed urna id nunc pulvinar semper. Nunc sit amet tortor sit amet lacus sagittis posuere cursus vitae nunc.Etiam venenatis, turpis at eleifend porta, nisl nulla bibendum justo.</p>
-            <ul class="fbg_ul">
-                <li><a href="#">Lorem ipsum dolor labore et dolore.</a></li>
-                <li><a href="#">Excepteur officia deserunt.</a></li>
-                <li><a href="#">Integer tellus ipsum tempor sed.</a></li>
-            </ul>
+            <!--<h2><span>Services</span> Overview</h2>-->
+            <!--<p>Curabitur sed urna id nunc pulvinar semper. Nunc sit amet tortor sit amet lacus sagittis posuere cursus vitae nunc.Etiam venenatis, turpis at eleifend porta, nisl nulla bibendum justo.</p>-->
+            <!--<ul class="fbg_ul">-->
+                <!--<li><a href="#">Lorem ipsum dolor labore et dolore.</a></li>-->
+                <!--<li><a href="#">Excepteur officia deserunt.</a></li>-->
+                <!--<li><a href="#">Integer tellus ipsum tempor sed.</a></li>-->
+            <!--</ul>-->
         </div>
         <div class="col c3">
-            <h2><span>Contact</span> Us</h2>
-            <p>Nullam quam lorem, tristique non vestibulum nec, consectetur in risus. Aliquam a quam vel leo gravida gravida eu porttitor dui.</p>
-            <p class="contact_info"> <span>Address:</span> 1458 TemplateAccess, USA<br />
-                <span>Telephone:</span> +123-1234-5678<br />
-                <span>FAX:</span> +458-4578<br />
-                <span>Others:</span> +301 - 0125 - 01258<br />
-                <span>E-mail:</span> <a href="#">mail@yoursitename.com</a> </p>
+            <h2><span>Contact</span> Me</h2>
+            <!--<p>Nullam quam lorem, tristique non vestibulum nec, consectetur in risus. Aliquam a quam vel leo gravida gravida eu porttitor dui.</p>-->
+            <!--<p class="contact_info"> <span>Address:</span> 1458 TemplateAccess, USA<br />-->
+                <span>Telephone:</span> +18292488112<br />
+                <span>Others:</span> +<br />
+                <span>E-mail:</span> <a href="javascript:void(0)">291247223@qq.com</a> </p>
         </div>
         <div class="clr"></div>
     </div>
 </div>
 <div class="footer">
     <div class="footer_resize">
-        <p class="lf">Copyright &copy; 2016.Company name All rights reserved.More Templates</p>
+        <!--<p class="lf">Copyright &copy; 2016.Company name All rights reserved.More Templates</p>-->
         <p class="rf"></p>
         <div style="clear:both;"></div>
     </div>

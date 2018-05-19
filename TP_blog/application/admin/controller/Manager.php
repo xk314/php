@@ -123,14 +123,21 @@ class Manager extends BaseController
     public function update(Request $request, $id)
     {
         $validate = validate('\app\admin\validate\Manager');
-        if(!$validate->scene('edit_status')->check(input())){
-            $msg = $validate->getError();
-            $this->error($msg,url('admin/manager/edit',['id'=>$id]));
+        if(session('UserInfo')['role_id'] != '超级管理员'){
+            if(!$validate->scene('user_edit')->check(input())){
+                $msg = $validate->getError();
+                $this->error($msg,url('admin/manager/edit',['id'=>$id]));
+            }
+        }else{
+            if(!$validate->scene('edit_status')->check(input())){
+                $msg = $validate->getError();
+                $this->error($msg,url('admin/manager/edit',['id'=>$id]));
+            }
         }
         $res = \app\admin\model\Manager::update(input(),$id,true);
         if(empty($res))
-            $this->error('修改用户状态失败',url('admin/manager/index'));
-        $this->success('修改用户状态成功', url('admin/manager/index'));
+            $this->error('修改用户状态失败',url('admin/index/index'));
+        $this->success('修改用户状态成功', url('admin/index/index'));
     }
 
     /**
@@ -143,5 +150,30 @@ class Manager extends BaseController
     {
         \app\admin\model\Manager::find($id)->delete();
         $this->success('删除用户成功', url('admin/manager/index'));
+    }
+
+    public function changePassword($id)
+    {
+        $userInfo = \app\admin\model\Manager::find($id)->toArray();
+        $info = [
+            'userInfo' => $userInfo,
+        ];
+        return view('changePassword', $info);
+    }
+    public function savePassword($id)
+    {
+        $validate = validate('\app\admin\validate\Manager');
+        if(!$validate->scene('change_password')->check(input())){
+            $msg = $validate->getError();
+            $this->error($msg,url('admin/manager/changePassword',['id'=>$id]));
+        }
+        $newPassword = make_password(input('newpassword'));
+//        return $newPassword;
+
+        $res = \app\admin\model\Manager::where('id', $id)->update(['password'=>$newPassword]);
+        if(empty($res))
+            $this->error('修改密码失败',url('admin/index/index'));
+        $this->success('修改密码成功', url('admin/index/index'));
+
     }
 }

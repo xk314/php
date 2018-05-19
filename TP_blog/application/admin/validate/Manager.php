@@ -17,6 +17,9 @@ class Manager extends Base
         'email' =>'require|email',
         'nickname' =>'unique:tpshop_manager',
         'role_id' =>'require',
+
+        'newpassword' =>'require|length:6,8',
+        'confirmpassword' => 'require|confirm:newpassword',
     ];
 
     protected $message = [
@@ -33,9 +36,18 @@ class Manager extends Base
         'role_id.require' =>'用户类型必填',
         'status.require'=>'请设置用户状态',
         'role_id.require'=>'请设置用户类型',
+
+        'newpassword.require' =>'新密码必填',
+        'newpassword.length' =>'新密码长度必须为6-8位',
+
+        'confirmpassword.require' => '必须确认密码',
+        'confirmpassword.confirm' => '密码确认失败',
     ];
     protected $scene = [  //定义验证场景
+        //使用验证场景可以灵活的设置要验证的字段和验证的规则
         'create' => ['username','password','role_id','status'],
         'edit_status' =>['role_id', 'status'=>'require','role_id'=>'require'],
+        'change_password' => ['password', 'newpassword', 'confirmpassword'],
+        'user_edit' => ['username', 'nickname', 'email'],
     ];
 }

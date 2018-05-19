@@ -14,7 +14,7 @@
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
                         <div class="muted pull-left">用户信息修改</div>
-                        <div style="float: right"><a href="{:url('admin/manager/index')}"><i class="icon-remove"></i></a></div>
+                        <div style="float: right"><a href="{:url('admin/index/index')}"><i class="icon-remove"></i></a></div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
@@ -38,19 +38,25 @@
                                    <div class="control-group">
                                     <label  class="control-label" for="username">用户名<span class="required">*</span></label>
                                     <div class="controls">
-                                        <input type="text" disabled class="input-xlarge" id="username" name="username" value="{$userInfo.username}">
+                                        <input type="text"  class="input-xlarge" id="username" name="username" value="{$userInfo.username}">
                                     </div>
                                 </div>
                                     <div class="control-group">
                                         <label  class="control-label" for="nickname">Nickname<span class="required">*</span></label>
                                         <div class="controls">
-                                            <input type="text" disabled class="input-xlarge" id="nickname" name="nickname" value="{$userInfo.nickname}">
+                                            <input type="text"  class="input-xlarge" id="nickname" name="nickname" value="{$userInfo.nickname}">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label  class="control-label" for="email">email<span class="required">*</span></label>
+                                        <div class="controls">
+                                            <input type="text"  class="input-xlarge" id="email" name="email" value="{$userInfo.email}">
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <label class="control-label" for="select01">用户状态</label>
                                         <div class="controls">
-                                            <select id="select01" class="chzn-select" name="status">
+                                            <select id="select01" class="chzn-select" name="status" {if($Think.session.UserInfo.role_id !=='超级管理员')}disabled{/if}>
                                                 <option>请设置用户状态</option>
                                                 <option value="注销" {if($userInfo.status=='注销')}selected{/if}>注销</option>
                                                 <option value="禁用" {if($userInfo.status=='禁用')}selected{/if}>禁用</option>
@@ -61,7 +67,7 @@
                                     <div class="control-group">
                                         <label class="control-label" for="select02">用户角色类型</label>
                                         <div class="controls">
-                                            <select id="select02" class="chzn-select" name="role_id">
+                                            <select id="select02" class="chzn-select" name="role_id" {if($Think.session.UserInfo.role_id !=='超级管理员')}disabled{/if}>
                                                 <option>请选择角色类型</option>
                                                 {volist name='roleList' id='role'}
                                                 <!--由于对用户的role_id字段设置了获取器，所以不能通过角色id进行判断，只能通过角色的role_name字段进行判断-->

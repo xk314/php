@@ -23,6 +23,7 @@ class Comment extends BaseController
         $nowUserArticleIds = implode(',', $nowUserArticleIds);
         if($userInfo['role_id'] == '超级管理员') $where = '2>1';
         else $where['c.article_id'] = ['in', $nowUserArticleIds];
+//        超级管理员可以看到所有的评论，普通用户只能看到自己文章的评论
         $commentList = \app\admin\model\Comment::alias('c')
             ->field('c.*')
             ->join('article a','a.id=c.article_id')
